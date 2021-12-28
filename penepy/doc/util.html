@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Utility &#8212; penepy  ドキュメント</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="Backendで使用される関数" href="core.html" />
+    <link rel="prev" title="アニメーション作成" href="animate.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="core.html" title="Backendで使用される関数"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="animate.html" title="アニメーション作成"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">penepy  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Utility</a><ul>
+<li><a class="reference internal" href="#module-penepy.util">penepy.util module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="animate.html"
+                        title="前の章へ">アニメーション作成</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="core.html"
+                        title="次の章へ">Backendで使用される関数</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/util.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="utility">
+<h1>Utility<a class="headerlink" href="#utility" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="module-penepy.util">
+<span id="penepy-util-module"></span><h2>penepy.util module<a class="headerlink" href="#module-penepy.util" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="function">
+<dt id="penepy.util.getMaterials">
+<code class="sig-prename descclassname">penepy.util.</code><code class="sig-name descname">getMaterials</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span> &#x2192; List[material.Material]<a class="reference internal" href="_modules/penepy/util.html#getMaterials"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.util.getMaterials" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>penepy.materialPropertyList 中のMaterialを取得</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>*args</strong> (<em>str</em>) -- materialPropertyListのkey</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>Material</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="material.html#penepy.material.Material" title="penepy.material.Material">material.Material</a>]</p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">penepy</span><span class="o">.</span><span class="n">getMaterials</span><span class="p">(</span><span class="s2">&quot;iron&quot;</span><span class="p">,</span> <span class="s2">&quot;WHA&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>何個でも行ける</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">materialkey</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;iron&quot;</span><span class="p">,</span> <span class="s2">&quot;WHA&quot;</span><span class="p">,</span> <span class="s2">&quot;DU&quot;</span><span class="p">]</span>
+<span class="n">materialList</span> <span class="o">=</span> <span class="n">penepy</span><span class="o">.</span><span class="n">getMaterials</span><span class="p">(</span><span class="o">*</span><span class="n">materialkey</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="penepy.util.getTandP">
+<code class="sig-prename descclassname">penepy.util.</code><code class="sig-name descname">getTandP</code><span class="sig-paren">(</span><em class="sig-param">mT: material.Material</em>, <em class="sig-param">mP: material.Material</em>, <em class="sig-param">L: float</em>, <em class="sig-param">D: float</em>, <em class="sig-param">Crh: float = 0.5</em>, <em class="sig-param">Ys: float = 0.0</em>, <em class="sig-param">ts: float = 0.0</em>, <em class="sig-param">th: float = 0.0</em><span class="sig-paren">)</span> &#x2192; List[Union[material.Target, material.Penetrator]]<a class="reference internal" href="_modules/penepy/util.html#getTandP"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.util.getTandP" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Target</span></code></a> と <a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Penetrator</span></code></a> を1行で取得するための関数</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mT</strong> (<a class="reference internal" href="material.html#penepy.material.Material" title="penepy.material.Material"><em>material.Material</em></a>) -- Targetに使うMaterial</p></li>
+<li><p><strong>mP</strong> (<a class="reference internal" href="material.html#penepy.material.Material" title="penepy.material.Material"><em>material.Material</em></a>) -- Penetratorに使うMaterial</p></li>
+<li><p><strong>L</strong> (<em>float</em>) -- L[m]</p></li>
+<li><p><strong>D</strong> (<em>float</em>) -- D[m]</p></li>
+<li><p><strong>Crh</strong> (<em>float</em><em>, </em><em>optional</em>) -- Crh, by default 0.5</p></li>
+<li><p><strong>Ys</strong> (<em>float</em><em>, </em><em>optional</em>) -- 表面硬化領域の降伏強度[GPa], by default 0.</p></li>
+<li><p><strong>ts</strong> (<em>float</em><em>, </em><em>optional</em>) -- 完全に焼きが入った層の厚み[m], by default 0.</p></li>
+<li><p><strong>th</strong> (<em>float</em><em>, </em><em>optional</em>) -- 硬化層全体の厚み[m], by default 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>[<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Target</span></code></a> , <a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Penetrator</span></code></a> ]</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>List[Union[<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target">material.Target</a>, <a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator">material.Penetrator</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="core.html" title="Backendで使用される関数"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="animate.html" title="アニメーション作成"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">penepy  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, c_curve1870.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1 で生成しました。
+    </div>
+  </body>
+</html>

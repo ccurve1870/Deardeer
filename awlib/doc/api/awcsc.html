@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace awcsc
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace awcsc
+   ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="awcsc">
+  
+  <h1 id="awcsc" data-uid="awcsc" class="text-break">Namespace awcsc
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="awcsc.AnimateUtil.html">AnimateUtil</a></h4>
+      <section><p>計算結果を入れると侵徹挙動をアニメーションで描画するのに必要な情報作成してくれるクラス。
+<example><p>
+<pre><code>Calc C = Calc(P,T,V0);
+AnimateUtil A = new AnimateUtil(C);</code></pre>
+</example>
+pythonでアニメーションを書きたいときは
+<example>
+<pre><code>key = list(A.plot[0].Keys)
+fig, ax = plt.subplots()
+ax.set_xlim(A.xmin, A.xmax)
+ax.set_ylim(A.ymin, A.ymax)
+for p in A.plot:
+    for k in key:
+        ax.plot(p[k].x, p[k].y)</code></pre>
+</example>
+的にかけば動きます(アニメーションにする関数は別途)
+</section>
+      <h4><a class="xref" href="awcsc.Calc.html">Calc</a></h4>
+      <section><p>侵徹計算の各種モデルを統一的に扱うためのAbstract class
+具体的な実装は
+<a class="xref" href="awcsc.CalcAW.html">CalcAW</a>,<a class="xref" href="awcsc.CalcAWLV.html">CalcAWLV</a>,<a class="xref" href="awcsc.CalcAWHVLV.html">CalcAWHVLV</a>,<a class="xref" href="awcsc.CalcForrLV.html">CalcForrLV</a>,<a class="xref" href="awcsc.CalcMBE.html">CalcMBE</a>
+を参照のこと。</p>
+<p>基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D);
+Calc C = new Calc(P,T, V0, cfp);
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+これは衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</section>
+      <h4><a class="xref" href="awcsc.CalcAW.html">CalcAW</a></h4>
+      <section><p>高速度AWモデルを扱うためのモデル</p>
+<p>基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D);
+CalcAW C = new CalcAW(P,T, V0, cfp);
+CalcAW C = new CalcAW(P,T, V0); //cfpは省略可能
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+これは衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</section>
+      <h4><a class="xref" href="awcsc.CalcAWHVLV.html">CalcAWHVLV</a></h4>
+      <section><p>高速度と低速度AWモデルを扱うためのモデル
+侵徹体強度が十分高い高速度侵徹では、侵徹終了後に、残存侵徹体長さが低速度侵徹を起こしうる。
+そこでCalcAW→CalcAWLVを続けて行うことで高速度侵徹終了後の侵徹を計算する。
+基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D);
+CalcAW C = new CalcAW(P,T, V0, cfp);
+CalcAW C = new CalcAW(P,T, V0); //cfpは省略可能
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+これは衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</section>
+      <h4><a class="xref" href="awcsc.CalcAWLV.html">CalcAWLV</a></h4>
+      <section><p>低速度AWモデルを扱うためのモデル</p>
+<p>基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D);
+CalcAWLV C = new CalcAWLV(P,T, V0, cfp);
+CalcAWLV C = new CalcAWLV(P,T, V0); //cfpは省略可能
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+これは衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</section>
+      <h4><a class="xref" href="awcsc.CalcForrLV.html">CalcForrLV</a></h4>
+      <section><p>低速度Forrestal-Warrenモデルを扱うためのモデル
+添字のVCはVarious Constantを意味しており、Cavity expansion analysisの定数項を変更可能であることを意味している。</p>
+<p>基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。</p>
+<p>このモデルでは侵徹体先端形状CRHを考慮した計算が可能。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D, CRH); //ここでCRHを設定
+CalcAWLV C = new CalcAWLV(P,T, V0, cfp);
+CalcAWLV C = new CalcAWLV(P,T, V0); //cfpは省略可能
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+上記例は衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</section>
+      <h4><a class="xref" href="awcsc.CalcForrLVold.html">CalcForrLVold</a></h4>
+      <section><p>低速度Forrestal-Warrenモデルを扱うためのモデル</p>
+<p>基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。</p>
+<p>このモデルでは侵徹体先端形状CRHを考慮した計算が可能。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D, CRH); //ここでCRHを設定
+CalcAWLV C = new CalcAWLV(P,T, V0, cfp);
+CalcAWLV C = new CalcAWLV(P,T, V0); //cfpは省略可能
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+上記例は衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</section>
+      <h4><a class="xref" href="awcsc.CalcMBE.html">CalcMBE</a></h4>
+      <section><p>MBEモデルを扱うためのモデル</p>
+<p>基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D);
+CalcMBE C = new CalcMBE(P,T, V0, cfp);
+CalcMBE C = new CalcMBE(P,T, V0); //cfpは省略可能
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+これは衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</section>
+      <h4><a class="xref" href="awcsc.JsonSerializer.html">JsonSerializer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="awcsc.Material.html">Material</a></h4>
+      <section><p>侵徹体や標的の材質をまとめて扱うためのクラス。</p>
+<p>材料の特性を設定する。</p>
+</section>
+      <h4><a class="xref" href="awcsc.Penetrator.html">Penetrator</a></h4>
+      <section><p>侵徹体の材料特性、寸法などを設定。</p>
+</section>
+      <h4><a class="xref" href="awcsc.PointArray.html">PointArray</a></h4>
+      <section><p>侵徹体などの輪郭を記録するクラス</p>
+</section>
+      <h4><a class="xref" href="awcsc.State.html">State</a></h4>
+      <section><p>侵徹時の状態を保持するクラス。</p>
+</section>
+      <h4><a class="xref" href="awcsc.Target.html">Target</a></h4>
+      <section><p>標的特性のクラス。
+Materialと大体同じだけど、表面硬化などを考慮できるように少し変更を加えている。</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="awcsc.AnimateUtil.Point.html">AnimateUtil.Point</a></h4>
+      <section><p>なんだっけこれ。
+あると作るときに便利らしい</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

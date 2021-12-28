@@ -1,0 +1,26 @@
+﻿語句の詳細な説明は高速度侵徹への招待もしくは
+JD. Walker, CE. Anderson, Int. J. Impact Eng. 16(1995), pp. 19-48
+Z. Rosenberg, E. Dekel, Terminal ballistics, (2016), Springer
+Paul J. Hazell, Armour, (2015), CRC Press
+参照のこと。
+
+それぞれのモデルの概観は、penepy/doc/Usage.htmlを参照のこと
+
+計算モデルにより低速度侵徹限定のものがある。
+ここでいう低速度侵徹は侵徹が消耗しない侵徹
+高速度侵徹は侵徹体が消耗する侵徹のこと
+
+
+CalcAW: 
+Anderson-Walkerモデル。
+半球状侵徹体、標的が作る抵抗(Rt)は動的に計算される。
+LVは低速度用、HVLVは低速度高速度自動切り替え
+
+CalcMBE: 
+Alekseevskii-Tateモデル(Modified Bernoulli Equation)。
+標的が作る抵抗は所与(Y=Rt)。低速度高速度同時計算
+
+CalcForr: Forrestalモデル:
+侵徹体形状考慮可能(CRH、CRHはCaliber radius headで、侵徹体先端の曲率半径sと侵徹体直径dの比(s/d))。
+標的が作る抵抗は所与(Rt=2/3Y(1+log(3Y/2E))
+低速度専用

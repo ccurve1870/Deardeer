@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calc &#8212; penepy  ドキュメント</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="アニメーション作成" href="animate.html" />
+    <link rel="prev" title="材料、侵徹体、標的" href="material.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="animate.html" title="アニメーション作成"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="material.html" title="材料、侵徹体、標的"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">penepy  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Calc</a><ul>
+<li><a class="reference internal" href="#module-penepy.calc">penepy.calc module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="material.html"
+                        title="前の章へ">材料、侵徹体、標的</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="animate.html"
+                        title="次の章へ">アニメーション作成</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/calc.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="calc">
+<h1>Calc<a class="headerlink" href="#calc" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="module-penepy.calc">
+<span id="penepy-calc-module"></span><h2>penepy.calc module<a class="headerlink" href="#module-penepy.calc" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="class">
+<dt id="penepy.calc.Calc">
+<em class="property">class </em><code class="sig-prename descclassname">penepy.calc.</code><code class="sig-name descname">Calc</code><a class="reference internal" href="_modules/penepy/calc.html#Calc"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.Calc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>計算を実行するCalcクラスの基底クラス。</p>
+<p>実体はないのでこれは使わない。
+計算用のクラスはすべて、</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Calc</span><span class="p">(</span><span class="n">P</span><span class="p">:</span><span class="n">Penetrator</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span><span class="n">Target</span><span class="p">,</span> <span class="n">V0</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>の形で使用可能。</p>
+<dl class="attribute">
+<dt id="penepy.calc.Calc.V0">
+<code class="sig-name descname">V0</code><a class="headerlink" href="#penepy.calc.Calc.V0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度[m/s]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.Calc.Rc">
+<code class="sig-name descname">Rc</code><a class="headerlink" href="#penepy.calc.Calc.Rc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター半径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.Calc.Dc">
+<code class="sig-name descname">Dc</code><a class="headerlink" href="#penepy.calc.Calc.Dc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター直径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.Calc.calc">
+<code class="sig-name descname">calc</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">dt_log</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/penepy/calc.html#Calc.calc"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.Calc.calc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度V0における侵徹過程の時間変化を計算する</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.Calc.calc_Vdependent">
+<code class="sig-name descname">calc_Vdependent</code><span class="sig-paren">(</span><em class="sig-param">V_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/penepy/calc.html#Calc.calc_Vdependent"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.Calc.calc_Vdependent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>種々の衝突速度について、侵徹終了時点での状態を取得する</p>
+</dd></dl>
+
+<p>コンストラクタ。実体はない</p>
+<dl class="method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">Dc</code></dt>
+<dd><p>クレーター直径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>クレーター直径[m]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">Rc</code></dt>
+<dd><p>クレーター半径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>クレーター半径[m]</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">V0</code></dt>
+<dd><p>衝突速度[m/s]</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>衝突速度</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">calc</code><span class="sig-paren">(</span><em class="sig-param">dt: float</em>, <em class="sig-param">dt_log: float</em><span class="sig-paren">)</span> &#x2192; Dict[str, numpy.ndarray]<a class="reference internal" href="_modules/penepy/calc.html#Calc.calc"><span class="viewcode-link">[ソース]</span></a></dt>
+<dd><p>衝突速度V0における侵徹過程の時間変化を計算する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> (<em>float</em>) -- 計算時間ステップ[s]</p></li>
+<li><p><strong>dt_log</strong> (<em>float</em>) -- 記録時間ステップ[s]</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>侵徹過程の時間変化を記録した辞書</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>Dict[str, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">calc_Vdependent</code><span class="sig-paren">(</span><em class="sig-param">V_list: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; Dict[str, numpy.ndarray]<a class="reference internal" href="_modules/penepy/calc.html#Calc.calc_Vdependent"><span class="viewcode-link">[ソース]</span></a></dt>
+<dd><p>種々の衝突速度について、侵徹終了時点での状態を取得する。</p>
+<p>np.ndarrayに格納されている値は、calcと異なりV_listに対応した値が記録されている。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>V_list</strong> (<em>np.ndarray</em>) -- 衝突速度のリスト。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>侵徹終了時点での状態を記録した辞書</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>Dict[str, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="penepy.calc.CalcAW">
+<em class="property">class </em><code class="sig-prename descclassname">penepy.calc.</code><code class="sig-name descname">CalcAW</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">T</em>, <em class="sig-param">V0</em>, <em class="sig-param">fit_param: numpy.ndarray = array([2.87e-04</em>, <em class="sig-param">1.48e-07])</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/penepy/calc.html#CalcAW"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.CalcAW" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#penepy.calc.Calc" title="penepy.calc.Calc"><code class="xref py py-class docutils literal notranslate"><span class="pre">penepy.calc.Calc</span></code></a></p>
+<p>高速度Anderson-Walkerモデル用のCalcクラス</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CalcAW</span><span class="p">(</span><span class="n">P</span><span class="p">:</span><span class="n">Penetrator</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span><span class="n">Target</span><span class="p">,</span> <span class="n">V0</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>の形で使用可能。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="penepy.calc.CalcAW.V0">
+<code class="sig-name descname">V0</code><a class="headerlink" href="#penepy.calc.CalcAW.V0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度[m/s]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcAW.Rc">
+<code class="sig-name descname">Rc</code><a class="headerlink" href="#penepy.calc.CalcAW.Rc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター半径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcAW.Dc">
+<code class="sig-name descname">Dc</code><a class="headerlink" href="#penepy.calc.CalcAW.Dc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター直径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcAW.calc">
+<code class="sig-name descname">calc</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">dt_log</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcAW.calc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度V0における侵徹過程の時間変化を計算する</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcAW.calc_Vdependent">
+<code class="sig-name descname">calc_Vdependent</code><span class="sig-paren">(</span><em class="sig-param">V_list</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcAW.calc_Vdependent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>種々の衝突速度について、侵徹終了時点での状態を取得する</p>
+</dd></dl>
+
+<p>CalcAWのコンストラクタ</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="penepy.calc.CalcAWHVLV">
+<em class="property">class </em><code class="sig-prename descclassname">penepy.calc.</code><code class="sig-name descname">CalcAWHVLV</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">T</em>, <em class="sig-param">V0</em>, <em class="sig-param">fit_param: numpy.ndarray = array([2.87e-04</em>, <em class="sig-param">1.48e-07])</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/penepy/calc.html#CalcAWHVLV"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.CalcAWHVLV" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#penepy.calc.Calc" title="penepy.calc.Calc"><code class="xref py py-class docutils literal notranslate"><span class="pre">penepy.calc.Calc</span></code></a></p>
+<p>高速度-低速度一貫Anderson-Walkerモデル用のCalcクラス</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CalcAWHVLV</span><span class="p">(</span><span class="n">P</span><span class="p">:</span><span class="n">Penetrator</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span><span class="n">Target</span><span class="p">,</span> <span class="n">V0</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>の形で使用可能。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="penepy.calc.CalcAWHVLV.V0">
+<code class="sig-name descname">V0</code><a class="headerlink" href="#penepy.calc.CalcAWHVLV.V0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度[m/s]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcAWHVLV.Rc">
+<code class="sig-name descname">Rc</code><a class="headerlink" href="#penepy.calc.CalcAWHVLV.Rc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター半径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcAWHVLV.Dc">
+<code class="sig-name descname">Dc</code><a class="headerlink" href="#penepy.calc.CalcAWHVLV.Dc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター直径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcAWHVLV.calc">
+<code class="sig-name descname">calc</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">dt_log</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcAWHVLV.calc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度V0における侵徹過程の時間変化を計算する</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcAWHVLV.calc_Vdependent">
+<code class="sig-name descname">calc_Vdependent</code><span class="sig-paren">(</span><em class="sig-param">V_list</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcAWHVLV.calc_Vdependent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>種々の衝突速度について、侵徹終了時点での状態を取得する</p>
+</dd></dl>
+
+<p>CalcAWHVLVのコンストラクタ</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="penepy.calc.CalcAWLV">
+<em class="property">class </em><code class="sig-prename descclassname">penepy.calc.</code><code class="sig-name descname">CalcAWLV</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">T</em>, <em class="sig-param">V0</em>, <em class="sig-param">fit_param: numpy.ndarray = array([2.87e-04</em>, <em class="sig-param">1.48e-07])</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/penepy/calc.html#CalcAWLV"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.CalcAWLV" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#penepy.calc.Calc" title="penepy.calc.Calc"><code class="xref py py-class docutils literal notranslate"><span class="pre">penepy.calc.Calc</span></code></a></p>
+<p>低速度Anderson-Walkerモデル用のCalcクラス</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CalcAWLV</span><span class="p">(</span><span class="n">P</span><span class="p">:</span><span class="n">Penetrator</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span><span class="n">Target</span><span class="p">,</span> <span class="n">V0</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>の形で使用可能。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="penepy.calc.CalcAWLV.V0">
+<code class="sig-name descname">V0</code><a class="headerlink" href="#penepy.calc.CalcAWLV.V0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度[m/s]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcAWLV.Rc">
+<code class="sig-name descname">Rc</code><a class="headerlink" href="#penepy.calc.CalcAWLV.Rc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター半径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcAWLV.Dc">
+<code class="sig-name descname">Dc</code><a class="headerlink" href="#penepy.calc.CalcAWLV.Dc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター直径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcAWLV.calc">
+<code class="sig-name descname">calc</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">dt_log</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcAWLV.calc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度V0における侵徹過程の時間変化を計算する</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcAWLV.calc_Vdependent">
+<code class="sig-name descname">calc_Vdependent</code><span class="sig-paren">(</span><em class="sig-param">V_list</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcAWLV.calc_Vdependent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>種々の衝突速度について、侵徹終了時点での状態を取得する</p>
+</dd></dl>
+
+<p>CalcAWLVのコンストラクタ</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="penepy.calc.CalcForrLV">
+<em class="property">class </em><code class="sig-prename descclassname">penepy.calc.</code><code class="sig-name descname">CalcForrLV</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">T</em>, <em class="sig-param">V0</em>, <em class="sig-param">fit_param: numpy.ndarray = array([2.87e-04</em>, <em class="sig-param">1.48e-07])</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/penepy/calc.html#CalcForrLV"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.CalcForrLV" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#penepy.calc.Calc" title="penepy.calc.Calc"><code class="xref py py-class docutils literal notranslate"><span class="pre">penepy.calc.Calc</span></code></a></p>
+<p>低速度Forrestal-Warrenモデル用のCalcクラス</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CalcForrLV</span><span class="p">(</span><span class="n">P</span><span class="p">:</span><span class="n">Penetrator</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span><span class="n">Target</span><span class="p">,</span> <span class="n">V0</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>の形で使用可能。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="penepy.calc.CalcForrLV.V0">
+<code class="sig-name descname">V0</code><a class="headerlink" href="#penepy.calc.CalcForrLV.V0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度[m/s]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcForrLV.Rc">
+<code class="sig-name descname">Rc</code><a class="headerlink" href="#penepy.calc.CalcForrLV.Rc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター半径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcForrLV.Dc">
+<code class="sig-name descname">Dc</code><a class="headerlink" href="#penepy.calc.CalcForrLV.Dc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター直径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcForrLV.calc">
+<code class="sig-name descname">calc</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">dt_log</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcForrLV.calc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度V0における侵徹過程の時間変化を計算する</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcForrLV.calc_Vdependent">
+<code class="sig-name descname">calc_Vdependent</code><span class="sig-paren">(</span><em class="sig-param">V_list</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcForrLV.calc_Vdependent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>種々の衝突速度について、侵徹終了時点での状態を取得する</p>
+</dd></dl>
+
+<p>CalcForrLVのコンストラクタ</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="penepy.calc.CalcMBE">
+<em class="property">class </em><code class="sig-prename descclassname">penepy.calc.</code><code class="sig-name descname">CalcMBE</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">T</em>, <em class="sig-param">V0</em>, <em class="sig-param">fit_param: numpy.ndarray = array([2.87e-04</em>, <em class="sig-param">1.48e-07])</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/penepy/calc.html#CalcMBE"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#penepy.calc.CalcMBE" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#penepy.calc.Calc" title="penepy.calc.Calc"><code class="xref py py-class docutils literal notranslate"><span class="pre">penepy.calc.Calc</span></code></a></p>
+<p>高速度-低速度一貫Alekseevski-Tateモデル用のCalcクラス</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CalcMBE</span><span class="p">(</span><span class="n">P</span><span class="p">:</span><span class="n">Penetrator</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span><span class="n">Target</span><span class="p">,</span> <span class="n">V0</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>の形で使用可能。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="penepy.calc.CalcMBE.V0">
+<code class="sig-name descname">V0</code><a class="headerlink" href="#penepy.calc.CalcMBE.V0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度[m/s]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcMBE.Rc">
+<code class="sig-name descname">Rc</code><a class="headerlink" href="#penepy.calc.CalcMBE.Rc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター半径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcMBE.Dc">
+<code class="sig-name descname">Dc</code><a class="headerlink" href="#penepy.calc.CalcMBE.Dc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>クレーター直径[m]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="penepy.calc.CalcMBE.hydro_lim">
+<code class="sig-name descname">hydro_lim</code><a class="headerlink" href="#penepy.calc.CalcMBE.hydro_lim" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><span class="math notranslate nohighlight">\(\sqrt{\rho_P / \rho_T}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcMBE.calc">
+<code class="sig-name descname">calc</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">dt_log</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcMBE.calc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>衝突速度V0における侵徹過程の時間変化を計算する</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="penepy.calc.CalcMBE.calc_Vdependent">
+<code class="sig-name descname">calc_Vdependent</code><span class="sig-paren">(</span><em class="sig-param">V_list</em><span class="sig-paren">)</span><a class="headerlink" href="#penepy.calc.CalcMBE.calc_Vdependent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>種々の衝突速度について、侵徹終了時点での状態を取得する</p>
+</dd></dl>
+
+<p>CalcMBEのコンストラクタ</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<a class="reference internal" href="material.html#penepy.material.Penetrator" title="penepy.material.Penetrator"><em>Penetrator</em></a>) -- 侵徹体の材料特性、寸法</p></li>
+<li><p><strong>T</strong> (<a class="reference internal" href="material.html#penepy.material.Target" title="penepy.material.Target"><em>Target</em></a>) -- 標的の材料特性</p></li>
+<li><p><strong>V0</strong> (<em>float</em>) -- 衝突速度</p></li>
+<li><p><strong>fit_param</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) -- 衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと, by default np.array([0.000287, 1.48e-07])</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">hydro_lim</code></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="animate.html" title="アニメーション作成"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="material.html" title="材料、侵徹体、標的"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">penepy  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, c_curve1870.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1 で生成しました。
+    </div>
+  </body>
+</html>

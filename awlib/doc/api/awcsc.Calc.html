@@ -1,0 +1,1101 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Calc
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Calc
+   ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="awcsc.Calc">
+  
+  
+  <h1 id="awcsc_Calc" data-uid="awcsc.Calc" class="text-break">Class Calc
+  </h1>
+  <div class="markdown level0 summary"><p>侵徹計算の各種モデルを統一的に扱うためのAbstract class
+具体的な実装は
+<a class="xref" href="awcsc.CalcAW.html">CalcAW</a>,<a class="xref" href="awcsc.CalcAWLV.html">CalcAWLV</a>,<a class="xref" href="awcsc.CalcAWHVLV.html">CalcAWHVLV</a>,<a class="xref" href="awcsc.CalcForrLV.html">CalcForrLV</a>,<a class="xref" href="awcsc.CalcMBE.html">CalcMBE</a>
+を参照のこと。</p>
+<p>基本的な使い方は<a class="xref" href="awcsc.Material.html">Material</a>により材料定数を設定し、
+<a class="xref" href="awcsc.Target.html">Target</a>,<a class="xref" href="awcsc.Penetrator.html">Penetrator</a>で標的、侵徹体の特徴を決める。
+最も簡単な例を以下に示す。
+<example><p>
+<pre><code>Material M = new Material(rho, YS, E, K0, k);
+Target T = new Target(M);
+Penetrator P = new Penetrator(M, L,D);
+Calc C = new Calc(P,T, V0, cfp);
+var  res = C.calc(dt_log, dt);</code></pre>
+</example>
+これは衝突速度V0での侵徹挙動を計算する。
+<code>var res = C.calc_Vdependent(V_list);</code>
+とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Calc</span></div>
+      <div class="level2"><a class="xref" href="awcsc.CalcAW.html">CalcAW</a></div>
+      <div class="level2"><a class="xref" href="awcsc.CalcAWHVLV.html">CalcAWHVLV</a></div>
+      <div class="level2"><a class="xref" href="awcsc.CalcForrLV.html">CalcForrLV</a></div>
+      <div class="level2"><a class="xref" href="awcsc.CalcForrLVold.html">CalcForrLVold</a></div>
+      <div class="level2"><a class="xref" href="awcsc.CalcMBE.html">CalcMBE</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="awcsc.html">awcsc</a></h6>
+  <h6><strong>Assembly</strong>: awlib.dll</h6>
+  <h5 id="awcsc_Calc_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Calc</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_fit_param_.md&amp;value=---%0Auid%3A%20awcsc.Calc.fit_param_%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L81">View Source</a>
+  </span>
+  <h4 id="awcsc_Calc_fit_param_" data-uid="awcsc.Calc.fit_param_">fit_param_</h4>
+  <div class="markdown level1 summary"><p>衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;double&gt; fit_param_</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_fit_param__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)</span></div>
+      <div><a class="xref" href="awcsc.Calc.html#awcsc_Calc_Rc">Rc</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_P_.md&amp;value=---%0Auid%3A%20awcsc.Calc.P_%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L59">View Source</a>
+  </span>
+  <h4 id="awcsc_Calc_P_" data-uid="awcsc.Calc.P_">P_</h4>
+  <div class="markdown level1 summary"><p>Calcが計算に使用するPenetrator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Penetrator P_</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Penetrator.html">Penetrator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_P__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.Penetrator.html">Penetrator</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_Rc_.md&amp;value=---%0Auid%3A%20awcsc.Calc.Rc_%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L42">View Source</a>
+  </span>
+  <h4 id="awcsc_Calc_Rc_" data-uid="awcsc.Calc.Rc_">Rc_</h4>
+  <div class="markdown level1 summary"><p>衝突時に形成されるクレーター径[m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double Rc_</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_Rc__seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)</span></div>
+      <div><a class="xref" href="awcsc.Calc.html#awcsc_Calc_fit_param">fit_param</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_T_.md&amp;value=---%0Auid%3A%20awcsc.Calc.T_%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L64">View Source</a>
+  </span>
+  <h4 id="awcsc_Calc_T_" data-uid="awcsc.Calc.T_">T_</h4>
+  <div class="markdown level1 summary"><p>Calcが計算に使用するTarget</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Target T_</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Target.html">Target</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_T__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.Target.html">Target</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_V0_.md&amp;value=---%0Auid%3A%20awcsc.Calc.V0_%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L36">View Source</a>
+  </span>
+  <h4 id="awcsc_Calc_V0_" data-uid="awcsc.Calc.V0_">V0_</h4>
+  <div class="markdown level1 summary"><p>衝突速度[m/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double V0_</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_fit_param.md&amp;value=---%0Auid%3A%20awcsc.Calc.fit_param%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L87">View Source</a>
+  </span>
+  <a id="awcsc_Calc_fit_param_" data-uid="awcsc.Calc.fit_param*"></a>
+  <h4 id="awcsc_Calc_fit_param" data-uid="awcsc.Calc.fit_param">fit_param</h4>
+  <div class="markdown level1 summary"><p>衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;double&gt; fit_param { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_fit_param_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)</span></div>
+      <div><a class="xref" href="awcsc.Calc.html#awcsc_Calc_Rc">Rc</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_P.md&amp;value=---%0Auid%3A%20awcsc.Calc.P%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L69">View Source</a>
+  </span>
+  <a id="awcsc_Calc_P_" data-uid="awcsc.Calc.P*"></a>
+  <h4 id="awcsc_Calc_P" data-uid="awcsc.Calc.P">P</h4>
+  <div class="markdown level1 summary"><p>Calcが計算に使用するPenetrator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Penetrator P { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Penetrator.html">Penetrator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_P_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.Penetrator.html">Penetrator</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_Rc.md&amp;value=---%0Auid%3A%20awcsc.Calc.Rc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L48">View Source</a>
+  </span>
+  <a id="awcsc_Calc_Rc_" data-uid="awcsc.Calc.Rc*"></a>
+  <h4 id="awcsc_Calc_Rc" data-uid="awcsc.Calc.Rc">Rc</h4>
+  <div class="markdown level1 summary"><p>衝突時に形成されるクレーター径[m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Rc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_Rc_seealso">See Also</h5>
+  <div class="seealso">
+      <div><span class="xref">awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)</span></div>
+      <div><a class="xref" href="awcsc.Calc.html#awcsc_Calc_fit_param">fit_param</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_T.md&amp;value=---%0Auid%3A%20awcsc.Calc.T%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L74">View Source</a>
+  </span>
+  <a id="awcsc_Calc_T_" data-uid="awcsc.Calc.T*"></a>
+  <h4 id="awcsc_Calc_T" data-uid="awcsc.Calc.T">T</h4>
+  <div class="markdown level1 summary"><p>Calcが計算に使用するTarget</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Target T { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Target.html">Target</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_T_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.Target.html">Target</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_V0.md&amp;value=---%0Auid%3A%20awcsc.Calc.V0%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L53">View Source</a>
+  </span>
+  <a id="awcsc_Calc_V0_" data-uid="awcsc.Calc.V0*"></a>
+  <h4 id="awcsc_Calc_V0" data-uid="awcsc.Calc.V0">V0</h4>
+  <div class="markdown level1 summary"><p>衝突速度[m/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract double V0 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_calc_System_Double__System_Double__.md&amp;value=---%0Auid%3A%20awcsc.Calc.calc(System.Double%40%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L103">View Source</a>
+  </span>
+  <a id="awcsc_Calc_calc_" data-uid="awcsc.Calc.calc*"></a>
+  <h4 id="awcsc_Calc_calc_System_Double__System_Double__" data-uid="awcsc.Calc.calc(System.Double@,System.Double@)">calc(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>速度V0で衝突する侵徹挙動を計算を実行する関数。
+各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+SoAを返さないのはpythonとの相互作用を考慮。</p>
+<p>と書いていたけどよく考えると普通にSoAで返したほうが幸せかもしれない(検討</p>
+<p>計算はdtごとに行い、時間がdt_log経過するごとにその時の計算結果を保存するという形式。
+結果を格納した辞書の中身は<a class="xref" href="awcsc.State.html">State</a>参照</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Dictionary&lt;string, List&lt;double&gt;&gt; calc(in double dt0, in double dt_log0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt0</span></td>
+        <td><p>計算時間ステップ[s]</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt_log0</span></td>
+        <td><p>計算結果取得ステップ[s]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><p>結果を格納した辞書。引数の詳細は<a class="xref" href="awcsc.State.html">State</a>参照</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_calc_System_Double__System_Double___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.State.html">State</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_calc_Vdependent_System_Collections_Generic_List_System_Double___.md&amp;value=---%0Auid%3A%20awcsc.Calc.calc_Vdependent(System.Collections.Generic.List%7BSystem.Double%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L234">View Source</a>
+  </span>
+  <a id="awcsc_Calc_calc_Vdependent_" data-uid="awcsc.Calc.calc_Vdependent*"></a>
+  <h4 id="awcsc_Calc_calc_Vdependent_System_Collections_Generic_List_System_Double___" data-uid="awcsc.Calc.calc_Vdependent(System.Collections.Generic.List{System.Double}@)">calc_Vdependent(List&lt;Double&gt;)</h4>
+  <div class="markdown level1 summary"><p>衝突速度V0を変化させながら、衝突終了後の値を取得する関数。
+各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+SoAを返さないのはpythonとの相互作用を考慮。</p>
+<p>と書いていたけどよく考えると普通にSoAで返したほうが幸せかもしれない(検討</p>
+<p>結果を格納した辞書の中身は<a class="xref" href="awcsc.State.html">State</a>参照。
+また、この関数では衝突速度V0も格納した辞書が返される</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Dictionary&lt;string, List&lt;double&gt;&gt; calc_Vdependent(in List&lt;double&gt; V0_list)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="parametername">V0_list</span></td>
+        <td><p>V0のリスト[m/s]。10000 m/sくらいから結果が不安定になる(この辺は割と難しくて放置)。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><p>結果を格納した辞書。引数の詳細は<a class="xref" href="awcsc.State.html">State</a>参照。この関数ではV0のリストも格納されている</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_calc_Vdependent_System_Collections_Generic_List_System_Double____seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.State.html">State</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_calc_Vdependent_System_Double____.md&amp;value=---%0Auid%3A%20awcsc.Calc.calc_Vdependent(System.Double%5B%5D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L214">View Source</a>
+  </span>
+  <a id="awcsc_Calc_calc_Vdependent_" data-uid="awcsc.Calc.calc_Vdependent*"></a>
+  <h4 id="awcsc_Calc_calc_Vdependent_System_Double____" data-uid="awcsc.Calc.calc_Vdependent(System.Double[]@)">calc_Vdependent(Double[])</h4>
+  <div class="markdown level1 summary"><p>衝突速度V0を変化させながら、衝突終了後の値を取得する関数。
+各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+SoAを返さないのはpythonとの相互作用を考慮。</p>
+<p>と書いていたけどよく考えると普通にSoAで返したほうが幸せかもしれない(検討</p>
+<p>結果を格納した辞書の中身は<a class="xref" href="awcsc.State.html">State</a>参照。
+また、この関数では衝突速度V0も格納した辞書が返される</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Dictionary&lt;string, List&lt;double&gt;&gt; calc_Vdependent(in double[] V0_list)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">V0_list</span></td>
+        <td><p>V0のリスト[m/s]。10000 m/sくらいから結果が不安定になる(この辺は割と難しくて放置)。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><p>結果を格納した辞書。引数の詳細は<a class="xref" href="awcsc.State.html">State</a>参照。この関数ではV0のリストも格納されている</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_calc_Vdependent_System_Double_____seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.State.html">State</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_calc_VdependentPyInterop_System_Double____.md&amp;value=---%0Auid%3A%20awcsc.Calc.calc_VdependentPyInterop(System.Double%5B%5D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L291">View Source</a>
+  </span>
+  <a id="awcsc_Calc_calc_VdependentPyInterop_" data-uid="awcsc.Calc.calc_VdependentPyInterop*"></a>
+  <h4 id="awcsc_Calc_calc_VdependentPyInterop_System_Double____" data-uid="awcsc.Calc.calc_VdependentPyInterop(System.Double[]@)">calc_VdependentPyInterop(Double[])</h4>
+  <div class="markdown level1 summary"><p>衝突速度V0を変化させながら、衝突終了後の値を取得する関数。
+各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。</p>
+<p><a class="xref" href="awcsc.Calc.html#awcsc_Calc_calc_Vdependent_System_Double____">calc_Vdependent(Double[])</a>でListをpythonに返したときにpythonnetが行う
+Implicit List conversionがあまりにも遅いので生の配列を返すようにした。</p>
+<p>結果を格納した辞書の中身は<a class="xref" href="awcsc.State.html">State</a>参照。
+また、この関数では衝突速度V0も格納した辞書が返される</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Dictionary&lt;string, double[]&gt; calc_VdependentPyInterop(in double[] V0_list)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">V0_list</span></td>
+        <td><p>V0のリスト[m/s]。10000 m/sくらいから結果が不安定になる(この辺は割と難しくて放置)。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Double</span>[]&gt;</td>
+        <td><p>結果を格納した辞書。引数の詳細は<a class="xref" href="awcsc.State.html">State</a>参照。この関数ではV0のリストも格納されている</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_calc_VdependentPyInterop_System_Double_____seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.State.html">State</a></div>
+      <div><a class="xref" href="awcsc.Calc.html#awcsc_Calc_calc_Vdependent_System_Double____">calc_Vdependent(Double[])</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_calcPyInterop_System_Double__System_Double__.md&amp;value=---%0Auid%3A%20awcsc.Calc.calcPyInterop(System.Double%40%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L189">View Source</a>
+  </span>
+  <a id="awcsc_Calc_calcPyInterop_" data-uid="awcsc.Calc.calcPyInterop*"></a>
+  <h4 id="awcsc_Calc_calcPyInterop_System_Double__System_Double__" data-uid="awcsc.Calc.calcPyInterop(System.Double@,System.Double@)">calcPyInterop(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>速度V0で衝突する侵徹挙動を計算を実行する関数。
+各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。</p>
+<p><a class="xref" href="awcsc.Calc.html#awcsc_Calc_calc_System_Double__System_Double__">calc(Double, Double)</a>でListをpythonに返したときにpythonnetが行う
+Implicit List conversionがあまりにも遅いので生の配列を返すようにした。</p>
+<p>計算はdtごとに行い、時間がdt_log経過するごとにその時の計算結果を保存するという形式。
+結果を格納した辞書の中身は<a class="xref" href="awcsc.State.html">State</a>参照</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Dictionary&lt;string, double[]&gt; calcPyInterop(in double dt0, in double dt_log0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt0</span></td>
+        <td><p>計算時間ステップ[s]</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt_log0</span></td>
+        <td><p>計算結果取得ステップ[s]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Double</span>[]&gt;</td>
+        <td><p>結果を格納した辞書。引数の詳細は<a class="xref" href="awcsc.State.html">State</a>参照</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="awcsc_Calc_calcPyInterop_System_Double__System_Double___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="awcsc.State.html">State</a></div>
+      <div><a class="xref" href="awcsc.Calc.html#awcsc_Calc_calc_System_Double__System_Double__">calc(Double, Double)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_cond_endcalc_awcsc_State__awcsc_State__.md&amp;value=---%0Auid%3A%20awcsc.Calc.cond_endcalc(awcsc.State%40%2Cawcsc.State%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L332">View Source</a>
+  </span>
+  <a id="awcsc_Calc_cond_endcalc_" data-uid="awcsc.Calc.cond_endcalc*"></a>
+  <h4 id="awcsc_Calc_cond_endcalc_awcsc_State__awcsc_State__" data-uid="awcsc.Calc.cond_endcalc(awcsc.State@,awcsc.State@)">cond_endcalc(State, State)</h4>
+  <div class="markdown level1 summary"><p>計算を終了するための判定基準。
+がんばろう。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool cond_endcalc(in State st, in State st0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.State.html">State</a></td>
+        <td><span class="parametername">st</span></td>
+        <td><p>Statenew</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="awcsc.State.html">State</a></td>
+        <td><span class="parametername">st0</span></td>
+        <td><p>Stateold</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_cycle_System_Double__awcsc_State__.md&amp;value=---%0Auid%3A%20awcsc.Calc.cycle(System.Double%40%2Cawcsc.State%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L323">View Source</a>
+  </span>
+  <a id="awcsc_Calc_cycle_" data-uid="awcsc.Calc.cycle*"></a>
+  <h4 id="awcsc_Calc_cycle_System_Double__awcsc_State__" data-uid="awcsc.Calc.cycle(System.Double@,awcsc.State@)">cycle(Double, State)</h4>
+  <div class="markdown level1 summary"><p>実際に時間を進めるときの、1サイクルを記述した関数。気合だ。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract State cycle(in double dt, in State st0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt</span></td>
+        <td><p>時間刻み[s]</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="awcsc.State.html">State</a></td>
+        <td><span class="parametername">st0</span></td>
+        <td><p>時刻tにおける状態</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.State.html">State</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_getRt_System_Double_awcsc_State__.md&amp;value=---%0Auid%3A%20awcsc.Calc.getRt(System.Double%2Cawcsc.State%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L308">View Source</a>
+  </span>
+  <a id="awcsc_Calc_getRt_" data-uid="awcsc.Calc.getRt*"></a>
+  <h4 id="awcsc_Calc_getRt_System_Double_awcsc_State__" data-uid="awcsc.Calc.getRt(System.Double,awcsc.State@)">getRt(Double, State)</h4>
+  <div class="markdown level1 summary"><p>標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract double getRt(double Y, in State stold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">Y</span></td>
+        <td><p>Material.Y[GPa]</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="awcsc.State.html">State</a></td>
+        <td><span class="parametername">stold</span></td>
+        <td><p>State</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_init_State_System_Double__.md&amp;value=---%0Auid%3A%20awcsc.Calc.init_State(System.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L315">View Source</a>
+  </span>
+  <a id="awcsc_Calc_init_State_" data-uid="awcsc.Calc.init_State*"></a>
+  <h4 id="awcsc_Calc_init_State_System_Double__" data-uid="awcsc.Calc.init_State(System.Double@)">init_State(Double)</h4>
+  <div class="markdown level1 summary"><p>計算モデルのt=0sにおける状態を取得するための関数</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract State init_State(in double dt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt</span></td>
+        <td><p>dt[s]。まあ気にしなくていいと思います</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.State.html">State</a></td>
+        <td><p>初期化されたStateを返します</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc_Swap__1___0____0__.md&amp;value=---%0Auid%3A%20awcsc.Calc.Swap%60%601(%60%600%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L339">View Source</a>
+  </span>
+  <a id="awcsc_Calc_Swap_" data-uid="awcsc.Calc.Swap*"></a>
+  <h4 id="awcsc_Calc_Swap__1___0____0__" data-uid="awcsc.Calc.Swap``1(``0@,``0@)">Swap&lt;T&gt;(ref T, ref T)</h4>
+  <div class="markdown level1 summary"><p>cycleごとにstnewとstoldをスワップしたいので作った。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void Swap&lt;T&gt;(ref T lhs, ref T rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">lhs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">rhs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Calc.md&amp;value=---%0Auid%3A%20awcsc.Calc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Calc.cs/#L31" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

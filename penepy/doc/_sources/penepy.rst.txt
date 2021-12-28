@@ -1,0 +1,54 @@
+penepy package
+==============
+
+Submodules
+----------
+
+penepy.animate module
+---------------------
+
+.. automodule:: penepy.animate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+penepy.calc module
+------------------
+
+.. automodule:: penepy.calc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+penepy.core module
+------------------
+
+.. automodule:: penepy.core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+penepy.material module
+----------------------
+
+.. automodule:: penepy.material
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+penepy.materialList module
+--------------------------
+
+.. automodule:: penepy.materialList
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: penepy
+   :members:
+   :undoc-members:
+   :show-inheritance:

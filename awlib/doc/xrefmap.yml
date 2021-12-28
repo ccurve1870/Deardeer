@@ -1,0 +1,2192 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: awcsc
+  name: awcsc
+  href: api/awcsc.html
+  commentId: N:awcsc
+  fullName: awcsc
+  nameWithType: awcsc
+- uid: awcsc.AnimateUtil
+  name: AnimateUtil
+  href: api/awcsc.AnimateUtil.html
+  commentId: T:awcsc.AnimateUtil
+  fullName: awcsc.AnimateUtil
+  nameWithType: AnimateUtil
+- uid: awcsc.AnimateUtil.#ctor(awcsc.Calc,System.Double,System.Double,System.Int32)
+  name: AnimateUtil(Calc, Double, Double, Int32)
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil__ctor_awcsc_Calc_System_Double_System_Double_System_Int32_
+  commentId: M:awcsc.AnimateUtil.#ctor(awcsc.Calc,System.Double,System.Double,System.Int32)
+  fullName: awcsc.AnimateUtil.AnimateUtil(awcsc.Calc, System.Double, System.Double, System.Int32)
+  nameWithType: AnimateUtil.AnimateUtil(Calc, Double, Double, Int32)
+- uid: awcsc.AnimateUtil.#ctor*
+  name: AnimateUtil
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil__ctor_
+  commentId: Overload:awcsc.AnimateUtil.#ctor
+  isSpec: "True"
+  fullName: awcsc.AnimateUtil.AnimateUtil
+  nameWithType: AnimateUtil.AnimateUtil
+- uid: awcsc.AnimateUtil.plot
+  name: plot
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil_plot
+  commentId: F:awcsc.AnimateUtil.plot
+  fullName: awcsc.AnimateUtil.plot
+  nameWithType: AnimateUtil.plot
+- uid: awcsc.AnimateUtil.Point
+  name: AnimateUtil.Point
+  href: api/awcsc.AnimateUtil.Point.html
+  commentId: T:awcsc.AnimateUtil.Point
+  fullName: awcsc.AnimateUtil.Point
+  nameWithType: AnimateUtil.Point
+- uid: awcsc.AnimateUtil.Point.#ctor(System.Double,System.Double)
+  name: Point(Double, Double)
+  href: api/awcsc.AnimateUtil.Point.html#awcsc_AnimateUtil_Point__ctor_System_Double_System_Double_
+  commentId: M:awcsc.AnimateUtil.Point.#ctor(System.Double,System.Double)
+  fullName: awcsc.AnimateUtil.Point.Point(System.Double, System.Double)
+  nameWithType: AnimateUtil.Point.Point(Double, Double)
+- uid: awcsc.AnimateUtil.Point.#ctor*
+  name: Point
+  href: api/awcsc.AnimateUtil.Point.html#awcsc_AnimateUtil_Point__ctor_
+  commentId: Overload:awcsc.AnimateUtil.Point.#ctor
+  isSpec: "True"
+  fullName: awcsc.AnimateUtil.Point.Point
+  nameWithType: AnimateUtil.Point.Point
+- uid: awcsc.AnimateUtil.Point.x
+  name: x
+  href: api/awcsc.AnimateUtil.Point.html#awcsc_AnimateUtil_Point_x
+  commentId: F:awcsc.AnimateUtil.Point.x
+  fullName: awcsc.AnimateUtil.Point.x
+  nameWithType: AnimateUtil.Point.x
+- uid: awcsc.AnimateUtil.Point.y
+  name: y
+  href: api/awcsc.AnimateUtil.Point.html#awcsc_AnimateUtil_Point_y
+  commentId: F:awcsc.AnimateUtil.Point.y
+  fullName: awcsc.AnimateUtil.Point.y
+  nameWithType: AnimateUtil.Point.y
+- uid: awcsc.AnimateUtil.result
+  name: result
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil_result
+  commentId: P:awcsc.AnimateUtil.result
+  fullName: awcsc.AnimateUtil.result
+  nameWithType: AnimateUtil.result
+- uid: awcsc.AnimateUtil.result*
+  name: result
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil_result_
+  commentId: Overload:awcsc.AnimateUtil.result
+  isSpec: "True"
+  fullName: awcsc.AnimateUtil.result
+  nameWithType: AnimateUtil.result
+- uid: awcsc.AnimateUtil.xmax
+  name: xmax
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil_xmax
+  commentId: F:awcsc.AnimateUtil.xmax
+  fullName: awcsc.AnimateUtil.xmax
+  nameWithType: AnimateUtil.xmax
+- uid: awcsc.AnimateUtil.xmin
+  name: xmin
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil_xmin
+  commentId: F:awcsc.AnimateUtil.xmin
+  fullName: awcsc.AnimateUtil.xmin
+  nameWithType: AnimateUtil.xmin
+- uid: awcsc.AnimateUtil.ymax
+  name: ymax
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil_ymax
+  commentId: F:awcsc.AnimateUtil.ymax
+  fullName: awcsc.AnimateUtil.ymax
+  nameWithType: AnimateUtil.ymax
+- uid: awcsc.AnimateUtil.ymin
+  name: ymin
+  href: api/awcsc.AnimateUtil.html#awcsc_AnimateUtil_ymin
+  commentId: F:awcsc.AnimateUtil.ymin
+  fullName: awcsc.AnimateUtil.ymin
+  nameWithType: AnimateUtil.ymin
+- uid: awcsc.Calc
+  name: Calc
+  href: api/awcsc.Calc.html
+  commentId: T:awcsc.Calc
+  fullName: awcsc.Calc
+  nameWithType: Calc
+- uid: awcsc.Calc.calc(System.Double@,System.Double@)
+  name: calc(Double, Double)
+  href: api/awcsc.Calc.html#awcsc_Calc_calc_System_Double__System_Double__
+  commentId: M:awcsc.Calc.calc(System.Double@,System.Double@)
+  name.vb: calc(ByRef Double, ByRef Double)
+  fullName: awcsc.Calc.calc(System.Double, System.Double)
+  fullName.vb: awcsc.Calc.calc(ByRef System.Double, ByRef System.Double)
+  nameWithType: Calc.calc(Double, Double)
+  nameWithType.vb: Calc.calc(ByRef Double, ByRef Double)
+- uid: awcsc.Calc.calc*
+  name: calc
+  href: api/awcsc.Calc.html#awcsc_Calc_calc_
+  commentId: Overload:awcsc.Calc.calc
+  isSpec: "True"
+  fullName: awcsc.Calc.calc
+  nameWithType: Calc.calc
+- uid: awcsc.Calc.calc_Vdependent(System.Collections.Generic.List{System.Double}@)
+  name: calc_Vdependent(List<Double>)
+  href: api/awcsc.Calc.html#awcsc_Calc_calc_Vdependent_System_Collections_Generic_List_System_Double___
+  commentId: M:awcsc.Calc.calc_Vdependent(System.Collections.Generic.List{System.Double}@)
+  name.vb: calc_Vdependent(ByRef List(Of Double))
+  fullName: awcsc.Calc.calc_Vdependent(System.Collections.Generic.List<System.Double>)
+  fullName.vb: awcsc.Calc.calc_Vdependent(ByRef System.Collections.Generic.List(Of System.Double))
+  nameWithType: Calc.calc_Vdependent(List<Double>)
+  nameWithType.vb: Calc.calc_Vdependent(ByRef List(Of Double))
+- uid: awcsc.Calc.calc_Vdependent(System.Double[]@)
+  name: calc_Vdependent(Double[])
+  href: api/awcsc.Calc.html#awcsc_Calc_calc_Vdependent_System_Double____
+  commentId: M:awcsc.Calc.calc_Vdependent(System.Double[]@)
+  name.vb: calc_Vdependent(ByRef Double())
+  fullName: awcsc.Calc.calc_Vdependent(System.Double[])
+  fullName.vb: awcsc.Calc.calc_Vdependent(ByRef System.Double())
+  nameWithType: Calc.calc_Vdependent(Double[])
+  nameWithType.vb: Calc.calc_Vdependent(ByRef Double())
+- uid: awcsc.Calc.calc_Vdependent*
+  name: calc_Vdependent
+  href: api/awcsc.Calc.html#awcsc_Calc_calc_Vdependent_
+  commentId: Overload:awcsc.Calc.calc_Vdependent
+  isSpec: "True"
+  fullName: awcsc.Calc.calc_Vdependent
+  nameWithType: Calc.calc_Vdependent
+- uid: awcsc.Calc.calc_VdependentPyInterop(System.Double[]@)
+  name: calc_VdependentPyInterop(Double[])
+  href: api/awcsc.Calc.html#awcsc_Calc_calc_VdependentPyInterop_System_Double____
+  commentId: M:awcsc.Calc.calc_VdependentPyInterop(System.Double[]@)
+  name.vb: calc_VdependentPyInterop(ByRef Double())
+  fullName: awcsc.Calc.calc_VdependentPyInterop(System.Double[])
+  fullName.vb: awcsc.Calc.calc_VdependentPyInterop(ByRef System.Double())
+  nameWithType: Calc.calc_VdependentPyInterop(Double[])
+  nameWithType.vb: Calc.calc_VdependentPyInterop(ByRef Double())
+- uid: awcsc.Calc.calc_VdependentPyInterop*
+  name: calc_VdependentPyInterop
+  href: api/awcsc.Calc.html#awcsc_Calc_calc_VdependentPyInterop_
+  commentId: Overload:awcsc.Calc.calc_VdependentPyInterop
+  isSpec: "True"
+  fullName: awcsc.Calc.calc_VdependentPyInterop
+  nameWithType: Calc.calc_VdependentPyInterop
+- uid: awcsc.Calc.calcPyInterop(System.Double@,System.Double@)
+  name: calcPyInterop(Double, Double)
+  href: api/awcsc.Calc.html#awcsc_Calc_calcPyInterop_System_Double__System_Double__
+  commentId: M:awcsc.Calc.calcPyInterop(System.Double@,System.Double@)
+  name.vb: calcPyInterop(ByRef Double, ByRef Double)
+  fullName: awcsc.Calc.calcPyInterop(System.Double, System.Double)
+  fullName.vb: awcsc.Calc.calcPyInterop(ByRef System.Double, ByRef System.Double)
+  nameWithType: Calc.calcPyInterop(Double, Double)
+  nameWithType.vb: Calc.calcPyInterop(ByRef Double, ByRef Double)
+- uid: awcsc.Calc.calcPyInterop*
+  name: calcPyInterop
+  href: api/awcsc.Calc.html#awcsc_Calc_calcPyInterop_
+  commentId: Overload:awcsc.Calc.calcPyInterop
+  isSpec: "True"
+  fullName: awcsc.Calc.calcPyInterop
+  nameWithType: Calc.calcPyInterop
+- uid: awcsc.Calc.cond_endcalc(awcsc.State@,awcsc.State@)
+  name: cond_endcalc(State, State)
+  href: api/awcsc.Calc.html#awcsc_Calc_cond_endcalc_awcsc_State__awcsc_State__
+  commentId: M:awcsc.Calc.cond_endcalc(awcsc.State@,awcsc.State@)
+  name.vb: cond_endcalc(ByRef State, ByRef State)
+  fullName: awcsc.Calc.cond_endcalc(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.Calc.cond_endcalc(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: Calc.cond_endcalc(State, State)
+  nameWithType.vb: Calc.cond_endcalc(ByRef State, ByRef State)
+- uid: awcsc.Calc.cond_endcalc*
+  name: cond_endcalc
+  href: api/awcsc.Calc.html#awcsc_Calc_cond_endcalc_
+  commentId: Overload:awcsc.Calc.cond_endcalc
+  isSpec: "True"
+  fullName: awcsc.Calc.cond_endcalc
+  nameWithType: Calc.cond_endcalc
+- uid: awcsc.Calc.cycle(System.Double@,awcsc.State@)
+  name: cycle(Double, State)
+  href: api/awcsc.Calc.html#awcsc_Calc_cycle_System_Double__awcsc_State__
+  commentId: M:awcsc.Calc.cycle(System.Double@,awcsc.State@)
+  name.vb: cycle(ByRef Double, ByRef State)
+  fullName: awcsc.Calc.cycle(System.Double, awcsc.State)
+  fullName.vb: awcsc.Calc.cycle(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: Calc.cycle(Double, State)
+  nameWithType.vb: Calc.cycle(ByRef Double, ByRef State)
+- uid: awcsc.Calc.cycle*
+  name: cycle
+  href: api/awcsc.Calc.html#awcsc_Calc_cycle_
+  commentId: Overload:awcsc.Calc.cycle
+  isSpec: "True"
+  fullName: awcsc.Calc.cycle
+  nameWithType: Calc.cycle
+- uid: awcsc.Calc.fit_param
+  name: fit_param
+  href: api/awcsc.Calc.html#awcsc_Calc_fit_param
+  commentId: P:awcsc.Calc.fit_param
+  fullName: awcsc.Calc.fit_param
+  nameWithType: Calc.fit_param
+- uid: awcsc.Calc.fit_param*
+  name: fit_param
+  href: api/awcsc.Calc.html#awcsc_Calc_fit_param_
+  commentId: Overload:awcsc.Calc.fit_param
+  isSpec: "True"
+  fullName: awcsc.Calc.fit_param
+  nameWithType: Calc.fit_param
+- uid: awcsc.Calc.fit_param_
+  name: fit_param_
+  href: api/awcsc.Calc.html#awcsc_Calc_fit_param_
+  commentId: F:awcsc.Calc.fit_param_
+  fullName: awcsc.Calc.fit_param_
+  nameWithType: Calc.fit_param_
+- uid: awcsc.Calc.getRt(System.Double,awcsc.State@)
+  name: getRt(Double, State)
+  href: api/awcsc.Calc.html#awcsc_Calc_getRt_System_Double_awcsc_State__
+  commentId: M:awcsc.Calc.getRt(System.Double,awcsc.State@)
+  name.vb: getRt(Double, ByRef State)
+  fullName: awcsc.Calc.getRt(System.Double, awcsc.State)
+  fullName.vb: awcsc.Calc.getRt(System.Double, ByRef awcsc.State)
+  nameWithType: Calc.getRt(Double, State)
+  nameWithType.vb: Calc.getRt(Double, ByRef State)
+- uid: awcsc.Calc.getRt*
+  name: getRt
+  href: api/awcsc.Calc.html#awcsc_Calc_getRt_
+  commentId: Overload:awcsc.Calc.getRt
+  isSpec: "True"
+  fullName: awcsc.Calc.getRt
+  nameWithType: Calc.getRt
+- uid: awcsc.Calc.init_State(System.Double@)
+  name: init_State(Double)
+  href: api/awcsc.Calc.html#awcsc_Calc_init_State_System_Double__
+  commentId: M:awcsc.Calc.init_State(System.Double@)
+  name.vb: init_State(ByRef Double)
+  fullName: awcsc.Calc.init_State(System.Double)
+  fullName.vb: awcsc.Calc.init_State(ByRef System.Double)
+  nameWithType: Calc.init_State(Double)
+  nameWithType.vb: Calc.init_State(ByRef Double)
+- uid: awcsc.Calc.init_State*
+  name: init_State
+  href: api/awcsc.Calc.html#awcsc_Calc_init_State_
+  commentId: Overload:awcsc.Calc.init_State
+  isSpec: "True"
+  fullName: awcsc.Calc.init_State
+  nameWithType: Calc.init_State
+- uid: awcsc.Calc.P
+  name: P
+  href: api/awcsc.Calc.html#awcsc_Calc_P
+  commentId: P:awcsc.Calc.P
+  fullName: awcsc.Calc.P
+  nameWithType: Calc.P
+- uid: awcsc.Calc.P*
+  name: P
+  href: api/awcsc.Calc.html#awcsc_Calc_P_
+  commentId: Overload:awcsc.Calc.P
+  isSpec: "True"
+  fullName: awcsc.Calc.P
+  nameWithType: Calc.P
+- uid: awcsc.Calc.P_
+  name: P_
+  href: api/awcsc.Calc.html#awcsc_Calc_P_
+  commentId: F:awcsc.Calc.P_
+  fullName: awcsc.Calc.P_
+  nameWithType: Calc.P_
+- uid: awcsc.Calc.Rc
+  name: Rc
+  href: api/awcsc.Calc.html#awcsc_Calc_Rc
+  commentId: P:awcsc.Calc.Rc
+  fullName: awcsc.Calc.Rc
+  nameWithType: Calc.Rc
+- uid: awcsc.Calc.Rc*
+  name: Rc
+  href: api/awcsc.Calc.html#awcsc_Calc_Rc_
+  commentId: Overload:awcsc.Calc.Rc
+  isSpec: "True"
+  fullName: awcsc.Calc.Rc
+  nameWithType: Calc.Rc
+- uid: awcsc.Calc.Rc_
+  name: Rc_
+  href: api/awcsc.Calc.html#awcsc_Calc_Rc_
+  commentId: F:awcsc.Calc.Rc_
+  fullName: awcsc.Calc.Rc_
+  nameWithType: Calc.Rc_
+- uid: awcsc.Calc.Swap*
+  name: Swap
+  href: api/awcsc.Calc.html#awcsc_Calc_Swap_
+  commentId: Overload:awcsc.Calc.Swap
+  isSpec: "True"
+  fullName: awcsc.Calc.Swap
+  nameWithType: Calc.Swap
+- uid: awcsc.Calc.Swap``1(``0@,``0@)
+  name: Swap<T>(ref T, ref T)
+  href: api/awcsc.Calc.html#awcsc_Calc_Swap__1___0____0__
+  commentId: M:awcsc.Calc.Swap``1(``0@,``0@)
+  name.vb: Swap(Of T)(ByRef T, ByRef T)
+  fullName: awcsc.Calc.Swap<T>(ref T, ref T)
+  fullName.vb: awcsc.Calc.Swap(Of T)(ByRef T, ByRef T)
+  nameWithType: Calc.Swap<T>(ref T, ref T)
+  nameWithType.vb: Calc.Swap(Of T)(ByRef T, ByRef T)
+- uid: awcsc.Calc.T
+  name: T
+  href: api/awcsc.Calc.html#awcsc_Calc_T
+  commentId: P:awcsc.Calc.T
+  fullName: awcsc.Calc.T
+  nameWithType: Calc.T
+- uid: awcsc.Calc.T*
+  name: T
+  href: api/awcsc.Calc.html#awcsc_Calc_T_
+  commentId: Overload:awcsc.Calc.T
+  isSpec: "True"
+  fullName: awcsc.Calc.T
+  nameWithType: Calc.T
+- uid: awcsc.Calc.T_
+  name: T_
+  href: api/awcsc.Calc.html#awcsc_Calc_T_
+  commentId: F:awcsc.Calc.T_
+  fullName: awcsc.Calc.T_
+  nameWithType: Calc.T_
+- uid: awcsc.Calc.V0
+  name: V0
+  href: api/awcsc.Calc.html#awcsc_Calc_V0
+  commentId: P:awcsc.Calc.V0
+  fullName: awcsc.Calc.V0
+  nameWithType: Calc.V0
+- uid: awcsc.Calc.V0*
+  name: V0
+  href: api/awcsc.Calc.html#awcsc_Calc_V0_
+  commentId: Overload:awcsc.Calc.V0
+  isSpec: "True"
+  fullName: awcsc.Calc.V0
+  nameWithType: Calc.V0
+- uid: awcsc.Calc.V0_
+  name: V0_
+  href: api/awcsc.Calc.html#awcsc_Calc_V0_
+  commentId: F:awcsc.Calc.V0_
+  fullName: awcsc.Calc.V0_
+  nameWithType: Calc.V0_
+- uid: awcsc.CalcAW
+  name: CalcAW
+  href: api/awcsc.CalcAW.html
+  commentId: T:awcsc.CalcAW
+  fullName: awcsc.CalcAW
+  nameWithType: CalcAW
+- uid: awcsc.CalcAW.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name: CalcAW(Penetrator, Target, Double, Double[])
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW__ctor_awcsc_Penetrator__awcsc_Target__System_Double_System_Double___
+  commentId: M:awcsc.CalcAW.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name.vb: CalcAW(ByRef Penetrator, ByRef Target, Double, Double())
+  fullName: awcsc.CalcAW.CalcAW(awcsc.Penetrator, awcsc.Target, System.Double, System.Double[])
+  fullName.vb: awcsc.CalcAW.CalcAW(ByRef awcsc.Penetrator, ByRef awcsc.Target, System.Double, System.Double())
+  nameWithType: CalcAW.CalcAW(Penetrator, Target, Double, Double[])
+  nameWithType.vb: CalcAW.CalcAW(ByRef Penetrator, ByRef Target, Double, Double())
+- uid: awcsc.CalcAW.#ctor*
+  name: CalcAW
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW__ctor_
+  commentId: Overload:awcsc.CalcAW.#ctor
+  isSpec: "True"
+  fullName: awcsc.CalcAW.CalcAW
+  nameWithType: CalcAW.CalcAW
+- uid: awcsc.CalcAW.calc_alpha(System.Double@,awcsc.State@)
+  name: calc_alpha(Double, State)
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_calc_alpha_System_Double__awcsc_State__
+  commentId: M:awcsc.CalcAW.calc_alpha(System.Double@,awcsc.State@)
+  name.vb: calc_alpha(ByRef Double, ByRef State)
+  fullName: awcsc.CalcAW.calc_alpha(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcAW.calc_alpha(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: CalcAW.calc_alpha(Double, State)
+  nameWithType.vb: CalcAW.calc_alpha(ByRef Double, ByRef State)
+- uid: awcsc.CalcAW.calc_alpha*
+  name: calc_alpha
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_calc_alpha_
+  commentId: Overload:awcsc.CalcAW.calc_alpha
+  isSpec: "True"
+  fullName: awcsc.CalcAW.calc_alpha
+  nameWithType: CalcAW.calc_alpha
+- uid: awcsc.CalcAW.cond_endcalc(awcsc.State@,awcsc.State@)
+  name: cond_endcalc(State, State)
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_cond_endcalc_awcsc_State__awcsc_State__
+  commentId: M:awcsc.CalcAW.cond_endcalc(awcsc.State@,awcsc.State@)
+  name.vb: cond_endcalc(ByRef State, ByRef State)
+  fullName: awcsc.CalcAW.cond_endcalc(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.CalcAW.cond_endcalc(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: CalcAW.cond_endcalc(State, State)
+  nameWithType.vb: CalcAW.cond_endcalc(ByRef State, ByRef State)
+- uid: awcsc.CalcAW.cond_endcalc*
+  name: cond_endcalc
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_cond_endcalc_
+  commentId: Overload:awcsc.CalcAW.cond_endcalc
+  isSpec: "True"
+  fullName: awcsc.CalcAW.cond_endcalc
+  nameWithType: CalcAW.cond_endcalc
+- uid: awcsc.CalcAW.cycle(System.Double@,awcsc.State@)
+  name: cycle(Double, State)
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_cycle_System_Double__awcsc_State__
+  commentId: M:awcsc.CalcAW.cycle(System.Double@,awcsc.State@)
+  name.vb: cycle(ByRef Double, ByRef State)
+  fullName: awcsc.CalcAW.cycle(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcAW.cycle(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: CalcAW.cycle(Double, State)
+  nameWithType.vb: CalcAW.cycle(ByRef Double, ByRef State)
+- uid: awcsc.CalcAW.cycle*
+  name: cycle
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_cycle_
+  commentId: Overload:awcsc.CalcAW.cycle
+  isSpec: "True"
+  fullName: awcsc.CalcAW.cycle
+  nameWithType: CalcAW.cycle
+- uid: awcsc.CalcAW.Dc
+  name: Dc
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_Dc
+  commentId: P:awcsc.CalcAW.Dc
+  fullName: awcsc.CalcAW.Dc
+  nameWithType: CalcAW.Dc
+- uid: awcsc.CalcAW.Dc*
+  name: Dc
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_Dc_
+  commentId: Overload:awcsc.CalcAW.Dc
+  isSpec: "True"
+  fullName: awcsc.CalcAW.Dc
+  nameWithType: CalcAW.Dc
+- uid: awcsc.CalcAW.getRt(System.Double,awcsc.State@)
+  name: getRt(Double, State)
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_getRt_System_Double_awcsc_State__
+  commentId: M:awcsc.CalcAW.getRt(System.Double,awcsc.State@)
+  name.vb: getRt(Double, ByRef State)
+  fullName: awcsc.CalcAW.getRt(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcAW.getRt(System.Double, ByRef awcsc.State)
+  nameWithType: CalcAW.getRt(Double, State)
+  nameWithType.vb: CalcAW.getRt(Double, ByRef State)
+- uid: awcsc.CalcAW.getRt*
+  name: getRt
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_getRt_
+  commentId: Overload:awcsc.CalcAW.getRt
+  isSpec: "True"
+  fullName: awcsc.CalcAW.getRt
+  nameWithType: CalcAW.getRt
+- uid: awcsc.CalcAW.init_State(System.Double@)
+  name: init_State(Double)
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_init_State_System_Double__
+  commentId: M:awcsc.CalcAW.init_State(System.Double@)
+  name.vb: init_State(ByRef Double)
+  fullName: awcsc.CalcAW.init_State(System.Double)
+  fullName.vb: awcsc.CalcAW.init_State(ByRef System.Double)
+  nameWithType: CalcAW.init_State(Double)
+  nameWithType.vb: CalcAW.init_State(ByRef Double)
+- uid: awcsc.CalcAW.init_State*
+  name: init_State
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_init_State_
+  commentId: Overload:awcsc.CalcAW.init_State
+  isSpec: "True"
+  fullName: awcsc.CalcAW.init_State
+  nameWithType: CalcAW.init_State
+- uid: awcsc.CalcAW.P
+  name: P
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_P
+  commentId: P:awcsc.CalcAW.P
+  fullName: awcsc.CalcAW.P
+  nameWithType: CalcAW.P
+- uid: awcsc.CalcAW.P*
+  name: P
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_P_
+  commentId: Overload:awcsc.CalcAW.P
+  isSpec: "True"
+  fullName: awcsc.CalcAW.P
+  nameWithType: CalcAW.P
+- uid: awcsc.CalcAW.T
+  name: T
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_T
+  commentId: P:awcsc.CalcAW.T
+  fullName: awcsc.CalcAW.T
+  nameWithType: CalcAW.T
+- uid: awcsc.CalcAW.T*
+  name: T
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_T_
+  commentId: Overload:awcsc.CalcAW.T
+  isSpec: "True"
+  fullName: awcsc.CalcAW.T
+  nameWithType: CalcAW.T
+- uid: awcsc.CalcAW.V0
+  name: V0
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_V0
+  commentId: P:awcsc.CalcAW.V0
+  fullName: awcsc.CalcAW.V0
+  nameWithType: CalcAW.V0
+- uid: awcsc.CalcAW.V0*
+  name: V0
+  href: api/awcsc.CalcAW.html#awcsc_CalcAW_V0_
+  commentId: Overload:awcsc.CalcAW.V0
+  isSpec: "True"
+  fullName: awcsc.CalcAW.V0
+  nameWithType: CalcAW.V0
+- uid: awcsc.CalcAWHVLV
+  name: CalcAWHVLV
+  href: api/awcsc.CalcAWHVLV.html
+  commentId: T:awcsc.CalcAWHVLV
+  fullName: awcsc.CalcAWHVLV
+  nameWithType: CalcAWHVLV
+- uid: awcsc.CalcAWHVLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name: CalcAWHVLV(Penetrator, Target, Double, Double[])
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV__ctor_awcsc_Penetrator__awcsc_Target__System_Double_System_Double___
+  commentId: M:awcsc.CalcAWHVLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name.vb: CalcAWHVLV(ByRef Penetrator, ByRef Target, Double, Double())
+  fullName: awcsc.CalcAWHVLV.CalcAWHVLV(awcsc.Penetrator, awcsc.Target, System.Double, System.Double[])
+  fullName.vb: awcsc.CalcAWHVLV.CalcAWHVLV(ByRef awcsc.Penetrator, ByRef awcsc.Target, System.Double, System.Double())
+  nameWithType: CalcAWHVLV.CalcAWHVLV(Penetrator, Target, Double, Double[])
+  nameWithType.vb: CalcAWHVLV.CalcAWHVLV(ByRef Penetrator, ByRef Target, Double, Double())
+- uid: awcsc.CalcAWHVLV.#ctor*
+  name: CalcAWHVLV
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV__ctor_
+  commentId: Overload:awcsc.CalcAWHVLV.#ctor
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.CalcAWHVLV
+  nameWithType: CalcAWHVLV.CalcAWHVLV
+- uid: awcsc.CalcAWHVLV.calc(System.Double@,System.Double@)
+  name: calc(Double, Double)
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_calc_System_Double__System_Double__
+  commentId: M:awcsc.CalcAWHVLV.calc(System.Double@,System.Double@)
+  name.vb: calc(ByRef Double, ByRef Double)
+  fullName: awcsc.CalcAWHVLV.calc(System.Double, System.Double)
+  fullName.vb: awcsc.CalcAWHVLV.calc(ByRef System.Double, ByRef System.Double)
+  nameWithType: CalcAWHVLV.calc(Double, Double)
+  nameWithType.vb: CalcAWHVLV.calc(ByRef Double, ByRef Double)
+- uid: awcsc.CalcAWHVLV.calc*
+  name: calc
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_calc_
+  commentId: Overload:awcsc.CalcAWHVLV.calc
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.calc
+  nameWithType: CalcAWHVLV.calc
+- uid: awcsc.CalcAWHVLV.calc_Vdependent(System.Collections.Generic.List{System.Double}@)
+  name: calc_Vdependent(List<Double>)
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_calc_Vdependent_System_Collections_Generic_List_System_Double___
+  commentId: M:awcsc.CalcAWHVLV.calc_Vdependent(System.Collections.Generic.List{System.Double}@)
+  name.vb: calc_Vdependent(ByRef List(Of Double))
+  fullName: awcsc.CalcAWHVLV.calc_Vdependent(System.Collections.Generic.List<System.Double>)
+  fullName.vb: awcsc.CalcAWHVLV.calc_Vdependent(ByRef System.Collections.Generic.List(Of System.Double))
+  nameWithType: CalcAWHVLV.calc_Vdependent(List<Double>)
+  nameWithType.vb: CalcAWHVLV.calc_Vdependent(ByRef List(Of Double))
+- uid: awcsc.CalcAWHVLV.calc_Vdependent*
+  name: calc_Vdependent
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_calc_Vdependent_
+  commentId: Overload:awcsc.CalcAWHVLV.calc_Vdependent
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.calc_Vdependent
+  nameWithType: CalcAWHVLV.calc_Vdependent
+- uid: awcsc.CalcAWHVLV.cond_endcalc(awcsc.State@,awcsc.State@)
+  name: cond_endcalc(State, State)
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_cond_endcalc_awcsc_State__awcsc_State__
+  commentId: M:awcsc.CalcAWHVLV.cond_endcalc(awcsc.State@,awcsc.State@)
+  name.vb: cond_endcalc(ByRef State, ByRef State)
+  fullName: awcsc.CalcAWHVLV.cond_endcalc(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.CalcAWHVLV.cond_endcalc(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: CalcAWHVLV.cond_endcalc(State, State)
+  nameWithType.vb: CalcAWHVLV.cond_endcalc(ByRef State, ByRef State)
+- uid: awcsc.CalcAWHVLV.cond_endcalc*
+  name: cond_endcalc
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_cond_endcalc_
+  commentId: Overload:awcsc.CalcAWHVLV.cond_endcalc
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.cond_endcalc
+  nameWithType: CalcAWHVLV.cond_endcalc
+- uid: awcsc.CalcAWHVLV.cycle(System.Double@,awcsc.State@)
+  name: cycle(Double, State)
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_cycle_System_Double__awcsc_State__
+  commentId: M:awcsc.CalcAWHVLV.cycle(System.Double@,awcsc.State@)
+  name.vb: cycle(ByRef Double, ByRef State)
+  fullName: awcsc.CalcAWHVLV.cycle(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcAWHVLV.cycle(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: CalcAWHVLV.cycle(Double, State)
+  nameWithType.vb: CalcAWHVLV.cycle(ByRef Double, ByRef State)
+- uid: awcsc.CalcAWHVLV.cycle*
+  name: cycle
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_cycle_
+  commentId: Overload:awcsc.CalcAWHVLV.cycle
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.cycle
+  nameWithType: CalcAWHVLV.cycle
+- uid: awcsc.CalcAWHVLV.Dc
+  name: Dc
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_Dc
+  commentId: P:awcsc.CalcAWHVLV.Dc
+  fullName: awcsc.CalcAWHVLV.Dc
+  nameWithType: CalcAWHVLV.Dc
+- uid: awcsc.CalcAWHVLV.Dc*
+  name: Dc
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_Dc_
+  commentId: Overload:awcsc.CalcAWHVLV.Dc
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.Dc
+  nameWithType: CalcAWHVLV.Dc
+- uid: awcsc.CalcAWHVLV.getRt(System.Double,awcsc.State@)
+  name: getRt(Double, State)
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_getRt_System_Double_awcsc_State__
+  commentId: M:awcsc.CalcAWHVLV.getRt(System.Double,awcsc.State@)
+  name.vb: getRt(Double, ByRef State)
+  fullName: awcsc.CalcAWHVLV.getRt(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcAWHVLV.getRt(System.Double, ByRef awcsc.State)
+  nameWithType: CalcAWHVLV.getRt(Double, State)
+  nameWithType.vb: CalcAWHVLV.getRt(Double, ByRef State)
+- uid: awcsc.CalcAWHVLV.getRt*
+  name: getRt
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_getRt_
+  commentId: Overload:awcsc.CalcAWHVLV.getRt
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.getRt
+  nameWithType: CalcAWHVLV.getRt
+- uid: awcsc.CalcAWHVLV.init_State(System.Double@)
+  name: init_State(Double)
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_init_State_System_Double__
+  commentId: M:awcsc.CalcAWHVLV.init_State(System.Double@)
+  name.vb: init_State(ByRef Double)
+  fullName: awcsc.CalcAWHVLV.init_State(System.Double)
+  fullName.vb: awcsc.CalcAWHVLV.init_State(ByRef System.Double)
+  nameWithType: CalcAWHVLV.init_State(Double)
+  nameWithType.vb: CalcAWHVLV.init_State(ByRef Double)
+- uid: awcsc.CalcAWHVLV.init_State*
+  name: init_State
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_init_State_
+  commentId: Overload:awcsc.CalcAWHVLV.init_State
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.init_State
+  nameWithType: CalcAWHVLV.init_State
+- uid: awcsc.CalcAWHVLV.P
+  name: P
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_P
+  commentId: P:awcsc.CalcAWHVLV.P
+  fullName: awcsc.CalcAWHVLV.P
+  nameWithType: CalcAWHVLV.P
+- uid: awcsc.CalcAWHVLV.P*
+  name: P
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_P_
+  commentId: Overload:awcsc.CalcAWHVLV.P
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.P
+  nameWithType: CalcAWHVLV.P
+- uid: awcsc.CalcAWHVLV.T
+  name: T
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_T
+  commentId: P:awcsc.CalcAWHVLV.T
+  fullName: awcsc.CalcAWHVLV.T
+  nameWithType: CalcAWHVLV.T
+- uid: awcsc.CalcAWHVLV.T*
+  name: T
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_T_
+  commentId: Overload:awcsc.CalcAWHVLV.T
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.T
+  nameWithType: CalcAWHVLV.T
+- uid: awcsc.CalcAWHVLV.V0
+  name: V0
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_V0
+  commentId: P:awcsc.CalcAWHVLV.V0
+  fullName: awcsc.CalcAWHVLV.V0
+  nameWithType: CalcAWHVLV.V0
+- uid: awcsc.CalcAWHVLV.V0*
+  name: V0
+  href: api/awcsc.CalcAWHVLV.html#awcsc_CalcAWHVLV_V0_
+  commentId: Overload:awcsc.CalcAWHVLV.V0
+  isSpec: "True"
+  fullName: awcsc.CalcAWHVLV.V0
+  nameWithType: CalcAWHVLV.V0
+- uid: awcsc.CalcAWLV
+  name: CalcAWLV
+  href: api/awcsc.CalcAWLV.html
+  commentId: T:awcsc.CalcAWLV
+  fullName: awcsc.CalcAWLV
+  nameWithType: CalcAWLV
+- uid: awcsc.CalcAWLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name: CalcAWLV(Penetrator, Target, Double, Double[])
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV__ctor_awcsc_Penetrator__awcsc_Target__System_Double_System_Double___
+  commentId: M:awcsc.CalcAWLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name.vb: CalcAWLV(ByRef Penetrator, ByRef Target, Double, Double())
+  fullName: awcsc.CalcAWLV.CalcAWLV(awcsc.Penetrator, awcsc.Target, System.Double, System.Double[])
+  fullName.vb: awcsc.CalcAWLV.CalcAWLV(ByRef awcsc.Penetrator, ByRef awcsc.Target, System.Double, System.Double())
+  nameWithType: CalcAWLV.CalcAWLV(Penetrator, Target, Double, Double[])
+  nameWithType.vb: CalcAWLV.CalcAWLV(ByRef Penetrator, ByRef Target, Double, Double())
+- uid: awcsc.CalcAWLV.#ctor*
+  name: CalcAWLV
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV__ctor_
+  commentId: Overload:awcsc.CalcAWLV.#ctor
+  isSpec: "True"
+  fullName: awcsc.CalcAWLV.CalcAWLV
+  nameWithType: CalcAWLV.CalcAWLV
+- uid: awcsc.CalcAWLV.cond_endcalc(awcsc.State@,awcsc.State@)
+  name: cond_endcalc(State, State)
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_cond_endcalc_awcsc_State__awcsc_State__
+  commentId: M:awcsc.CalcAWLV.cond_endcalc(awcsc.State@,awcsc.State@)
+  name.vb: cond_endcalc(ByRef State, ByRef State)
+  fullName: awcsc.CalcAWLV.cond_endcalc(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.CalcAWLV.cond_endcalc(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: CalcAWLV.cond_endcalc(State, State)
+  nameWithType.vb: CalcAWLV.cond_endcalc(ByRef State, ByRef State)
+- uid: awcsc.CalcAWLV.cond_endcalc*
+  name: cond_endcalc
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_cond_endcalc_
+  commentId: Overload:awcsc.CalcAWLV.cond_endcalc
+  isSpec: "True"
+  fullName: awcsc.CalcAWLV.cond_endcalc
+  nameWithType: CalcAWLV.cond_endcalc
+- uid: awcsc.CalcAWLV.cycle(System.Double@,awcsc.State@)
+  name: cycle(Double, State)
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_cycle_System_Double__awcsc_State__
+  commentId: M:awcsc.CalcAWLV.cycle(System.Double@,awcsc.State@)
+  name.vb: cycle(ByRef Double, ByRef State)
+  fullName: awcsc.CalcAWLV.cycle(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcAWLV.cycle(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: CalcAWLV.cycle(Double, State)
+  nameWithType.vb: CalcAWLV.cycle(ByRef Double, ByRef State)
+- uid: awcsc.CalcAWLV.cycle*
+  name: cycle
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_cycle_
+  commentId: Overload:awcsc.CalcAWLV.cycle
+  isSpec: "True"
+  fullName: awcsc.CalcAWLV.cycle
+  nameWithType: CalcAWLV.cycle
+- uid: awcsc.CalcAWLV.getRt(System.Double,awcsc.State@)
+  name: getRt(Double, State)
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_getRt_System_Double_awcsc_State__
+  commentId: M:awcsc.CalcAWLV.getRt(System.Double,awcsc.State@)
+  name.vb: getRt(Double, ByRef State)
+  fullName: awcsc.CalcAWLV.getRt(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcAWLV.getRt(System.Double, ByRef awcsc.State)
+  nameWithType: CalcAWLV.getRt(Double, State)
+  nameWithType.vb: CalcAWLV.getRt(Double, ByRef State)
+- uid: awcsc.CalcAWLV.getRt*
+  name: getRt
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_getRt_
+  commentId: Overload:awcsc.CalcAWLV.getRt
+  isSpec: "True"
+  fullName: awcsc.CalcAWLV.getRt
+  nameWithType: CalcAWLV.getRt
+- uid: awcsc.CalcAWLV.init_State(System.Double@)
+  name: init_State(Double)
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_init_State_System_Double__
+  commentId: M:awcsc.CalcAWLV.init_State(System.Double@)
+  name.vb: init_State(ByRef Double)
+  fullName: awcsc.CalcAWLV.init_State(System.Double)
+  fullName.vb: awcsc.CalcAWLV.init_State(ByRef System.Double)
+  nameWithType: CalcAWLV.init_State(Double)
+  nameWithType.vb: CalcAWLV.init_State(ByRef Double)
+- uid: awcsc.CalcAWLV.init_State*
+  name: init_State
+  href: api/awcsc.CalcAWLV.html#awcsc_CalcAWLV_init_State_
+  commentId: Overload:awcsc.CalcAWLV.init_State
+  isSpec: "True"
+  fullName: awcsc.CalcAWLV.init_State
+  nameWithType: CalcAWLV.init_State
+- uid: awcsc.CalcForrLV
+  name: CalcForrLV
+  href: api/awcsc.CalcForrLV.html
+  commentId: T:awcsc.CalcForrLV
+  fullName: awcsc.CalcForrLV
+  nameWithType: CalcForrLV
+- uid: awcsc.CalcForrLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[],System.Double,System.Double)
+  name: CalcForrLV(Penetrator, Target, Double, Double[], Double, Double)
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV__ctor_awcsc_Penetrator__awcsc_Target__System_Double_System_Double___System_Double_System_Double_
+  commentId: M:awcsc.CalcForrLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[],System.Double,System.Double)
+  name.vb: CalcForrLV(ByRef Penetrator, ByRef Target, Double, Double(), Double, Double)
+  fullName: awcsc.CalcForrLV.CalcForrLV(awcsc.Penetrator, awcsc.Target, System.Double, System.Double[], System.Double, System.Double)
+  fullName.vb: awcsc.CalcForrLV.CalcForrLV(ByRef awcsc.Penetrator, ByRef awcsc.Target, System.Double, System.Double(), System.Double, System.Double)
+  nameWithType: CalcForrLV.CalcForrLV(Penetrator, Target, Double, Double[], Double, Double)
+  nameWithType.vb: CalcForrLV.CalcForrLV(ByRef Penetrator, ByRef Target, Double, Double(), Double, Double)
+- uid: awcsc.CalcForrLV.#ctor*
+  name: CalcForrLV
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV__ctor_
+  commentId: Overload:awcsc.CalcForrLV.#ctor
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.CalcForrLV
+  nameWithType: CalcForrLV.CalcForrLV
+- uid: awcsc.CalcForrLV.cond_endcalc(awcsc.State@,awcsc.State@)
+  name: cond_endcalc(State, State)
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_cond_endcalc_awcsc_State__awcsc_State__
+  commentId: M:awcsc.CalcForrLV.cond_endcalc(awcsc.State@,awcsc.State@)
+  name.vb: cond_endcalc(ByRef State, ByRef State)
+  fullName: awcsc.CalcForrLV.cond_endcalc(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.CalcForrLV.cond_endcalc(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: CalcForrLV.cond_endcalc(State, State)
+  nameWithType.vb: CalcForrLV.cond_endcalc(ByRef State, ByRef State)
+- uid: awcsc.CalcForrLV.cond_endcalc*
+  name: cond_endcalc
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_cond_endcalc_
+  commentId: Overload:awcsc.CalcForrLV.cond_endcalc
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.cond_endcalc
+  nameWithType: CalcForrLV.cond_endcalc
+- uid: awcsc.CalcForrLV.cycle(System.Double@,awcsc.State@)
+  name: cycle(Double, State)
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_cycle_System_Double__awcsc_State__
+  commentId: M:awcsc.CalcForrLV.cycle(System.Double@,awcsc.State@)
+  name.vb: cycle(ByRef Double, ByRef State)
+  fullName: awcsc.CalcForrLV.cycle(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcForrLV.cycle(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: CalcForrLV.cycle(Double, State)
+  nameWithType.vb: CalcForrLV.cycle(ByRef Double, ByRef State)
+- uid: awcsc.CalcForrLV.cycle*
+  name: cycle
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_cycle_
+  commentId: Overload:awcsc.CalcForrLV.cycle
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.cycle
+  nameWithType: CalcForrLV.cycle
+- uid: awcsc.CalcForrLV.Dc
+  name: Dc
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_Dc
+  commentId: P:awcsc.CalcForrLV.Dc
+  fullName: awcsc.CalcForrLV.Dc
+  nameWithType: CalcForrLV.Dc
+- uid: awcsc.CalcForrLV.Dc*
+  name: Dc
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_Dc_
+  commentId: Overload:awcsc.CalcForrLV.Dc
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.Dc
+  nameWithType: CalcForrLV.Dc
+- uid: awcsc.CalcForrLV.getRt(System.Double,awcsc.State@)
+  name: getRt(Double, State)
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_getRt_System_Double_awcsc_State__
+  commentId: M:awcsc.CalcForrLV.getRt(System.Double,awcsc.State@)
+  name.vb: getRt(Double, ByRef State)
+  fullName: awcsc.CalcForrLV.getRt(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcForrLV.getRt(System.Double, ByRef awcsc.State)
+  nameWithType: CalcForrLV.getRt(Double, State)
+  nameWithType.vb: CalcForrLV.getRt(Double, ByRef State)
+- uid: awcsc.CalcForrLV.getRt*
+  name: getRt
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_getRt_
+  commentId: Overload:awcsc.CalcForrLV.getRt
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.getRt
+  nameWithType: CalcForrLV.getRt
+- uid: awcsc.CalcForrLV.init_State(System.Double@)
+  name: init_State(Double)
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_init_State_System_Double__
+  commentId: M:awcsc.CalcForrLV.init_State(System.Double@)
+  name.vb: init_State(ByRef Double)
+  fullName: awcsc.CalcForrLV.init_State(System.Double)
+  fullName.vb: awcsc.CalcForrLV.init_State(ByRef System.Double)
+  nameWithType: CalcForrLV.init_State(Double)
+  nameWithType.vb: CalcForrLV.init_State(ByRef Double)
+- uid: awcsc.CalcForrLV.init_State*
+  name: init_State
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_init_State_
+  commentId: Overload:awcsc.CalcForrLV.init_State
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.init_State
+  nameWithType: CalcForrLV.init_State
+- uid: awcsc.CalcForrLV.K1
+  name: K1
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_K1
+  commentId: P:awcsc.CalcForrLV.K1
+  fullName: awcsc.CalcForrLV.K1
+  nameWithType: CalcForrLV.K1
+- uid: awcsc.CalcForrLV.K1*
+  name: K1
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_K1_
+  commentId: Overload:awcsc.CalcForrLV.K1
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.K1
+  nameWithType: CalcForrLV.K1
+- uid: awcsc.CalcForrLV.K2
+  name: K2
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_K2
+  commentId: P:awcsc.CalcForrLV.K2
+  fullName: awcsc.CalcForrLV.K2
+  nameWithType: CalcForrLV.K2
+- uid: awcsc.CalcForrLV.K2*
+  name: K2
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_K2_
+  commentId: Overload:awcsc.CalcForrLV.K2
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.K2
+  nameWithType: CalcForrLV.K2
+- uid: awcsc.CalcForrLV.P
+  name: P
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_P
+  commentId: P:awcsc.CalcForrLV.P
+  fullName: awcsc.CalcForrLV.P
+  nameWithType: CalcForrLV.P
+- uid: awcsc.CalcForrLV.P*
+  name: P
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_P_
+  commentId: Overload:awcsc.CalcForrLV.P
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.P
+  nameWithType: CalcForrLV.P
+- uid: awcsc.CalcForrLV.T
+  name: T
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_T
+  commentId: P:awcsc.CalcForrLV.T
+  fullName: awcsc.CalcForrLV.T
+  nameWithType: CalcForrLV.T
+- uid: awcsc.CalcForrLV.T*
+  name: T
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_T_
+  commentId: Overload:awcsc.CalcForrLV.T
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.T
+  nameWithType: CalcForrLV.T
+- uid: awcsc.CalcForrLV.V0
+  name: V0
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_V0
+  commentId: P:awcsc.CalcForrLV.V0
+  fullName: awcsc.CalcForrLV.V0
+  nameWithType: CalcForrLV.V0
+- uid: awcsc.CalcForrLV.V0*
+  name: V0
+  href: api/awcsc.CalcForrLV.html#awcsc_CalcForrLV_V0_
+  commentId: Overload:awcsc.CalcForrLV.V0
+  isSpec: "True"
+  fullName: awcsc.CalcForrLV.V0
+  nameWithType: CalcForrLV.V0
+- uid: awcsc.CalcForrLVold
+  name: CalcForrLVold
+  href: api/awcsc.CalcForrLVold.html
+  commentId: T:awcsc.CalcForrLVold
+  fullName: awcsc.CalcForrLVold
+  nameWithType: CalcForrLVold
+- uid: awcsc.CalcForrLVold.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name: CalcForrLVold(Penetrator, Target, Double, Double[])
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold__ctor_awcsc_Penetrator__awcsc_Target__System_Double_System_Double___
+  commentId: M:awcsc.CalcForrLVold.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name.vb: CalcForrLVold(ByRef Penetrator, ByRef Target, Double, Double())
+  fullName: awcsc.CalcForrLVold.CalcForrLVold(awcsc.Penetrator, awcsc.Target, System.Double, System.Double[])
+  fullName.vb: awcsc.CalcForrLVold.CalcForrLVold(ByRef awcsc.Penetrator, ByRef awcsc.Target, System.Double, System.Double())
+  nameWithType: CalcForrLVold.CalcForrLVold(Penetrator, Target, Double, Double[])
+  nameWithType.vb: CalcForrLVold.CalcForrLVold(ByRef Penetrator, ByRef Target, Double, Double())
+- uid: awcsc.CalcForrLVold.#ctor*
+  name: CalcForrLVold
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold__ctor_
+  commentId: Overload:awcsc.CalcForrLVold.#ctor
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.CalcForrLVold
+  nameWithType: CalcForrLVold.CalcForrLVold
+- uid: awcsc.CalcForrLVold.cond_endcalc(awcsc.State@,awcsc.State@)
+  name: cond_endcalc(State, State)
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_cond_endcalc_awcsc_State__awcsc_State__
+  commentId: M:awcsc.CalcForrLVold.cond_endcalc(awcsc.State@,awcsc.State@)
+  name.vb: cond_endcalc(ByRef State, ByRef State)
+  fullName: awcsc.CalcForrLVold.cond_endcalc(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.CalcForrLVold.cond_endcalc(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: CalcForrLVold.cond_endcalc(State, State)
+  nameWithType.vb: CalcForrLVold.cond_endcalc(ByRef State, ByRef State)
+- uid: awcsc.CalcForrLVold.cond_endcalc*
+  name: cond_endcalc
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_cond_endcalc_
+  commentId: Overload:awcsc.CalcForrLVold.cond_endcalc
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.cond_endcalc
+  nameWithType: CalcForrLVold.cond_endcalc
+- uid: awcsc.CalcForrLVold.cycle(System.Double@,awcsc.State@)
+  name: cycle(Double, State)
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_cycle_System_Double__awcsc_State__
+  commentId: M:awcsc.CalcForrLVold.cycle(System.Double@,awcsc.State@)
+  name.vb: cycle(ByRef Double, ByRef State)
+  fullName: awcsc.CalcForrLVold.cycle(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcForrLVold.cycle(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: CalcForrLVold.cycle(Double, State)
+  nameWithType.vb: CalcForrLVold.cycle(ByRef Double, ByRef State)
+- uid: awcsc.CalcForrLVold.cycle*
+  name: cycle
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_cycle_
+  commentId: Overload:awcsc.CalcForrLVold.cycle
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.cycle
+  nameWithType: CalcForrLVold.cycle
+- uid: awcsc.CalcForrLVold.Dc
+  name: Dc
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_Dc
+  commentId: P:awcsc.CalcForrLVold.Dc
+  fullName: awcsc.CalcForrLVold.Dc
+  nameWithType: CalcForrLVold.Dc
+- uid: awcsc.CalcForrLVold.Dc*
+  name: Dc
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_Dc_
+  commentId: Overload:awcsc.CalcForrLVold.Dc
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.Dc
+  nameWithType: CalcForrLVold.Dc
+- uid: awcsc.CalcForrLVold.getRt(System.Double,awcsc.State@)
+  name: getRt(Double, State)
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_getRt_System_Double_awcsc_State__
+  commentId: M:awcsc.CalcForrLVold.getRt(System.Double,awcsc.State@)
+  name.vb: getRt(Double, ByRef State)
+  fullName: awcsc.CalcForrLVold.getRt(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcForrLVold.getRt(System.Double, ByRef awcsc.State)
+  nameWithType: CalcForrLVold.getRt(Double, State)
+  nameWithType.vb: CalcForrLVold.getRt(Double, ByRef State)
+- uid: awcsc.CalcForrLVold.getRt*
+  name: getRt
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_getRt_
+  commentId: Overload:awcsc.CalcForrLVold.getRt
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.getRt
+  nameWithType: CalcForrLVold.getRt
+- uid: awcsc.CalcForrLVold.init_State(System.Double@)
+  name: init_State(Double)
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_init_State_System_Double__
+  commentId: M:awcsc.CalcForrLVold.init_State(System.Double@)
+  name.vb: init_State(ByRef Double)
+  fullName: awcsc.CalcForrLVold.init_State(System.Double)
+  fullName.vb: awcsc.CalcForrLVold.init_State(ByRef System.Double)
+  nameWithType: CalcForrLVold.init_State(Double)
+  nameWithType.vb: CalcForrLVold.init_State(ByRef Double)
+- uid: awcsc.CalcForrLVold.init_State*
+  name: init_State
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_init_State_
+  commentId: Overload:awcsc.CalcForrLVold.init_State
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.init_State
+  nameWithType: CalcForrLVold.init_State
+- uid: awcsc.CalcForrLVold.P
+  name: P
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_P
+  commentId: P:awcsc.CalcForrLVold.P
+  fullName: awcsc.CalcForrLVold.P
+  nameWithType: CalcForrLVold.P
+- uid: awcsc.CalcForrLVold.P*
+  name: P
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_P_
+  commentId: Overload:awcsc.CalcForrLVold.P
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.P
+  nameWithType: CalcForrLVold.P
+- uid: awcsc.CalcForrLVold.T
+  name: T
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_T
+  commentId: P:awcsc.CalcForrLVold.T
+  fullName: awcsc.CalcForrLVold.T
+  nameWithType: CalcForrLVold.T
+- uid: awcsc.CalcForrLVold.T*
+  name: T
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_T_
+  commentId: Overload:awcsc.CalcForrLVold.T
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.T
+  nameWithType: CalcForrLVold.T
+- uid: awcsc.CalcForrLVold.V0
+  name: V0
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_V0
+  commentId: P:awcsc.CalcForrLVold.V0
+  fullName: awcsc.CalcForrLVold.V0
+  nameWithType: CalcForrLVold.V0
+- uid: awcsc.CalcForrLVold.V0*
+  name: V0
+  href: api/awcsc.CalcForrLVold.html#awcsc_CalcForrLVold_V0_
+  commentId: Overload:awcsc.CalcForrLVold.V0
+  isSpec: "True"
+  fullName: awcsc.CalcForrLVold.V0
+  nameWithType: CalcForrLVold.V0
+- uid: awcsc.CalcMBE
+  name: CalcMBE
+  href: api/awcsc.CalcMBE.html
+  commentId: T:awcsc.CalcMBE
+  fullName: awcsc.CalcMBE
+  nameWithType: CalcMBE
+- uid: awcsc.CalcMBE.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name: CalcMBE(Penetrator, Target, Double, Double[])
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE__ctor_awcsc_Penetrator__awcsc_Target__System_Double_System_Double___
+  commentId: M:awcsc.CalcMBE.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])
+  name.vb: CalcMBE(ByRef Penetrator, ByRef Target, Double, Double())
+  fullName: awcsc.CalcMBE.CalcMBE(awcsc.Penetrator, awcsc.Target, System.Double, System.Double[])
+  fullName.vb: awcsc.CalcMBE.CalcMBE(ByRef awcsc.Penetrator, ByRef awcsc.Target, System.Double, System.Double())
+  nameWithType: CalcMBE.CalcMBE(Penetrator, Target, Double, Double[])
+  nameWithType.vb: CalcMBE.CalcMBE(ByRef Penetrator, ByRef Target, Double, Double())
+- uid: awcsc.CalcMBE.#ctor*
+  name: CalcMBE
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE__ctor_
+  commentId: Overload:awcsc.CalcMBE.#ctor
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.CalcMBE
+  nameWithType: CalcMBE.CalcMBE
+- uid: awcsc.CalcMBE.cond_endcalc(awcsc.State@,awcsc.State@)
+  name: cond_endcalc(State, State)
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_cond_endcalc_awcsc_State__awcsc_State__
+  commentId: M:awcsc.CalcMBE.cond_endcalc(awcsc.State@,awcsc.State@)
+  name.vb: cond_endcalc(ByRef State, ByRef State)
+  fullName: awcsc.CalcMBE.cond_endcalc(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.CalcMBE.cond_endcalc(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: CalcMBE.cond_endcalc(State, State)
+  nameWithType.vb: CalcMBE.cond_endcalc(ByRef State, ByRef State)
+- uid: awcsc.CalcMBE.cond_endcalc*
+  name: cond_endcalc
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_cond_endcalc_
+  commentId: Overload:awcsc.CalcMBE.cond_endcalc
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.cond_endcalc
+  nameWithType: CalcMBE.cond_endcalc
+- uid: awcsc.CalcMBE.cycle(System.Double@,awcsc.State@)
+  name: cycle(Double, State)
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_cycle_System_Double__awcsc_State__
+  commentId: M:awcsc.CalcMBE.cycle(System.Double@,awcsc.State@)
+  name.vb: cycle(ByRef Double, ByRef State)
+  fullName: awcsc.CalcMBE.cycle(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcMBE.cycle(ByRef System.Double, ByRef awcsc.State)
+  nameWithType: CalcMBE.cycle(Double, State)
+  nameWithType.vb: CalcMBE.cycle(ByRef Double, ByRef State)
+- uid: awcsc.CalcMBE.cycle*
+  name: cycle
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_cycle_
+  commentId: Overload:awcsc.CalcMBE.cycle
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.cycle
+  nameWithType: CalcMBE.cycle
+- uid: awcsc.CalcMBE.getRt(System.Double,awcsc.State@)
+  name: getRt(Double, State)
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_getRt_System_Double_awcsc_State__
+  commentId: M:awcsc.CalcMBE.getRt(System.Double,awcsc.State@)
+  name.vb: getRt(Double, ByRef State)
+  fullName: awcsc.CalcMBE.getRt(System.Double, awcsc.State)
+  fullName.vb: awcsc.CalcMBE.getRt(System.Double, ByRef awcsc.State)
+  nameWithType: CalcMBE.getRt(Double, State)
+  nameWithType.vb: CalcMBE.getRt(Double, ByRef State)
+- uid: awcsc.CalcMBE.getRt*
+  name: getRt
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_getRt_
+  commentId: Overload:awcsc.CalcMBE.getRt
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.getRt
+  nameWithType: CalcMBE.getRt
+- uid: awcsc.CalcMBE.hydro_lim
+  name: hydro_lim
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_hydro_lim
+  commentId: P:awcsc.CalcMBE.hydro_lim
+  fullName: awcsc.CalcMBE.hydro_lim
+  nameWithType: CalcMBE.hydro_lim
+- uid: awcsc.CalcMBE.hydro_lim*
+  name: hydro_lim
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_hydro_lim_
+  commentId: Overload:awcsc.CalcMBE.hydro_lim
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.hydro_lim
+  nameWithType: CalcMBE.hydro_lim
+- uid: awcsc.CalcMBE.init_State(System.Double@)
+  name: init_State(Double)
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_init_State_System_Double__
+  commentId: M:awcsc.CalcMBE.init_State(System.Double@)
+  name.vb: init_State(ByRef Double)
+  fullName: awcsc.CalcMBE.init_State(System.Double)
+  fullName.vb: awcsc.CalcMBE.init_State(ByRef System.Double)
+  nameWithType: CalcMBE.init_State(Double)
+  nameWithType.vb: CalcMBE.init_State(ByRef Double)
+- uid: awcsc.CalcMBE.init_State*
+  name: init_State
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_init_State_
+  commentId: Overload:awcsc.CalcMBE.init_State
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.init_State
+  nameWithType: CalcMBE.init_State
+- uid: awcsc.CalcMBE.P
+  name: P
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_P
+  commentId: P:awcsc.CalcMBE.P
+  fullName: awcsc.CalcMBE.P
+  nameWithType: CalcMBE.P
+- uid: awcsc.CalcMBE.P*
+  name: P
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_P_
+  commentId: Overload:awcsc.CalcMBE.P
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.P
+  nameWithType: CalcMBE.P
+- uid: awcsc.CalcMBE.T
+  name: T
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_T
+  commentId: P:awcsc.CalcMBE.T
+  fullName: awcsc.CalcMBE.T
+  nameWithType: CalcMBE.T
+- uid: awcsc.CalcMBE.T*
+  name: T
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_T_
+  commentId: Overload:awcsc.CalcMBE.T
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.T
+  nameWithType: CalcMBE.T
+- uid: awcsc.CalcMBE.V0
+  name: V0
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_V0
+  commentId: P:awcsc.CalcMBE.V0
+  fullName: awcsc.CalcMBE.V0
+  nameWithType: CalcMBE.V0
+- uid: awcsc.CalcMBE.V0*
+  name: V0
+  href: api/awcsc.CalcMBE.html#awcsc_CalcMBE_V0_
+  commentId: Overload:awcsc.CalcMBE.V0
+  isSpec: "True"
+  fullName: awcsc.CalcMBE.V0
+  nameWithType: CalcMBE.V0
+- uid: awcsc.JsonSerializer
+  name: JsonSerializer
+  href: api/awcsc.JsonSerializer.html
+  commentId: T:awcsc.JsonSerializer
+  fullName: awcsc.JsonSerializer
+  nameWithType: JsonSerializer
+- uid: awcsc.JsonSerializer.Serializer*
+  name: Serializer
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_Serializer_
+  commentId: Overload:awcsc.JsonSerializer.Serializer
+  isSpec: "True"
+  fullName: awcsc.JsonSerializer.Serializer
+  nameWithType: JsonSerializer.Serializer
+- uid: awcsc.JsonSerializer.Serializer``1
+  name: Serializer<TYpe>()
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_Serializer__1
+  commentId: M:awcsc.JsonSerializer.Serializer``1
+  name.vb: Serializer(Of TYpe)()
+  fullName: awcsc.JsonSerializer.Serializer<TYpe>()
+  fullName.vb: awcsc.JsonSerializer.Serializer(Of TYpe)()
+  nameWithType: JsonSerializer.Serializer<TYpe>()
+  nameWithType.vb: JsonSerializer.Serializer(Of TYpe)()
+- uid: awcsc.JsonSerializer.SerializerDictionary*
+  name: SerializerDictionary
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_SerializerDictionary_
+  commentId: Overload:awcsc.JsonSerializer.SerializerDictionary
+  isSpec: "True"
+  fullName: awcsc.JsonSerializer.SerializerDictionary
+  nameWithType: JsonSerializer.SerializerDictionary
+- uid: awcsc.JsonSerializer.SerializerDictionary``2
+  name: SerializerDictionary<TYpe1, TYpe2>()
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_SerializerDictionary__2
+  commentId: M:awcsc.JsonSerializer.SerializerDictionary``2
+  name.vb: SerializerDictionary(Of TYpe1, TYpe2)()
+  fullName: awcsc.JsonSerializer.SerializerDictionary<TYpe1, TYpe2>()
+  fullName.vb: awcsc.JsonSerializer.SerializerDictionary(Of TYpe1, TYpe2)()
+  nameWithType: JsonSerializer.SerializerDictionary<TYpe1, TYpe2>()
+  nameWithType.vb: JsonSerializer.SerializerDictionary(Of TYpe1, TYpe2)()
+- uid: awcsc.JsonSerializer.SerializerList*
+  name: SerializerList
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_SerializerList_
+  commentId: Overload:awcsc.JsonSerializer.SerializerList
+  isSpec: "True"
+  fullName: awcsc.JsonSerializer.SerializerList
+  nameWithType: JsonSerializer.SerializerList
+- uid: awcsc.JsonSerializer.SerializerList``1
+  name: SerializerList<TYpe>()
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_SerializerList__1
+  commentId: M:awcsc.JsonSerializer.SerializerList``1
+  name.vb: SerializerList(Of TYpe)()
+  fullName: awcsc.JsonSerializer.SerializerList<TYpe>()
+  fullName.vb: awcsc.JsonSerializer.SerializerList(Of TYpe)()
+  nameWithType: JsonSerializer.SerializerList<TYpe>()
+  nameWithType.vb: JsonSerializer.SerializerList(Of TYpe)()
+- uid: awcsc.JsonSerializer.SerializerListDictionary*
+  name: SerializerListDictionary
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_SerializerListDictionary_
+  commentId: Overload:awcsc.JsonSerializer.SerializerListDictionary
+  isSpec: "True"
+  fullName: awcsc.JsonSerializer.SerializerListDictionary
+  nameWithType: JsonSerializer.SerializerListDictionary
+- uid: awcsc.JsonSerializer.SerializerListDictionary``2
+  name: SerializerListDictionary<TYpe1, TYpe2>()
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_SerializerListDictionary__2
+  commentId: M:awcsc.JsonSerializer.SerializerListDictionary``2
+  name.vb: SerializerListDictionary(Of TYpe1, TYpe2)()
+  fullName: awcsc.JsonSerializer.SerializerListDictionary<TYpe1, TYpe2>()
+  fullName.vb: awcsc.JsonSerializer.SerializerListDictionary(Of TYpe1, TYpe2)()
+  nameWithType: JsonSerializer.SerializerListDictionary<TYpe1, TYpe2>()
+  nameWithType.vb: JsonSerializer.SerializerListDictionary(Of TYpe1, TYpe2)()
+- uid: awcsc.JsonSerializer.WriteResult(System.String,System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.Double}}})
+  name: WriteResult(String, List<Dictionary<String, List<Double>>>)
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_WriteResult_System_String_System_Collections_Generic_List_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_Double____
+  commentId: M:awcsc.JsonSerializer.WriteResult(System.String,System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.Double}}})
+  name.vb: WriteResult(String, List(Of Dictionary(Of String, List(Of Double))))
+  fullName: awcsc.JsonSerializer.WriteResult(System.String, System.Collections.Generic.List<System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.List<System.Double>>>)
+  fullName.vb: awcsc.JsonSerializer.WriteResult(System.String, System.Collections.Generic.List(Of System.Collections.Generic.Dictionary(Of System.String, System.Collections.Generic.List(Of System.Double))))
+  nameWithType: JsonSerializer.WriteResult(String, List<Dictionary<String, List<Double>>>)
+  nameWithType.vb: JsonSerializer.WriteResult(String, List(Of Dictionary(Of String, List(Of Double))))
+- uid: awcsc.JsonSerializer.WriteResult*
+  name: WriteResult
+  href: api/awcsc.JsonSerializer.html#awcsc_JsonSerializer_WriteResult_
+  commentId: Overload:awcsc.JsonSerializer.WriteResult
+  isSpec: "True"
+  fullName: awcsc.JsonSerializer.WriteResult
+  nameWithType: JsonSerializer.WriteResult
+- uid: awcsc.Material
+  name: Material
+  href: api/awcsc.Material.html
+  commentId: T:awcsc.Material
+  fullName: awcsc.Material
+  nameWithType: Material
+- uid: awcsc.Material.#ctor(awcsc.Material@)
+  name: Material(Material)
+  href: api/awcsc.Material.html#awcsc_Material__ctor_awcsc_Material__
+  commentId: M:awcsc.Material.#ctor(awcsc.Material@)
+  name.vb: Material(ByRef Material)
+  fullName: awcsc.Material.Material(awcsc.Material)
+  fullName.vb: awcsc.Material.Material(ByRef awcsc.Material)
+  nameWithType: Material.Material(Material)
+  nameWithType.vb: Material.Material(ByRef Material)
+- uid: awcsc.Material.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double)
+  name: Material(Double, Double, Double, Double, Double)
+  href: api/awcsc.Material.html#awcsc_Material__ctor_System_Double_System_Double_System_Double_System_Double_System_Double_
+  commentId: M:awcsc.Material.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double)
+  fullName: awcsc.Material.Material(System.Double, System.Double, System.Double, System.Double, System.Double)
+  nameWithType: Material.Material(Double, Double, Double, Double, Double)
+- uid: awcsc.Material.#ctor*
+  name: Material
+  href: api/awcsc.Material.html#awcsc_Material__ctor_
+  commentId: Overload:awcsc.Material.#ctor
+  isSpec: "True"
+  fullName: awcsc.Material.Material
+  nameWithType: Material.Material
+- uid: awcsc.Material.c
+  name: c
+  href: api/awcsc.Material.html#awcsc_Material_c
+  commentId: P:awcsc.Material.c
+  fullName: awcsc.Material.c
+  nameWithType: Material.c
+- uid: awcsc.Material.c*
+  name: c
+  href: api/awcsc.Material.html#awcsc_Material_c_
+  commentId: Overload:awcsc.Material.c
+  isSpec: "True"
+  fullName: awcsc.Material.c
+  nameWithType: Material.c
+- uid: awcsc.Material.c0
+  name: c0
+  href: api/awcsc.Material.html#awcsc_Material_c0
+  commentId: P:awcsc.Material.c0
+  fullName: awcsc.Material.c0
+  nameWithType: Material.c0
+- uid: awcsc.Material.c0*
+  name: c0
+  href: api/awcsc.Material.html#awcsc_Material_c0_
+  commentId: Overload:awcsc.Material.c0
+  isSpec: "True"
+  fullName: awcsc.Material.c0
+  nameWithType: Material.c0
+- uid: awcsc.Material.E
+  name: E
+  href: api/awcsc.Material.html#awcsc_Material_E
+  commentId: P:awcsc.Material.E
+  fullName: awcsc.Material.E
+  nameWithType: Material.E
+- uid: awcsc.Material.E*
+  name: E
+  href: api/awcsc.Material.html#awcsc_Material_E_
+  commentId: Overload:awcsc.Material.E
+  isSpec: "True"
+  fullName: awcsc.Material.E
+  nameWithType: Material.E
+- uid: awcsc.Material.G
+  name: G
+  href: api/awcsc.Material.html#awcsc_Material_G
+  commentId: P:awcsc.Material.G
+  fullName: awcsc.Material.G
+  nameWithType: Material.G
+- uid: awcsc.Material.G*
+  name: G
+  href: api/awcsc.Material.html#awcsc_Material_G_
+  commentId: Overload:awcsc.Material.G
+  isSpec: "True"
+  fullName: awcsc.Material.G
+  nameWithType: Material.G
+- uid: awcsc.Material.k
+  name: k
+  href: api/awcsc.Material.html#awcsc_Material_k
+  commentId: P:awcsc.Material.k
+  fullName: awcsc.Material.k
+  nameWithType: Material.k
+- uid: awcsc.Material.k*
+  name: k
+  href: api/awcsc.Material.html#awcsc_Material_k_
+  commentId: Overload:awcsc.Material.k
+  isSpec: "True"
+  fullName: awcsc.Material.k
+  nameWithType: Material.k
+- uid: awcsc.Material.K0
+  name: K0
+  href: api/awcsc.Material.html#awcsc_Material_K0
+  commentId: P:awcsc.Material.K0
+  fullName: awcsc.Material.K0
+  nameWithType: Material.K0
+- uid: awcsc.Material.K0*
+  name: K0
+  href: api/awcsc.Material.html#awcsc_Material_K0_
+  commentId: Overload:awcsc.Material.K0
+  isSpec: "True"
+  fullName: awcsc.Material.K0
+  nameWithType: Material.K0
+- uid: awcsc.Material.rho
+  name: rho
+  href: api/awcsc.Material.html#awcsc_Material_rho
+  commentId: P:awcsc.Material.rho
+  fullName: awcsc.Material.rho
+  nameWithType: Material.rho
+- uid: awcsc.Material.rho*
+  name: rho
+  href: api/awcsc.Material.html#awcsc_Material_rho_
+  commentId: Overload:awcsc.Material.rho
+  isSpec: "True"
+  fullName: awcsc.Material.rho
+  nameWithType: Material.rho
+- uid: awcsc.Material.Y
+  name: Y
+  href: api/awcsc.Material.html#awcsc_Material_Y
+  commentId: P:awcsc.Material.Y
+  fullName: awcsc.Material.Y
+  nameWithType: Material.Y
+- uid: awcsc.Material.Y*
+  name: Y
+  href: api/awcsc.Material.html#awcsc_Material_Y_
+  commentId: Overload:awcsc.Material.Y
+  isSpec: "True"
+  fullName: awcsc.Material.Y
+  nameWithType: Material.Y
+- uid: awcsc.Penetrator
+  name: Penetrator
+  href: api/awcsc.Penetrator.html
+  commentId: T:awcsc.Penetrator
+  fullName: awcsc.Penetrator
+  nameWithType: Penetrator
+- uid: awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double)
+  name: Penetrator(Material, Double, Double)
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator__ctor_awcsc_Material__System_Double_System_Double_
+  commentId: M:awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double)
+  name.vb: Penetrator(ByRef Material, Double, Double)
+  fullName: awcsc.Penetrator.Penetrator(awcsc.Material, System.Double, System.Double)
+  fullName.vb: awcsc.Penetrator.Penetrator(ByRef awcsc.Material, System.Double, System.Double)
+  nameWithType: Penetrator.Penetrator(Material, Double, Double)
+  nameWithType.vb: Penetrator.Penetrator(ByRef Material, Double, Double)
+- uid: awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double,System.Double)
+  name: Penetrator(Material, Double, Double, Double)
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator__ctor_awcsc_Material__System_Double_System_Double_System_Double_
+  commentId: M:awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double,System.Double)
+  name.vb: Penetrator(ByRef Material, Double, Double, Double)
+  fullName: awcsc.Penetrator.Penetrator(awcsc.Material, System.Double, System.Double, System.Double)
+  fullName.vb: awcsc.Penetrator.Penetrator(ByRef awcsc.Material, System.Double, System.Double, System.Double)
+  nameWithType: Penetrator.Penetrator(Material, Double, Double, Double)
+  nameWithType.vb: Penetrator.Penetrator(ByRef Material, Double, Double, Double)
+- uid: awcsc.Penetrator.#ctor(awcsc.Penetrator@)
+  name: Penetrator(Penetrator)
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator__ctor_awcsc_Penetrator__
+  commentId: M:awcsc.Penetrator.#ctor(awcsc.Penetrator@)
+  name.vb: Penetrator(ByRef Penetrator)
+  fullName: awcsc.Penetrator.Penetrator(awcsc.Penetrator)
+  fullName.vb: awcsc.Penetrator.Penetrator(ByRef awcsc.Penetrator)
+  nameWithType: Penetrator.Penetrator(Penetrator)
+  nameWithType.vb: Penetrator.Penetrator(ByRef Penetrator)
+- uid: awcsc.Penetrator.#ctor*
+  name: Penetrator
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator__ctor_
+  commentId: Overload:awcsc.Penetrator.#ctor
+  isSpec: "True"
+  fullName: awcsc.Penetrator.Penetrator
+  nameWithType: Penetrator.Penetrator
+- uid: awcsc.Penetrator.c
+  name: c
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_c
+  commentId: P:awcsc.Penetrator.c
+  fullName: awcsc.Penetrator.c
+  nameWithType: Penetrator.c
+- uid: awcsc.Penetrator.c*
+  name: c
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_c_
+  commentId: Overload:awcsc.Penetrator.c
+  isSpec: "True"
+  fullName: awcsc.Penetrator.c
+  nameWithType: Penetrator.c
+- uid: awcsc.Penetrator.c0
+  name: c0
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_c0
+  commentId: P:awcsc.Penetrator.c0
+  fullName: awcsc.Penetrator.c0
+  nameWithType: Penetrator.c0
+- uid: awcsc.Penetrator.c0*
+  name: c0
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_c0_
+  commentId: Overload:awcsc.Penetrator.c0
+  isSpec: "True"
+  fullName: awcsc.Penetrator.c0
+  nameWithType: Penetrator.c0
+- uid: awcsc.Penetrator.c0inv
+  name: c0inv
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_c0inv
+  commentId: P:awcsc.Penetrator.c0inv
+  fullName: awcsc.Penetrator.c0inv
+  nameWithType: Penetrator.c0inv
+- uid: awcsc.Penetrator.c0inv*
+  name: c0inv
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_c0inv_
+  commentId: Overload:awcsc.Penetrator.c0inv
+  isSpec: "True"
+  fullName: awcsc.Penetrator.c0inv
+  nameWithType: Penetrator.c0inv
+- uid: awcsc.Penetrator.cinv
+  name: cinv
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_cinv
+  commentId: P:awcsc.Penetrator.cinv
+  fullName: awcsc.Penetrator.cinv
+  nameWithType: Penetrator.cinv
+- uid: awcsc.Penetrator.cinv*
+  name: cinv
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_cinv_
+  commentId: Overload:awcsc.Penetrator.cinv
+  isSpec: "True"
+  fullName: awcsc.Penetrator.cinv
+  nameWithType: Penetrator.cinv
+- uid: awcsc.Penetrator.Crh
+  name: Crh
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_Crh
+  commentId: P:awcsc.Penetrator.Crh
+  fullName: awcsc.Penetrator.Crh
+  nameWithType: Penetrator.Crh
+- uid: awcsc.Penetrator.Crh*
+  name: Crh
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_Crh_
+  commentId: Overload:awcsc.Penetrator.Crh
+  isSpec: "True"
+  fullName: awcsc.Penetrator.Crh
+  nameWithType: Penetrator.Crh
+- uid: awcsc.Penetrator.cv
+  name: cv
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_cv
+  commentId: P:awcsc.Penetrator.cv
+  fullName: awcsc.Penetrator.cv
+  nameWithType: Penetrator.cv
+- uid: awcsc.Penetrator.cv*
+  name: cv
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_cv_
+  commentId: Overload:awcsc.Penetrator.cv
+  isSpec: "True"
+  fullName: awcsc.Penetrator.cv
+  nameWithType: Penetrator.cv
+- uid: awcsc.Penetrator.D
+  name: D
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_D
+  commentId: P:awcsc.Penetrator.D
+  fullName: awcsc.Penetrator.D
+  nameWithType: Penetrator.D
+- uid: awcsc.Penetrator.D*
+  name: D
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_D_
+  commentId: Overload:awcsc.Penetrator.D
+  isSpec: "True"
+  fullName: awcsc.Penetrator.D
+  nameWithType: Penetrator.D
+- uid: awcsc.Penetrator.E
+  name: E
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_E
+  commentId: P:awcsc.Penetrator.E
+  fullName: awcsc.Penetrator.E
+  nameWithType: Penetrator.E
+- uid: awcsc.Penetrator.E*
+  name: E
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_E_
+  commentId: Overload:awcsc.Penetrator.E
+  isSpec: "True"
+  fullName: awcsc.Penetrator.E
+  nameWithType: Penetrator.E
+- uid: awcsc.Penetrator.G
+  name: G
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_G
+  commentId: P:awcsc.Penetrator.G
+  fullName: awcsc.Penetrator.G
+  nameWithType: Penetrator.G
+- uid: awcsc.Penetrator.G*
+  name: G
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_G_
+  commentId: Overload:awcsc.Penetrator.G
+  isSpec: "True"
+  fullName: awcsc.Penetrator.G
+  nameWithType: Penetrator.G
+- uid: awcsc.Penetrator.k
+  name: k
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_k
+  commentId: P:awcsc.Penetrator.k
+  fullName: awcsc.Penetrator.k
+  nameWithType: Penetrator.k
+- uid: awcsc.Penetrator.k*
+  name: k
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_k_
+  commentId: Overload:awcsc.Penetrator.k
+  isSpec: "True"
+  fullName: awcsc.Penetrator.k
+  nameWithType: Penetrator.k
+- uid: awcsc.Penetrator.K0
+  name: K0
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_K0
+  commentId: P:awcsc.Penetrator.K0
+  fullName: awcsc.Penetrator.K0
+  nameWithType: Penetrator.K0
+- uid: awcsc.Penetrator.K0*
+  name: K0
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_K0_
+  commentId: Overload:awcsc.Penetrator.K0
+  isSpec: "True"
+  fullName: awcsc.Penetrator.K0
+  nameWithType: Penetrator.K0
+- uid: awcsc.Penetrator.l
+  name: l
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_l
+  commentId: P:awcsc.Penetrator.l
+  fullName: awcsc.Penetrator.l
+  nameWithType: Penetrator.l
+- uid: awcsc.Penetrator.L
+  name: L
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_L
+  commentId: P:awcsc.Penetrator.L
+  fullName: awcsc.Penetrator.L
+  nameWithType: Penetrator.L
+- uid: awcsc.Penetrator.l*
+  name: l
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_l_
+  commentId: Overload:awcsc.Penetrator.l
+  isSpec: "True"
+  fullName: awcsc.Penetrator.l
+  nameWithType: Penetrator.l
+- uid: awcsc.Penetrator.L*
+  name: L
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_L_
+  commentId: Overload:awcsc.Penetrator.L
+  isSpec: "True"
+  fullName: awcsc.Penetrator.L
+  nameWithType: Penetrator.L
+- uid: awcsc.Penetrator.LD
+  name: LD
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_LD
+  commentId: P:awcsc.Penetrator.LD
+  fullName: awcsc.Penetrator.LD
+  nameWithType: Penetrator.LD
+- uid: awcsc.Penetrator.LD*
+  name: LD
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_LD_
+  commentId: Overload:awcsc.Penetrator.LD
+  isSpec: "True"
+  fullName: awcsc.Penetrator.LD
+  nameWithType: Penetrator.LD
+- uid: awcsc.Penetrator.m
+  name: m
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_m
+  commentId: P:awcsc.Penetrator.m
+  fullName: awcsc.Penetrator.m
+  nameWithType: Penetrator.m
+- uid: awcsc.Penetrator.m*
+  name: m
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_m_
+  commentId: Overload:awcsc.Penetrator.m
+  isSpec: "True"
+  fullName: awcsc.Penetrator.m
+  nameWithType: Penetrator.m
+- uid: awcsc.Penetrator.R
+  name: R
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_R
+  commentId: P:awcsc.Penetrator.R
+  fullName: awcsc.Penetrator.R
+  nameWithType: Penetrator.R
+- uid: awcsc.Penetrator.R*
+  name: R
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_R_
+  commentId: Overload:awcsc.Penetrator.R
+  isSpec: "True"
+  fullName: awcsc.Penetrator.R
+  nameWithType: Penetrator.R
+- uid: awcsc.Penetrator.rho
+  name: rho
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_rho
+  commentId: P:awcsc.Penetrator.rho
+  fullName: awcsc.Penetrator.rho
+  nameWithType: Penetrator.rho
+- uid: awcsc.Penetrator.rho*
+  name: rho
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_rho_
+  commentId: Overload:awcsc.Penetrator.rho
+  isSpec: "True"
+  fullName: awcsc.Penetrator.rho
+  nameWithType: Penetrator.rho
+- uid: awcsc.Penetrator.theta0
+  name: theta0
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_theta0
+  commentId: P:awcsc.Penetrator.theta0
+  fullName: awcsc.Penetrator.theta0
+  nameWithType: Penetrator.theta0
+- uid: awcsc.Penetrator.theta0*
+  name: theta0
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_theta0_
+  commentId: Overload:awcsc.Penetrator.theta0
+  isSpec: "True"
+  fullName: awcsc.Penetrator.theta0
+  nameWithType: Penetrator.theta0
+- uid: awcsc.Penetrator.Y
+  name: Y
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_Y
+  commentId: P:awcsc.Penetrator.Y
+  fullName: awcsc.Penetrator.Y
+  nameWithType: Penetrator.Y
+- uid: awcsc.Penetrator.Y*
+  name: Y
+  href: api/awcsc.Penetrator.html#awcsc_Penetrator_Y_
+  commentId: Overload:awcsc.Penetrator.Y
+  isSpec: "True"
+  fullName: awcsc.Penetrator.Y
+  nameWithType: Penetrator.Y
+- uid: awcsc.PointArray
+  name: PointArray
+  href: api/awcsc.PointArray.html
+  commentId: T:awcsc.PointArray
+  fullName: awcsc.PointArray
+  nameWithType: PointArray
+- uid: awcsc.PointArray.#ctor(System.Int32)
+  name: PointArray(Int32)
+  href: api/awcsc.PointArray.html#awcsc_PointArray__ctor_System_Int32_
+  commentId: M:awcsc.PointArray.#ctor(System.Int32)
+  fullName: awcsc.PointArray.PointArray(System.Int32)
+  nameWithType: PointArray.PointArray(Int32)
+- uid: awcsc.PointArray.#ctor*
+  name: PointArray
+  href: api/awcsc.PointArray.html#awcsc_PointArray__ctor_
+  commentId: Overload:awcsc.PointArray.#ctor
+  isSpec: "True"
+  fullName: awcsc.PointArray.PointArray
+  nameWithType: PointArray.PointArray
+- uid: awcsc.PointArray.Add(System.Double,System.Double)
+  name: Add(Double, Double)
+  href: api/awcsc.PointArray.html#awcsc_PointArray_Add_System_Double_System_Double_
+  commentId: M:awcsc.PointArray.Add(System.Double,System.Double)
+  fullName: awcsc.PointArray.Add(System.Double, System.Double)
+  nameWithType: PointArray.Add(Double, Double)
+- uid: awcsc.PointArray.Add*
+  name: Add
+  href: api/awcsc.PointArray.html#awcsc_PointArray_Add_
+  commentId: Overload:awcsc.PointArray.Add
+  isSpec: "True"
+  fullName: awcsc.PointArray.Add
+  nameWithType: PointArray.Add
+- uid: awcsc.PointArray.x
+  name: x
+  href: api/awcsc.PointArray.html#awcsc_PointArray_x
+  commentId: F:awcsc.PointArray.x
+  fullName: awcsc.PointArray.x
+  nameWithType: PointArray.x
+- uid: awcsc.PointArray.y
+  name: y
+  href: api/awcsc.PointArray.html#awcsc_PointArray_y
+  commentId: F:awcsc.PointArray.y
+  fullName: awcsc.PointArray.y
+  nameWithType: PointArray.y
+- uid: awcsc.State
+  name: State
+  href: api/awcsc.State.html
+  commentId: T:awcsc.State
+  fullName: awcsc.State
+  nameWithType: State
+- uid: awcsc.State.#ctor
+  name: State()
+  href: api/awcsc.State.html#awcsc_State__ctor
+  commentId: M:awcsc.State.#ctor
+  fullName: awcsc.State.State()
+  nameWithType: State.State()
+- uid: awcsc.State.#ctor*
+  name: State
+  href: api/awcsc.State.html#awcsc_State__ctor_
+  commentId: Overload:awcsc.State.#ctor
+  isSpec: "True"
+  fullName: awcsc.State.State
+  nameWithType: State.State
+- uid: awcsc.State.alpha
+  name: alpha
+  href: api/awcsc.State.html#awcsc_State_alpha
+  commentId: F:awcsc.State.alpha
+  fullName: awcsc.State.alpha
+  nameWithType: State.alpha
+- uid: awcsc.State.alphadot
+  name: alphadot
+  href: api/awcsc.State.html#awcsc_State_alphadot
+  commentId: F:awcsc.State.alphadot
+  fullName: awcsc.State.alphadot
+  nameWithType: State.alphadot
+- uid: awcsc.State.Copy(awcsc.State@)
+  name: Copy(State)
+  href: api/awcsc.State.html#awcsc_State_Copy_awcsc_State__
+  commentId: M:awcsc.State.Copy(awcsc.State@)
+  name.vb: Copy(ByRef State)
+  fullName: awcsc.State.Copy(awcsc.State)
+  fullName.vb: awcsc.State.Copy(ByRef awcsc.State)
+  nameWithType: State.Copy(State)
+  nameWithType.vb: State.Copy(ByRef State)
+- uid: awcsc.State.Copy*
+  name: Copy
+  href: api/awcsc.State.html#awcsc_State_Copy_
+  commentId: Overload:awcsc.State.Copy
+  isSpec: "True"
+  fullName: awcsc.State.Copy
+  nameWithType: State.Copy
+- uid: awcsc.State.DoP
+  name: DoP
+  href: api/awcsc.State.html#awcsc_State_DoP
+  commentId: F:awcsc.State.DoP
+  fullName: awcsc.State.DoP
+  nameWithType: State.DoP
+- uid: awcsc.State.L
+  name: L
+  href: api/awcsc.State.html#awcsc_State_L
+  commentId: F:awcsc.State.L
+  fullName: awcsc.State.L
+  nameWithType: State.L
+- uid: awcsc.State.Ldot
+  name: Ldot
+  href: api/awcsc.State.html#awcsc_State_Ldot
+  commentId: F:awcsc.State.Ldot
+  fullName: awcsc.State.Ldot
+  nameWithType: State.Ldot
+- uid: awcsc.State.Le
+  name: Le
+  href: api/awcsc.State.html#awcsc_State_Le
+  commentId: F:awcsc.State.Le
+  fullName: awcsc.State.Le
+  nameWithType: State.Le
+- uid: awcsc.State.op_Addition(awcsc.State@,awcsc.State@)
+  name: Addition(State, State)
+  href: api/awcsc.State.html#awcsc_State_op_Addition_awcsc_State__awcsc_State__
+  commentId: M:awcsc.State.op_Addition(awcsc.State@,awcsc.State@)
+  name.vb: Addition(ByRef State, ByRef State)
+  fullName: awcsc.State.Addition(awcsc.State, awcsc.State)
+  fullName.vb: awcsc.State.Addition(ByRef awcsc.State, ByRef awcsc.State)
+  nameWithType: State.Addition(State, State)
+  nameWithType.vb: State.Addition(ByRef State, ByRef State)
+- uid: awcsc.State.op_Addition*
+  name: Addition
+  href: api/awcsc.State.html#awcsc_State_op_Addition_
+  commentId: Overload:awcsc.State.op_Addition
+  isSpec: "True"
+  fullName: awcsc.State.Addition
+  nameWithType: State.Addition
+- uid: awcsc.State.op_Multiply(awcsc.State@,System.Double@)
+  name: Multiply(State, Double)
+  href: api/awcsc.State.html#awcsc_State_op_Multiply_awcsc_State__System_Double__
+  commentId: M:awcsc.State.op_Multiply(awcsc.State@,System.Double@)
+  name.vb: Multiply(ByRef State, ByRef Double)
+  fullName: awcsc.State.Multiply(awcsc.State, System.Double)
+  fullName.vb: awcsc.State.Multiply(ByRef awcsc.State, ByRef System.Double)
+  nameWithType: State.Multiply(State, Double)
+  nameWithType.vb: State.Multiply(ByRef State, ByRef Double)
+- uid: awcsc.State.op_Multiply*
+  name: Multiply
+  href: api/awcsc.State.html#awcsc_State_op_Multiply_
+  commentId: Overload:awcsc.State.op_Multiply
+  isSpec: "True"
+  fullName: awcsc.State.Multiply
+  nameWithType: State.Multiply
+- uid: awcsc.State.s
+  name: s
+  href: api/awcsc.State.html#awcsc_State_s
+  commentId: F:awcsc.State.s
+  fullName: awcsc.State.s
+  nameWithType: State.s
+- uid: awcsc.State.sdot
+  name: sdot
+  href: api/awcsc.State.html#awcsc_State_sdot
+  commentId: F:awcsc.State.sdot
+  fullName: awcsc.State.sdot
+  nameWithType: State.sdot
+- uid: awcsc.State.t
+  name: t
+  href: api/awcsc.State.html#awcsc_State_t
+  commentId: F:awcsc.State.t
+  fullName: awcsc.State.t
+  nameWithType: State.t
+- uid: awcsc.State.u
+  name: u
+  href: api/awcsc.State.html#awcsc_State_u
+  commentId: F:awcsc.State.u
+  fullName: awcsc.State.u
+  nameWithType: State.u
+- uid: awcsc.State.udot
+  name: udot
+  href: api/awcsc.State.html#awcsc_State_udot
+  commentId: F:awcsc.State.udot
+  fullName: awcsc.State.udot
+  nameWithType: State.udot
+- uid: awcsc.State.v
+  name: v
+  href: api/awcsc.State.html#awcsc_State_v
+  commentId: F:awcsc.State.v
+  fullName: awcsc.State.v
+  nameWithType: State.v
+- uid: awcsc.State.vdot
+  name: vdot
+  href: api/awcsc.State.html#awcsc_State_vdot
+  commentId: F:awcsc.State.vdot
+  fullName: awcsc.State.vdot
+  nameWithType: State.vdot
+- uid: awcsc.State.vu_sdot
+  name: vu_sdot
+  href: api/awcsc.State.html#awcsc_State_vu_sdot
+  commentId: F:awcsc.State.vu_sdot
+  fullName: awcsc.State.vu_sdot
+  nameWithType: State.vu_sdot
+- uid: awcsc.Target
+  name: Target
+  href: api/awcsc.Target.html
+  commentId: T:awcsc.Target
+  fullName: awcsc.Target
+  nameWithType: Target
+- uid: awcsc.Target.#ctor(awcsc.Material@)
+  name: Target(Material)
+  href: api/awcsc.Target.html#awcsc_Target__ctor_awcsc_Material__
+  commentId: M:awcsc.Target.#ctor(awcsc.Material@)
+  name.vb: Target(ByRef Material)
+  fullName: awcsc.Target.Target(awcsc.Material)
+  fullName.vb: awcsc.Target.Target(ByRef awcsc.Material)
+  nameWithType: Target.Target(Material)
+  nameWithType.vb: Target.Target(ByRef Material)
+- uid: awcsc.Target.#ctor(awcsc.Material@,System.Double,System.Double,System.Double)
+  name: Target(Material, Double, Double, Double)
+  href: api/awcsc.Target.html#awcsc_Target__ctor_awcsc_Material__System_Double_System_Double_System_Double_
+  commentId: M:awcsc.Target.#ctor(awcsc.Material@,System.Double,System.Double,System.Double)
+  name.vb: Target(ByRef Material, Double, Double, Double)
+  fullName: awcsc.Target.Target(awcsc.Material, System.Double, System.Double, System.Double)
+  fullName.vb: awcsc.Target.Target(ByRef awcsc.Material, System.Double, System.Double, System.Double)
+  nameWithType: Target.Target(Material, Double, Double, Double)
+  nameWithType.vb: Target.Target(ByRef Material, Double, Double, Double)
+- uid: awcsc.Target.#ctor(awcsc.Target@)
+  name: Target(Target)
+  href: api/awcsc.Target.html#awcsc_Target__ctor_awcsc_Target__
+  commentId: M:awcsc.Target.#ctor(awcsc.Target@)
+  name.vb: Target(ByRef Target)
+  fullName: awcsc.Target.Target(awcsc.Target)
+  fullName.vb: awcsc.Target.Target(ByRef awcsc.Target)
+  nameWithType: Target.Target(Target)
+  nameWithType.vb: Target.Target(ByRef Target)
+- uid: awcsc.Target.#ctor*
+  name: Target
+  href: api/awcsc.Target.html#awcsc_Target__ctor_
+  commentId: Overload:awcsc.Target.#ctor
+  isSpec: "True"
+  fullName: awcsc.Target.Target
+  nameWithType: Target.Target
+- uid: awcsc.Target.c
+  name: c
+  href: api/awcsc.Target.html#awcsc_Target_c
+  commentId: P:awcsc.Target.c
+  fullName: awcsc.Target.c
+  nameWithType: Target.c
+- uid: awcsc.Target.c*
+  name: c
+  href: api/awcsc.Target.html#awcsc_Target_c_
+  commentId: Overload:awcsc.Target.c
+  isSpec: "True"
+  fullName: awcsc.Target.c
+  nameWithType: Target.c
+- uid: awcsc.Target.c0
+  name: c0
+  href: api/awcsc.Target.html#awcsc_Target_c0
+  commentId: P:awcsc.Target.c0
+  fullName: awcsc.Target.c0
+  nameWithType: Target.c0
+- uid: awcsc.Target.c0*
+  name: c0
+  href: api/awcsc.Target.html#awcsc_Target_c0_
+  commentId: Overload:awcsc.Target.c0
+  isSpec: "True"
+  fullName: awcsc.Target.c0
+  nameWithType: Target.c0
+- uid: awcsc.Target.c0inv
+  name: c0inv
+  href: api/awcsc.Target.html#awcsc_Target_c0inv
+  commentId: P:awcsc.Target.c0inv
+  fullName: awcsc.Target.c0inv
+  nameWithType: Target.c0inv
+- uid: awcsc.Target.c0inv*
+  name: c0inv
+  href: api/awcsc.Target.html#awcsc_Target_c0inv_
+  commentId: Overload:awcsc.Target.c0inv
+  isSpec: "True"
+  fullName: awcsc.Target.c0inv
+  nameWithType: Target.c0inv
+- uid: awcsc.Target.calc_Y(System.Double)
+  name: calc_Y(Double)
+  href: api/awcsc.Target.html#awcsc_Target_calc_Y_System_Double_
+  commentId: M:awcsc.Target.calc_Y(System.Double)
+  fullName: awcsc.Target.calc_Y(System.Double)
+  nameWithType: Target.calc_Y(Double)
+- uid: awcsc.Target.calc_Y*
+  name: calc_Y
+  href: api/awcsc.Target.html#awcsc_Target_calc_Y_
+  commentId: Overload:awcsc.Target.calc_Y
+  isSpec: "True"
+  fullName: awcsc.Target.calc_Y
+  nameWithType: Target.calc_Y
+- uid: awcsc.Target.E
+  name: E
+  href: api/awcsc.Target.html#awcsc_Target_E
+  commentId: P:awcsc.Target.E
+  fullName: awcsc.Target.E
+  nameWithType: Target.E
+- uid: awcsc.Target.E*
+  name: E
+  href: api/awcsc.Target.html#awcsc_Target_E_
+  commentId: Overload:awcsc.Target.E
+  isSpec: "True"
+  fullName: awcsc.Target.E
+  nameWithType: Target.E
+- uid: awcsc.Target.G
+  name: G
+  href: api/awcsc.Target.html#awcsc_Target_G
+  commentId: P:awcsc.Target.G
+  fullName: awcsc.Target.G
+  nameWithType: Target.G
+- uid: awcsc.Target.G*
+  name: G
+  href: api/awcsc.Target.html#awcsc_Target_G_
+  commentId: Overload:awcsc.Target.G
+  isSpec: "True"
+  fullName: awcsc.Target.G
+  nameWithType: Target.G
+- uid: awcsc.Target.Ginv
+  name: Ginv
+  href: api/awcsc.Target.html#awcsc_Target_Ginv
+  commentId: P:awcsc.Target.Ginv
+  fullName: awcsc.Target.Ginv
+  nameWithType: Target.Ginv
+- uid: awcsc.Target.Ginv*
+  name: Ginv
+  href: api/awcsc.Target.html#awcsc_Target_Ginv_
+  commentId: Overload:awcsc.Target.Ginv
+  isSpec: "True"
+  fullName: awcsc.Target.Ginv
+  nameWithType: Target.Ginv
+- uid: awcsc.Target.k
+  name: k
+  href: api/awcsc.Target.html#awcsc_Target_k
+  commentId: P:awcsc.Target.k
+  fullName: awcsc.Target.k
+  nameWithType: Target.k
+- uid: awcsc.Target.k*
+  name: k
+  href: api/awcsc.Target.html#awcsc_Target_k_
+  commentId: Overload:awcsc.Target.k
+  isSpec: "True"
+  fullName: awcsc.Target.k
+  nameWithType: Target.k
+- uid: awcsc.Target.K0
+  name: K0
+  href: api/awcsc.Target.html#awcsc_Target_K0
+  commentId: P:awcsc.Target.K0
+  fullName: awcsc.Target.K0
+  nameWithType: Target.K0
+- uid: awcsc.Target.K0*
+  name: K0
+  href: api/awcsc.Target.html#awcsc_Target_K0_
+  commentId: Overload:awcsc.Target.K0
+  isSpec: "True"
+  fullName: awcsc.Target.K0
+  nameWithType: Target.K0
+- uid: awcsc.Target.rho
+  name: rho
+  href: api/awcsc.Target.html#awcsc_Target_rho
+  commentId: P:awcsc.Target.rho
+  fullName: awcsc.Target.rho
+  nameWithType: Target.rho
+- uid: awcsc.Target.rho*
+  name: rho
+  href: api/awcsc.Target.html#awcsc_Target_rho_
+  commentId: Overload:awcsc.Target.rho
+  isSpec: "True"
+  fullName: awcsc.Target.rho
+  nameWithType: Target.rho
+- uid: awcsc.Target.set_Y(System.Double)
+  name: set_Y(Double)
+  href: api/awcsc.Target.html#awcsc_Target_set_Y_System_Double_
+  commentId: M:awcsc.Target.set_Y(System.Double)
+  fullName: awcsc.Target.set_Y(System.Double)
+  nameWithType: Target.set_Y(Double)
+- uid: awcsc.Target.set_Y(System.Double,System.Double,System.Double)
+  name: set_Y(Double, Double, Double)
+  href: api/awcsc.Target.html#awcsc_Target_set_Y_System_Double_System_Double_System_Double_
+  commentId: M:awcsc.Target.set_Y(System.Double,System.Double,System.Double)
+  fullName: awcsc.Target.set_Y(System.Double, System.Double, System.Double)
+  nameWithType: Target.set_Y(Double, Double, Double)
+- uid: awcsc.Target.set_Y(System.Double,System.Double,System.Double,System.Double)
+  name: set_Y(Double, Double, Double, Double)
+  href: api/awcsc.Target.html#awcsc_Target_set_Y_System_Double_System_Double_System_Double_System_Double_
+  commentId: M:awcsc.Target.set_Y(System.Double,System.Double,System.Double,System.Double)
+  fullName: awcsc.Target.set_Y(System.Double, System.Double, System.Double, System.Double)
+  nameWithType: Target.set_Y(Double, Double, Double, Double)
+- uid: awcsc.Target.set_Y*
+  name: set_Y
+  href: api/awcsc.Target.html#awcsc_Target_set_Y_
+  commentId: Overload:awcsc.Target.set_Y
+  isSpec: "True"
+  fullName: awcsc.Target.set_Y
+  nameWithType: Target.set_Y
+- uid: awcsc.Target.th
+  name: th
+  href: api/awcsc.Target.html#awcsc_Target_th
+  commentId: P:awcsc.Target.th
+  fullName: awcsc.Target.th
+  nameWithType: Target.th
+- uid: awcsc.Target.th*
+  name: th
+  href: api/awcsc.Target.html#awcsc_Target_th_
+  commentId: Overload:awcsc.Target.th
+  isSpec: "True"
+  fullName: awcsc.Target.th
+  nameWithType: Target.th
+- uid: awcsc.Target.ts
+  name: ts
+  href: api/awcsc.Target.html#awcsc_Target_ts
+  commentId: P:awcsc.Target.ts
+  fullName: awcsc.Target.ts
+  nameWithType: Target.ts
+- uid: awcsc.Target.ts*
+  name: ts
+  href: api/awcsc.Target.html#awcsc_Target_ts_
+  commentId: Overload:awcsc.Target.ts
+  isSpec: "True"
+  fullName: awcsc.Target.ts
+  nameWithType: Target.ts
+- uid: awcsc.Target.tt
+  name: tt
+  href: api/awcsc.Target.html#awcsc_Target_tt
+  commentId: P:awcsc.Target.tt
+  fullName: awcsc.Target.tt
+  nameWithType: Target.tt
+- uid: awcsc.Target.tt*
+  name: tt
+  href: api/awcsc.Target.html#awcsc_Target_tt_
+  commentId: Overload:awcsc.Target.tt
+  isSpec: "True"
+  fullName: awcsc.Target.tt
+  nameWithType: Target.tt
+- uid: awcsc.Target.Y(System.Double)
+  name: Y(Double)
+  href: api/awcsc.Target.html#awcsc_Target_Y_System_Double_
+  commentId: M:awcsc.Target.Y(System.Double)
+  fullName: awcsc.Target.Y(System.Double)
+  nameWithType: Target.Y(Double)
+- uid: awcsc.Target.Y*
+  name: Y
+  href: api/awcsc.Target.html#awcsc_Target_Y_
+  commentId: Overload:awcsc.Target.Y
+  isSpec: "True"
+  fullName: awcsc.Target.Y
+  nameWithType: Target.Y
+- uid: awcsc.Target.Y0
+  name: Y0
+  href: api/awcsc.Target.html#awcsc_Target_Y0
+  commentId: P:awcsc.Target.Y0
+  fullName: awcsc.Target.Y0
+  nameWithType: Target.Y0
+- uid: awcsc.Target.Y0*
+  name: Y0
+  href: api/awcsc.Target.html#awcsc_Target_Y0_
+  commentId: Overload:awcsc.Target.Y0
+  isSpec: "True"
+  fullName: awcsc.Target.Y0
+  nameWithType: Target.Y0
+- uid: awcsc.Target.Yinv(System.Double)
+  name: Yinv(Double)
+  href: api/awcsc.Target.html#awcsc_Target_Yinv_System_Double_
+  commentId: M:awcsc.Target.Yinv(System.Double)
+  fullName: awcsc.Target.Yinv(System.Double)
+  nameWithType: Target.Yinv(Double)
+- uid: awcsc.Target.Yinv*
+  name: Yinv
+  href: api/awcsc.Target.html#awcsc_Target_Yinv_
+  commentId: Overload:awcsc.Target.Yinv
+  isSpec: "True"
+  fullName: awcsc.Target.Yinv
+  nameWithType: Target.Yinv
+- uid: awcsc.Target.Ys
+  name: Ys
+  href: api/awcsc.Target.html#awcsc_Target_Ys
+  commentId: P:awcsc.Target.Ys
+  fullName: awcsc.Target.Ys
+  nameWithType: Target.Ys
+- uid: awcsc.Target.Ys*
+  name: Ys
+  href: api/awcsc.Target.html#awcsc_Target_Ys_
+  commentId: Overload:awcsc.Target.Ys
+  isSpec: "True"
+  fullName: awcsc.Target.Ys
+  nameWithType: Target.Ys

@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>penepy.core &#8212; penepy  ドキュメント</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">penepy  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">モジュールコード</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>penepy.core のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">clr</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s2">&quot;awlib&quot;</span><span class="p">)</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s2">&quot;System.Collections&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">awcsc</span> <span class="k">as</span> <span class="nn">aw</span>
+<span class="kn">from</span> <span class="nn">System.Collections.Generic</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dictionary</span>
+<span class="kn">from</span> <span class="nn">System</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">System</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="kn">from</span> <span class="nn">System.Runtime.InteropServices</span> <span class="kn">import</span> <span class="n">GCHandle</span><span class="p">,</span> <span class="n">GCHandleType</span>
+
+
+<div class="viewcode-block" id="netArraytonpArray"><a class="viewcode-back" href="../../core.html#penepy.core.netArraytonpArray">[ドキュメント]</a><span class="k">def</span> <span class="nf">netArraytonpArray</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">Length</span>
+    <span class="n">npArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">sourceHandle</span> <span class="o">=</span> <span class="n">GCHandle</span><span class="o">.</span><span class="n">Alloc</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">GCHandleType</span><span class="o">.</span><span class="n">Pinned</span><span class="p">)</span>
+        <span class="n">sourcePtr</span> <span class="o">=</span> <span class="n">sourceHandle</span><span class="o">.</span><span class="n">AddrOfPinnedObject</span><span class="p">()</span><span class="o">.</span><span class="n">ToInt64</span><span class="p">()</span>
+        <span class="n">destPtr</span> <span class="o">=</span> <span class="n">npArray</span><span class="o">.</span><span class="n">__array_interface__</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ctypes</span><span class="o">.</span><span class="n">memmove</span><span class="p">(</span><span class="n">destPtr</span><span class="p">,</span> <span class="n">sourcePtr</span><span class="p">,</span> <span class="n">npArray</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">sourceHandle</span><span class="o">.</span><span class="n">IsAllocated</span><span class="p">:</span> <span class="n">sourceHandle</span><span class="o">.</span><span class="n">Free</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">npArray</span></div>
+
+
+<div class="viewcode-block" id="jsondump"><a class="viewcode-back" href="../../core.html#penepy.core.jsondump">[ドキュメント]</a><span class="k">def</span> <span class="nf">jsondump</span><span class="p">(</span><span class="n">dic</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">({})):</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">Dictionary</span><span class="p">[</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Double</span><span class="p">]]]()</span>
+        <span class="n">dic</span> <span class="o">=</span> <span class="n">dicconverter</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">([])):</span>
+
+        <span class="n">lst</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">Dictionary</span><span class="p">[</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Double</span><span class="p">]]]()</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+            <span class="n">dic</span> <span class="o">=</span> <span class="n">dicconverter</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+            <span class="n">lst</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+    <span class="n">aw</span><span class="o">.</span><span class="n">JsonSerializer</span><span class="o">.</span><span class="n">WriteResult</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span>
+    <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="dicconverter"><a class="viewcode-back" href="../../core.html#penepy.core.dicconverter">[ドキュメント]</a><span class="k">def</span> <span class="nf">dicconverter</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(())):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">({}):</span>
+        <span class="n">dret</span> <span class="o">=</span> <span class="n">Dictionary</span><span class="p">[</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Double</span><span class="p">]]()</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="n">Array</span><span class="p">[</span><span class="n">Double</span><span class="p">](</span><span class="n">v</span><span class="p">)</span>
+            <span class="n">V_list</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="n">Collections</span><span class="o">.</span><span class="n">Generic</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Double</span><span class="p">]()</span>
+            <span class="n">V_list</span><span class="o">.</span><span class="n">AddRange</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">dret</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">V_list</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dret</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">Keys</span><span class="p">:</span>
+            <span class="n">dret</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">netArraytonpArray</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+        <span class="n">dret</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dret</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dret</span></div>
+
+
+<div class="viewcode-block" id="calc"><a class="viewcode-back" href="../../core.html#penepy.core.calc">[ドキュメント]</a><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">C</span><span class="p">:</span> <span class="n">aw</span><span class="o">.</span><span class="n">Calc</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dt_log</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;awcscのCalc.calcで計算されたDictionary[String, List&lt;double&gt;]をpythonの辞書に変換して返すためのラッパー</span>
+
+<span class="sd">    python側で使う分にはpenepy.Calcクラスのcalcを使えば問題ない(penepy.Calc.calcがこの関数を使う)</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    C : aw.Calc</span>
+<span class="sd">        awcscで定義されるCalcを継承したクラス</span>
+<span class="sd">    dt : float</span>
+<span class="sd">        計算時間ステップ[s]</span>
+<span class="sd">    dt_log : float</span>
+<span class="sd">        記録時間ステップ</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Dict[str,np.ndarray]</span>
+<span class="sd">        Calc.calcで得られた計算結果</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">dicconverter</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">calcPyInterop</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dt</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">dt_log</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="calc_Vdependent"><a class="viewcode-back" href="../../core.html#penepy.core.calc_Vdependent">[ドキュメント]</a><span class="k">def</span> <span class="nf">calc_Vdependent</span><span class="p">(</span><span class="n">C</span><span class="p">:</span> <span class="n">aw</span><span class="o">.</span><span class="n">Calc</span><span class="p">,</span> <span class="n">V_list</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;awcscのCalc.calc_Vdependentで計算されたDictionary[String, List&lt;double&gt;]をpythonの辞書に変換して返すためのラッパー</span>
+
+<span class="sd">    python側で使う分にはpenepy.Calcクラスのcalcを使えば問題ない(penepy.Calc.calc_Vdependentがこの関数を使う)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    C : aw.Calc</span>
+<span class="sd">        awcscで定義されるCalcを継承したクラス</span>
+<span class="sd">    V_list : np.ndarray</span>
+<span class="sd">        衝突速度のリスト</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Dict[str, np.ndarray]</span>
+<span class="sd">        各衝突速度で衝突した際の、侵徹終了時点での各パラメータを格納した辞書</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">V_list</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">([]):</span>
+        <span class="n">V_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">V_list</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dicconverter</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">calc_VdependentPyInterop</span><span class="p">(</span><span class="n">V_list</span><span class="p">))</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">penepy  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >モジュールコード</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, c_curve1870.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1 で生成しました。
+    </div>
+  </body>
+</html>

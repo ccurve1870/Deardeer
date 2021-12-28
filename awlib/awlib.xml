@@ -1,0 +1,1554 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>awlib</name>
+    </assembly>
+    <members>
+        <member name="T:awcsc.PointArray">
+            <summary>
+            侵徹体などの輪郭を記録するクラス
+            </summary>
+        </member>
+        <member name="F:awcsc.PointArray.x">
+            <summary>
+            x座標とy座標があります。
+            </summary>
+        </member>
+        <member name="F:awcsc.PointArray.y">
+            <summary>
+            x座標とy座標があります。
+            </summary>
+        </member>
+        <member name="M:awcsc.PointArray.#ctor(System.Int32)">
+            <summary>
+            分割数分配列サイズを確保
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="M:awcsc.PointArray.Add(System.Double,System.Double)">
+            <summary>
+            x,yに追加
+            </summary>
+            <param name="a">x座標</param>
+            <param name="b">y座標</param>
+        </member>
+        <member name="T:awcsc.AnimateUtil">
+            <summary>
+            計算結果を入れると侵徹挙動をアニメーションで描画するのに必要な情報作成してくれるクラス。
+            <example>
+            <code>
+            Calc C = Calc(P,T,V0);
+            AnimateUtil A = new AnimateUtil(C);
+            </code>
+            </example>
+            pythonでアニメーションを書きたいときは
+             <example>
+            <code>
+            key = list(A.plot[0].Keys)
+            fig, ax = plt.subplots()
+            ax.set_xlim(A.xmin, A.xmax)
+            ax.set_ylim(A.ymin, A.ymax)
+            for p in A.plot:
+                for k in key:
+                    ax.plot(p[k].x, p[k].y)
+             </code>
+             </example>
+             的にかけば動きます(アニメーションにする関数は別途)
+            </summary>
+        </member>
+        <member name="T:awcsc.AnimateUtil.Point">
+            <summary>
+            なんだっけこれ。
+            あると作るときに便利らしい
+            </summary>
+        </member>
+        <member name="F:awcsc.AnimateUtil.Point.x">
+            <summary>
+            x,y
+            </summary>
+        </member>
+        <member name="F:awcsc.AnimateUtil.Point.y">
+            <summary>
+            x,y
+            </summary>
+        </member>
+        <member name="M:awcsc.AnimateUtil.Point.#ctor(System.Double,System.Double)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="x0">x</param>
+            <param name="y0">y</param>
+        </member>
+        <member name="F:awcsc.AnimateUtil.ymin">
+            <summary>
+            座標をplotするときの、ymin,ymax,xmax,xminを提供する
+            </summary>
+        </member>
+        <member name="F:awcsc.AnimateUtil.ymax">
+            <summary>
+            座標をplotするときの、ymin,ymax,xmax,xminを提供する
+            </summary>
+        </member>
+        <member name="F:awcsc.AnimateUtil.xmax">
+            <summary>
+            座標をplotするときの、ymin,ymax,xmax,xminを提供する
+            </summary>
+        </member>
+        <member name="F:awcsc.AnimateUtil.xmin">
+            <summary>
+            座標をplotするときの、ymin,ymax,xmax,xminを提供する
+            </summary>
+        </member>
+        <member name="P:awcsc.AnimateUtil.result">
+            <summary>
+            計算結果を保持
+            </summary>
+        </member>
+        <member name="M:awcsc.AnimateUtil.#ctor(awcsc.Calc,System.Double,System.Double,System.Int32)">
+            <summary>
+            アニメーションを作るのに必要な辞書のリストを自動的に生成します。
+            具体的には、Target界面、Penetrator界面、s界面、alpha界面をkeyに持つ辞書を書く時間ごとに保持したリストをplotとして持ちます。
+            pythonでアニメーションを書きたいときは
+            key = list(A.plot[0].Keys)
+            fig, ax = plt.subplots()
+            ax.set_xlim(A.xmin, A.xmax)
+            ax.set_ylim(A.ymin, A.ymax)
+            for p in A.plot:
+                for k in key:
+                    ax.plot(p[k].x, p[k].y)
+             とでもすれば動くと思います。
+            </summary>
+            <param name="C">Calc</param>
+            <param name="dt">dt[s] デフォルトは1e-7</param>
+            <param name="dt_log">dt_log[s] デフォルトは1e-5。</param>
+            <param name="numsplit">座標分割数</param>
+        </member>
+        <member name="M:awcsc.AnimateUtil.getEachTime(System.Int32)">
+            <summary>
+            各時間における座標を取得。
+            </summary>
+            <param name="iteration">座標を取得するiteration</param>
+            <returns>Point arrayの辞書</returns>
+        </member>
+        <member name="M:awcsc.AnimateUtil.getTargetIF(System.Double)">
+            <summary>
+            標的側の座標を取得。
+            </summary>
+            <param name="dop">侵徹深さ</param>
+            <returns>Pointarray</returns>
+        </member>
+        <member name="M:awcsc.AnimateUtil.getPenetratorIF(System.Double,System.Double)">
+            <summary>
+            侵徹体側の座標を取得する
+            </summary>
+            <param name="dop">侵徹深さ</param>
+            <param name="L">侵徹体長さ。なぜP.Lを使ってるのかは知らない</param>
+            <returns>PointArray</returns>
+        </member>
+        <member name="M:awcsc.AnimateUtil.getalphaIF(System.Double,System.Double)">
+            <summary>
+            標的の塑性領域を取得
+            </summary>
+            <param name="dop">侵徹深さ</param>
+            <param name="alpha">Alpha</param>
+            <returns>PointArray</returns>
+        </member>
+        <member name="M:awcsc.AnimateUtil.getsIF(System.Double,System.Double)">
+            <summary>
+            侵徹体の塑性変形領域を取得。
+            </summary>
+            <param name="dop">侵徹深さ</param>
+            <param name="s">侵徹体塑性変形領域</param>
+            <returns>PointArray</returns>
+        </member>
+        <member name="T:awcsc.Calc">
+            <summary>
+            侵徹計算の各種モデルを統一的に扱うためのAbstract class
+            具体的な実装は
+            <see cref="T:awcsc.CalcAW"/>,<see cref="T:awcsc.CalcAWLV"/>,<see cref="T:awcsc.CalcAWHVLV"/>,<see cref="T:awcsc.CalcForrLV"/>,<see cref="T:awcsc.CalcMBE"/>
+            を参照のこと。
+            
+            基本的な使い方は<see cref="T:awcsc.Material"/>により材料定数を設定し、
+            <see cref="T:awcsc.Target"/>,<see cref="T:awcsc.Penetrator"/>で標的、侵徹体の特徴を決める。
+            最も簡単な例を以下に示す。
+            <example>
+              <code>
+              Material M = new Material(rho, YS, E, K0, k);
+              Target T = new Target(M);
+              Penetrator P = new Penetrator(M, L,D);
+              Calc C = new Calc(P,T, V0, cfp);
+              var  res = C.calc(dt_log, dt);
+            </code>
+            </example>
+            これは衝突速度V0での侵徹挙動を計算する。
+            <c>var res = C.calc_Vdependent(V_list);</c>
+            とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+            </summary>
+        </member>
+        <member name="F:awcsc.Calc.V0_">
+            <summary>
+            衝突速度[m/s]
+            </summary>
+        </member>
+        <member name="F:awcsc.Calc.Rc_">
+            <summary>
+            衝突時に形成されるクレーター径[m]
+            </summary>
+            <seealso cref="M:awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)"/>
+            <seealso cref="P:awcsc.Calc.fit_param"/>
+        </member>
+        <member name="P:awcsc.Calc.Rc">
+            <summary>
+            衝突時に形成されるクレーター径[m]
+            </summary>
+            <seealso cref="M:awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)"/>
+            <seealso cref="P:awcsc.Calc.fit_param"/>
+        </member>
+        <member name="P:awcsc.Calc.V0">
+            <summary>
+            衝突速度[m/s]
+            </summary>
+        </member>
+        <member name="F:awcsc.Calc.P_">
+            <summary>
+            Calcが計算に使用するPenetrator
+            </summary>
+            <seealso cref="T:awcsc.Penetrator"/>
+        </member>
+        <member name="F:awcsc.Calc.T_">
+            <summary>
+            Calcが計算に使用するTarget
+            </summary>
+            <seealso cref="T:awcsc.Target"/>
+        </member>
+        <member name="P:awcsc.Calc.P">
+            <summary>
+            Calcが計算に使用するPenetrator
+            </summary>
+            <seealso cref="T:awcsc.Penetrator"/>
+        </member>
+        <member name="P:awcsc.Calc.T">
+            <summary>
+            Calcが計算に使用するTarget
+            </summary>
+            <seealso cref="T:awcsc.Target"/>
+        </member>
+        <member name="F:awcsc.Calc.fit_param_">
+            <summary>
+             衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと
+            </summary>
+            <seealso cref="M:awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)"/>
+            <seealso cref="P:awcsc.Calc.Rc"/>
+        </member>
+        <member name="P:awcsc.Calc.fit_param">
+            <summary>
+             衝突時に形成されるCrater径を求める際の速度依存性。わからなければ触れないこと
+            </summary>
+            <seealso cref="M:awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)"/>
+            <seealso cref="P:awcsc.Calc.Rc"/>
+        </member>
+        <member name="M:awcsc.Calc.calc(System.Double@,System.Double@)">
+            <summary>
+            速度V0で衝突する侵徹挙動を計算を実行する関数。
+            各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+            SoAを返さないのはpythonとの相互作用を考慮。 
+            
+            と書いていたけどよく考えると普通にSoAで返したほうが幸せかもしれない(検討
+            
+            計算はdtごとに行い、時間がdt_log経過するごとにその時の計算結果を保存するという形式。
+            結果を格納した辞書の中身は<see cref="T:awcsc.State"/>参照
+            </summary>
+            <param name="dt0">計算時間ステップ[s]</param>
+            <param name="dt_log0">計算結果取得ステップ[s]</param>
+            <returns>結果を格納した辞書。引数の詳細は<see cref="T:awcsc.State"/>参照</returns>
+            <seealso cref="T:awcsc.State"/>
+        </member>
+        <member name="M:awcsc.Calc.calcPyInterop(System.Double@,System.Double@)">
+            <summary>
+            速度V0で衝突する侵徹挙動を計算を実行する関数。
+            各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+            
+            <see cref="M:awcsc.Calc.calc(System.Double@,System.Double@)"/>でListをpythonに返したときにpythonnetが行う
+            Implicit List conversionがあまりにも遅いので生の配列を返すようにした。
+            
+            
+            計算はdtごとに行い、時間がdt_log経過するごとにその時の計算結果を保存するという形式。
+            結果を格納した辞書の中身は<see cref="T:awcsc.State"/>参照
+            </summary>
+            <param name="dt0">計算時間ステップ[s]</param>
+            <param name="dt_log0">計算結果取得ステップ[s]</param>
+            <returns>結果を格納した辞書。引数の詳細は<see cref="T:awcsc.State"/>参照</returns>
+            <seealso cref="T:awcsc.State"/>
+            <seealso cref="M:awcsc.Calc.calc(System.Double@,System.Double@)"/>
+        </member>
+        <member name="M:awcsc.Calc.calc_Vdependent(System.Double[]@)">
+            <summary>
+            衝突速度V0を変化させながら、衝突終了後の値を取得する関数。
+            各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+            SoAを返さないのはpythonとの相互作用を考慮。 
+            
+            と書いていたけどよく考えると普通にSoAで返したほうが幸せかもしれない(検討
+            
+            結果を格納した辞書の中身は<see cref="T:awcsc.State"/>参照。
+            また、この関数では衝突速度V0も格納した辞書が返される
+            </summary>
+            <seealso cref="T:awcsc.State"/>
+            <param name="V0_list">V0のリスト[m/s]。10000 m/sくらいから結果が不安定になる(この辺は割と難しくて放置)。</param>
+            <returns>結果を格納した辞書。引数の詳細は<see cref="T:awcsc.State"/>参照。この関数ではV0のリストも格納されている</returns>
+        </member>
+        <member name="M:awcsc.Calc.calc_Vdependent(System.Collections.Generic.List{System.Double}@)">
+            <summary>
+            衝突速度V0を変化させながら、衝突終了後の値を取得する関数。
+            各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+            SoAを返さないのはpythonとの相互作用を考慮。 
+            
+            と書いていたけどよく考えると普通にSoAで返したほうが幸せかもしれない(検討
+            
+            結果を格納した辞書の中身は<see cref="T:awcsc.State"/>参照。
+            また、この関数では衝突速度V0も格納した辞書が返される
+            </summary>
+            <seealso cref="T:awcsc.State"/>
+            <param name="V0_list">V0のリスト[m/s]。10000 m/sくらいから結果が不安定になる(この辺は割と難しくて放置)。</param>
+            <returns>結果を格納した辞書。引数の詳細は<see cref="T:awcsc.State"/>参照。この関数ではV0のリストも格納されている</returns>
+        </member>
+        <member name="M:awcsc.Calc.calc_VdependentPyInterop(System.Double[]@)">
+            <summary>
+            衝突速度V0を変化させながら、衝突終了後の値を取得する関数。
+            各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+            
+            <see cref="M:awcsc.Calc.calc_Vdependent(System.Double[]@)"/>でListをpythonに返したときにpythonnetが行う
+            Implicit List conversionがあまりにも遅いので生の配列を返すようにした。
+            
+            結果を格納した辞書の中身は<see cref="T:awcsc.State"/>参照。
+            また、この関数では衝突速度V0も格納した辞書が返される
+            </summary>
+            <seealso cref="T:awcsc.State"/>
+            <seealso cref="M:awcsc.Calc.calc_Vdependent(System.Double[]@)"/>
+            <param name="V0_list">V0のリスト[m/s]。10000 m/sくらいから結果が不安定になる(この辺は割と難しくて放置)。</param>
+            <returns>結果を格納した辞書。引数の詳細は<see cref="T:awcsc.State"/>参照。この関数ではV0のリストも格納されている</returns>
+        </member>
+        <member name="M:awcsc.Calc.getRt(System.Double,awcsc.State@)">
+            <summary>
+            標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。
+            </summary>
+            <param name="Y">Material.Y[GPa]</param>
+            <param name="stold">State</param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.Calc.init_State(System.Double@)">
+             <summary>
+            計算モデルのt=0sにおける状態を取得するための関数
+             </summary>
+             <param name="dt">dt[s]。まあ気にしなくていいと思います</param>
+             <returns>初期化されたStateを返します</returns>
+        </member>
+        <member name="M:awcsc.Calc.cycle(System.Double@,awcsc.State@)">
+            <summary>
+            実際に時間を進めるときの、1サイクルを記述した関数。気合だ。
+            </summary>
+            <param name="dt">時間刻み[s]</param>
+            <param name="st0">時刻tにおける状態</param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.Calc.cond_endcalc(awcsc.State@,awcsc.State@)">
+            <summary>
+            計算を終了するための判定基準。
+            がんばろう。
+            </summary>
+            <param name="st">Statenew</param>
+            <param name="st0">Stateold</param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.Calc.Swap``1(``0@,``0@)">
+            <summary>
+            cycleごとにstnewとstoldをスワップしたいので作った。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="lhs"></param>
+            <param name="rhs"></param>
+        </member>
+        <member name="T:awcsc.CalcAW">
+            <summary>
+            高速度AWモデルを扱うためのモデル
+            
+            基本的な使い方は<see cref="T:awcsc.Material"/>により材料定数を設定し、
+            <see cref="T:awcsc.Target"/>,<see cref="T:awcsc.Penetrator"/>で標的、侵徹体の特徴を決める。
+            最も簡単な例を以下に示す。
+            <example>
+              <code>
+              Material M = new Material(rho, YS, E, K0, k);
+              Target T = new Target(M);
+              Penetrator P = new Penetrator(M, L,D);
+              CalcAW C = new CalcAW(P,T, V0, cfp);
+              CalcAW C = new CalcAW(P,T, V0); //cfpは省略可能
+              var  res = C.calc(dt_log, dt);
+            </code>
+            </example>
+            これは衝突速度V0での侵徹挙動を計算する。
+            <c>var res = C.calc_Vdependent(V_list);</c>
+            とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcAW.V0">
+            <summary>
+            衝突速度[m/s]。Rcも再設定する
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcAW.Dc">
+            <summary>
+            クレーター直径。2*Rc
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcAW.P">
+            <summary>
+            Calcが計算に使用するPenetrator
+            </summary>
+            <seealso cref="T:awcsc.Penetrator"/>
+        </member>
+        <member name="P:awcsc.CalcAW.T">
+            <summary>
+            Calcが計算に使用するTarget
+            </summary>
+            <seealso cref="T:awcsc.Target"/>
+        </member>
+        <member name="M:awcsc.CalcAW.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])">
+            <summary>
+            CalcAWを初期化。
+            </summary>
+            <param name="P0">Penetrator</param>
+            <param name="T0">Target</param>
+            <param name="V00">衝突速度[m/s]</param>
+            <param name="fit_param0">クレーター径の衝突速度依存性。
+            
+            わからなかったらこの引数は省略可能。その場合は[0.000287, 1.48e-07]が用いられる</param>
+        </member>
+        <member name="M:awcsc.CalcAW.func_alpha(System.Double@,System.Double@,System.Double@)">
+            <summary>
+            alphaの解を得る。
+            dynamic cavity expansion analysisの結果
+             (1d + rhou2 * Yinv) * (1d + rhou2 * Yinv) * (K_t - rhou2 * alpha2) - (1d + rhou2 * alpha2 * 0.5 * T.Ginv) * (1d + rhou2 * alpha2 * 0.5 * T.Ginv) * (K_t - rhou2)=0
+             をalpha2について解き、それの平方根を返す。
+            </summary>
+            <param name="rhou2">rho*u^2[kg/m/s^2]</param>
+            <param name="K_t">uにおけるK[Pa]</param>
+            <param name="Yinv">1/Y(x)</param>
+            <returns>f(alhpa)→０にしたい</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.Kt(System.Double@)">
+            <summary>
+            粒子速度uにおける標的の体積弾性率
+            $U=c0+ku=\sqrt{K0/rho}+ku$ 
+            $U=\sqrt{K_t/rho}$ 
+            
+            </summary>
+            <param name="u">粒子速度[m/s]</param>
+            <returns>粒子速度uのときの標的のK[GPa]</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:awcsc.CalcAW.calc_alpha(System.Double@,awcsc.State@)" -->
+        <member name="M:awcsc.CalcAW.Crater_radius(System.Double@,System.Collections.Generic.List{System.Double}@)">
+            <summary>
+            衝突時のクレーター径を求める
+            </summary>
+            <param name="v">衝突速度[m/s]</param>
+            <param name="fit">fit_params</param>
+            <returns>Rc[m]</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.calc_udot(awcsc.State@)">
+            <summary>
+            侵徹体先端の加速度を求める。
+            </summary>
+            <param name="st">State</param>
+            <returns>udot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.calc_vdot(awcsc.State@)">
+            <summary>
+            侵徹体後端の加速度を求める。
+            </summary>
+            <param name="st">State</param>
+            <returns>vdot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.calc_s(awcsc.State@)">
+            <summary>
+            侵徹体先端の塑性変形領域を求める
+            </summary>
+            <param name="st">State</param>
+            <returns>s[m]</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.func_p(System.Double@)">
+            <summary>
+            衝突直後の先端速度を圧力のマッチングから求めるための圧力計算用の式。
+            </summary>
+            <param name="u">粒子速度[m/s]</param>
+            <returns>圧力[Pa]</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.func_pprime(System.Double@)">
+            <summary>
+            <see cref="M:awcsc.CalcAW.func_p(System.Double@)"/>の微分。
+            </summary>
+            <param name="u">粒子速度[m/s]</param>
+            <returns>圧力[Pa]</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.calc_initu">
+            <summary>
+            func_pを最小化して初期の侵徹速度を求める
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.CalcAW.getTimeDerivative(awcsc.State,System.Double)">
+            <summary>
+            諦め
+            </summary>
+            <param name="st0"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.CalcAW.cycle(System.Double@,awcsc.State@)">
+            <summary>
+            書く時間における侵徹体の状態を計算する。
+            詳細はAnderson, Walker参照
+            </summary>
+            <param name="dt">時間刻み[s]</param>
+            <param name="st0">State</param>
+            <returns>次の時間でのState</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.init_State(System.Double@)">
+             <summary>
+            計算モデルのt=0sにおける状態を取得するための関数
+             </summary>
+             <param name="dt">dt[s]。まあ気にしなくていいと思います</param>
+             <returns>初期化されたStateを返します</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.cond_endcalc(awcsc.State@,awcsc.State@)">
+            <summary>
+            計算を終了するための判定基準。
+            がんばろう。
+            </summary>
+            <param name="st">Statenew</param>
+            <param name="st0">Stateold</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:awcsc.CalcAW.getRt(System.Double,awcsc.State@)">
+            <summary>
+            標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。
+            </summary>
+            <param name="Y">Material.Y[GPa]</param>
+            <param name="stold">State</param>
+            <returns>Rt[Pa]</returns>
+        </member>
+        <member name="T:awcsc.CalcAWHVLV">
+            <summary>
+            高速度と低速度AWモデルを扱うためのモデル
+            侵徹体強度が十分高い高速度侵徹では、侵徹終了後に、残存侵徹体長さが低速度侵徹を起こしうる。
+            そこでCalcAW→CalcAWLVを続けて行うことで高速度侵徹終了後の侵徹を計算する。
+            基本的な使い方は<see cref="T:awcsc.Material"/>により材料定数を設定し、
+            <see cref="T:awcsc.Target"/>,<see cref="T:awcsc.Penetrator"/>で標的、侵徹体の特徴を決める。
+            最も簡単な例を以下に示す。
+            <example>
+              <code>
+              Material M = new Material(rho, YS, E, K0, k);
+              Target T = new Target(M);
+              Penetrator P = new Penetrator(M, L,D);
+              CalcAW C = new CalcAW(P,T, V0, cfp);
+              CalcAW C = new CalcAW(P,T, V0); //cfpは省略可能
+              var  res = C.calc(dt_log, dt);
+            </code>
+            </example>
+            これは衝突速度V0での侵徹挙動を計算する。
+            <c>var res = C.calc_Vdependent(V_list);</c>
+            とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcAWHVLV.V0">
+            <summary>
+            衝突速度[m/s]。Rcも再設定する
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcAWHVLV.Dc">
+            <summary>
+            クレーター直径。2*Rc
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcAWHVLV.P">
+            <summary>
+            Calcが計算に使用するPenetrator
+            </summary>
+            <seealso cref="T:awcsc.Penetrator"/>
+        </member>
+        <member name="P:awcsc.CalcAWHVLV.T">
+            <summary>
+            Calcが計算に使用するTarget
+            </summary>
+            <seealso cref="T:awcsc.Target"/>
+        </member>
+        <member name="M:awcsc.CalcAWHVLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])">
+            <summary>
+            CalcAWを初期化。
+            </summary>
+            <param name="P0">Penetrator</param>
+            <param name="T0">Target</param>
+            <param name="V00">衝突速度[m/s]</param>
+            <param name="fit_param0">クレーター径の衝突速度依存性。
+            
+            わからなかったらこの引数は省略可能。その場合は[0.000287, 1.48e-07]が用いられる</param>
+        </member>
+        <member name="M:awcsc.CalcAWHVLV.calc(System.Double@,System.Double@)">
+            <summary>
+            速度V0で衝突する侵徹挙動を計算を実行する関数。
+            ここでは一度CalcAWが終了するまで計算を行い、その後
+            CalcAWLVを再度投げている
+            
+            計算はdtごとに行い、時間がdt_log経過するごとにその時の計算結果を保存するという形式。
+            結果を格納した辞書の中身は<see cref="T:awcsc.State"/>参照
+            </summary>
+            <param name="dt0">計算時間ステップ[s]</param>
+            <param name="dt_log0">計算結果取得ステップ[s]</param>
+            <returns>結果を格納した辞書。引数の詳細は<see cref="T:awcsc.State"/>参照</returns>
+            <seealso cref="T:awcsc.State"/>
+        </member>
+        <member name="M:awcsc.CalcAWHVLV.calc_Vdependent(System.Collections.Generic.List{System.Double}@)">
+            <summary>
+            衝突速度V0を変化させながら、衝突終了後の値を取得する関数。
+            各種モデルについて統一的にこの関数を用いて計算を行い、各パラメータが格納された辞書を返す。
+            SoAを返さないのはpythonとの相互作用を考慮。 
+            
+            と書いていたけどよく考えると普通にSoAで返したほうが幸せかもしれない(検討
+            
+            結果を格納した辞書の中身は<see cref="T:awcsc.State"/>参照。
+            また、この関数では衝突速度V0も格納した辞書が返される
+            </summary>
+            <seealso cref="T:awcsc.State"/>
+            <param name="V0_list">V0のリスト[m/s]。10000 m/sくらいから結果が不安定になる(この辺は割と難しくて放置)。</param>
+            <returns>結果を格納した辞書。引数の詳細は<see cref="T:awcsc.State"/>参照。この関数ではV0のリストも格納されている</returns>
+        </member>
+        <member name="M:awcsc.CalcAWHVLV.init_State(System.Double@)">
+             <summary>
+            計算モデルのt=0sにおける状態を取得するための関数だけど必要なし
+             </summary>
+             <param name="dt">dt[s]。まあ気にしなくていいと思います</param>
+             <returns>初期化されたStateを返します</returns>
+        </member>
+        <member name="M:awcsc.CalcAWHVLV.cond_endcalc(awcsc.State@,awcsc.State@)">
+            <summary>
+            計算を終了するための判定基準。CalcAw,CalcAWLVのものを使う
+            </summary>
+            <param name="st">Statenew</param>
+            <param name="st0">Stateold</param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.CalcAWHVLV.cycle(System.Double@,awcsc.State@)">
+            <summary>
+            書く時間の状態を計算する。CalcAw,CalcAWLVのものを使う
+            </summary>
+            <param name="dt">time step[s]</param>
+            <param name="st0">Stateold</param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.CalcAWHVLV.getRt(System.Double,awcsc.State@)">
+            <summary>
+            標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。
+            CalcAW、CalcAWLVを使う
+            </summary>
+            <param name="Y">Material.Y[GPa]</param>
+            <param name="stold">State</param>
+            <returns></returns>
+        </member>
+        <member name="T:awcsc.CalcAWLV">
+            <summary>
+            低速度AWモデルを扱うためのモデル
+            
+            基本的な使い方は<see cref="T:awcsc.Material"/>により材料定数を設定し、
+            <see cref="T:awcsc.Target"/>,<see cref="T:awcsc.Penetrator"/>で標的、侵徹体の特徴を決める。
+            最も簡単な例を以下に示す。
+            <example>
+              <code>
+              Material M = new Material(rho, YS, E, K0, k);
+              Target T = new Target(M);
+              Penetrator P = new Penetrator(M, L,D);
+              CalcAWLV C = new CalcAWLV(P,T, V0, cfp);
+              CalcAWLV C = new CalcAWLV(P,T, V0); //cfpは省略可能
+              var  res = C.calc(dt_log, dt);
+            </code>
+            </example>
+            これは衝突速度V0での侵徹挙動を計算する。
+            <c>var res = C.calc_Vdependent(V_list);</c>
+            とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+            </summary>
+        </member>
+        <member name="M:awcsc.CalcAWLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])">
+            <summary>
+            CalcAWを初期化。
+            </summary>
+            <param name="P0">Penetrator</param>
+            <param name="T0">Target</param>
+            <param name="V00">衝突速度[m/s]</param>
+            <param name="fit_param0">クレーター径の衝突速度依存性。
+            
+            わからなかったらこの引数は省略可能。その場合は[0.000287, 1.48e-07]が用いられる</param>
+        </member>
+        <member name="M:awcsc.CalcAWLV.calc_udot(awcsc.State@)">
+            <summary>
+            侵徹体先端の加速度を求める。
+            </summary>
+            <param name="st">State</param>
+            <returns>udot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcAWLV.cycle(System.Double@,awcsc.State@)">
+            <summary>
+            各時間における侵徹体の状態を計算する。
+            詳細はAnderson, Walker参照
+            </summary>
+            <param name="dt">時間刻み[s]</param>
+            <param name="st0">State</param>
+            <returns>次の時間でのState</returns>
+        </member>
+        <member name="M:awcsc.CalcAWLV.init_State(System.Double@)">
+             <summary>
+            計算モデルのt=0sにおける状態を取得するための関数
+             </summary>
+             <param name="dt">dt[s]。まあ気にしなくていいと思います</param>
+             <returns>初期化されたStateを返します</returns>
+        </member>
+        <member name="M:awcsc.CalcAWLV.cond_endcalc(awcsc.State@,awcsc.State@)">
+            <summary>
+            計算を終了するための判定基準。
+            がんばろう。
+            </summary>
+            <param name="st">Statenew</param>
+            <param name="st0">Stateold</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:awcsc.CalcAWLV.getRt(System.Double,awcsc.State@)">
+            <summary>
+            標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。
+            </summary>
+            <param name="Y">Material.Y[GPa]</param>
+            <param name="stold">State</param>
+            <returns>Rt[Pa]</returns>
+        </member>
+        <member name="T:awcsc.CalcForrLV">
+            <summary>
+            低速度Forrestal-Warrenモデルを扱うためのモデル
+            添字のVCはVarious Constantを意味しており、Cavity expansion analysisの定数項を変更可能であることを意味している。
+            
+            基本的な使い方は<see cref="T:awcsc.Material"/>により材料定数を設定し、
+            <see cref="T:awcsc.Target"/>,<see cref="T:awcsc.Penetrator"/>で標的、侵徹体の特徴を決める。
+            
+            このモデルでは侵徹体先端形状CRHを考慮した計算が可能。
+            最も簡単な例を以下に示す。
+            <example>
+              <code>
+              Material M = new Material(rho, YS, E, K0, k);
+              Target T = new Target(M);
+              Penetrator P = new Penetrator(M, L,D, CRH); //ここでCRHを設定
+              CalcAWLV C = new CalcAWLV(P,T, V0, cfp);
+              CalcAWLV C = new CalcAWLV(P,T, V0); //cfpは省略可能
+              var  res = C.calc(dt_log, dt);
+            </code>
+            </example>
+            上記例は衝突速度V0での侵徹挙動を計算する。
+            <c>var res = C.calc_Vdependent(V_list);</c>
+            とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLV.K1">
+            <summary>
+            P/Y = K1 log(E/Y)+K2のK1
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLV.K2">
+            <summary>
+            P/Y = K1 log(E/Y)+K2のK2
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLV.V0">
+            <summary>
+            衝突速度[m/s]
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLV.Dc">
+            <summary>
+            クレーター直径。侵徹体径と同一
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLV.P">
+            <summary>
+            Calcが計算に使用するPenetrator
+            </summary>
+            <seealso cref="T:awcsc.Penetrator"/>
+        </member>
+        <member name="P:awcsc.CalcForrLV.T">
+            <summary>
+            Calcが計算に使用するTarget
+            </summary>
+            <seealso cref="T:awcsc.Target"/>
+        </member>
+        <member name="M:awcsc.CalcForrLV.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[],System.Double,System.Double)">
+            <summary>
+            CalcForrLVを初期化。
+            </summary>
+            <param name="P0">Penetrator</param>
+            <param name="T0">Target</param>
+            <param name="V00">衝突速度[m/s]</param>
+            <param name="fit_param0">クレーター径の衝突速度依存性。
+            
+            CalcForrLVでは使用しないため省略可能。
+            CalcAWなどと同一の引数を取れるよう用意している</param>
+            <param name="k1"> Cavity Expansion Analysisで求められるPの一般形P/Y = K1 log(E/Y)+K2のK1 </param>
+            <param name="k2"> Cavity Expansion Analysisで求められるPの一般形P/Y = K1 log(E/Y)+K2のK2 </param>
+        </member>
+        <member name="M:awcsc.CalcForrLV.calc_udot(awcsc.State@)">
+            <summary>
+            侵徹体先端の加速度を求める。
+            </summary>
+            <param name="st">State</param>
+            <returns>udot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLV.calc_vdot(awcsc.State@)">
+            <summary>
+            侵徹体後ろ端の加速度を求める。
+            
+            Rigidな侵徹体なので侵徹体先端と同じ
+            </summary>
+            <param name="st">State</param>
+            <returns>udot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLV.cycle(System.Double@,awcsc.State@)">
+            <summary>
+            書く時間における侵徹体の状態を計算する。
+            詳細はAnderson, Walker参照
+            </summary>
+            <param name="dt">時間刻み[s]</param>
+            <param name="st0">State</param>
+            <returns>次の時間でのState</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLV.init_State(System.Double@)">
+             <summary>
+            計算モデルのt=0sにおける状態を取得するための関数
+             </summary>
+             <param name="dt">dt[s]。まあ気にしなくていいと思います</param>
+             <returns>初期化されたStateを返します</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLV.cond_endcalc(awcsc.State@,awcsc.State@)">
+            <summary>
+            計算を終了するための判定基準。
+            がんばろう。
+            </summary>
+            <param name="st">Statenew</param>
+            <param name="st0">Stateold</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLV.getRt(System.Double,awcsc.State@)">
+            <summary>
+            標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。
+            </summary>
+            <param name="Y">Material.Y[GPa]</param>
+            <param name="stold">State</param>
+            <returns>Rt[Pa]</returns>
+        </member>
+        <member name="T:awcsc.CalcForrLVold">
+            <summary>
+            低速度Forrestal-Warrenモデルを扱うためのモデル
+            
+            基本的な使い方は<see cref="T:awcsc.Material"/>により材料定数を設定し、
+            <see cref="T:awcsc.Target"/>,<see cref="T:awcsc.Penetrator"/>で標的、侵徹体の特徴を決める。
+            
+            このモデルでは侵徹体先端形状CRHを考慮した計算が可能。
+            最も簡単な例を以下に示す。
+            <example>
+              <code>
+              Material M = new Material(rho, YS, E, K0, k);
+              Target T = new Target(M);
+              Penetrator P = new Penetrator(M, L,D, CRH); //ここでCRHを設定
+              CalcAWLV C = new CalcAWLV(P,T, V0, cfp);
+              CalcAWLV C = new CalcAWLV(P,T, V0); //cfpは省略可能
+              var  res = C.calc(dt_log, dt);
+            </code>
+            </example>
+            上記例は衝突速度V0での侵徹挙動を計算する。
+            <c>var res = C.calc_Vdependent(V_list);</c>
+            とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLVold.V0">
+            <summary>
+            衝突速度[m/s]
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLVold.Dc">
+            <summary>
+            クレーター直径。侵徹体径と同一
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcForrLVold.P">
+            <summary>
+            Calcが計算に使用するPenetrator
+            </summary>
+            <seealso cref="T:awcsc.Penetrator"/>
+        </member>
+        <member name="P:awcsc.CalcForrLVold.T">
+            <summary>
+            Calcが計算に使用するTarget
+            </summary>
+            <seealso cref="T:awcsc.Target"/>
+        </member>
+        <member name="M:awcsc.CalcForrLVold.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])">
+            <summary>
+            CalcForrLVを初期化。
+            </summary>
+            <param name="P0">Penetrator</param>
+            <param name="T0">Target</param>
+            <param name="V00">衝突速度[m/s]</param>
+            <param name="fit_param0">クレーター径の衝突速度依存性。
+            
+            CalcForrLVでは使用しないため省略可能。
+            CalcAWなどと同一の引数を取れるよう用意している</param>
+        </member>
+        <member name="M:awcsc.CalcForrLVold.calc_udot(awcsc.State@)">
+            <summary>
+            侵徹体先端の加速度を求める。
+            </summary>
+            <param name="st">State</param>
+            <returns>udot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLVold.calc_vdot(awcsc.State@)">
+            <summary>
+            侵徹体後ろ端の加速度を求める。
+            
+            Rigidな侵徹体なので侵徹体先端と同じ
+            </summary>
+            <param name="st">State</param>
+            <returns>udot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLVold.cycle(System.Double@,awcsc.State@)">
+            <summary>
+            書く時間における侵徹体の状態を計算する。
+            詳細はAnderson, Walker参照
+            </summary>
+            <param name="dt">時間刻み[s]</param>
+            <param name="st0">State</param>
+            <returns>次の時間でのState</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLVold.init_State(System.Double@)">
+             <summary>
+            計算モデルのt=0sにおける状態を取得するための関数
+             </summary>
+             <param name="dt">dt[s]。まあ気にしなくていいと思います</param>
+             <returns>初期化されたStateを返します</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLVold.cond_endcalc(awcsc.State@,awcsc.State@)">
+            <summary>
+            計算を終了するための判定基準。
+            がんばろう。
+            </summary>
+            <param name="st">Statenew</param>
+            <param name="st0">Stateold</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:awcsc.CalcForrLVold.getRt(System.Double,awcsc.State@)">
+            <summary>
+            標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。
+            </summary>
+            <param name="Y">Material.Y[GPa]</param>
+            <param name="stold">State</param>
+            <returns>Rt[Pa]</returns>
+        </member>
+        <member name="T:awcsc.CalcMBE">
+            <summary>
+            MBEモデルを扱うためのモデル
+            
+            基本的な使い方は<see cref="T:awcsc.Material"/>により材料定数を設定し、
+            <see cref="T:awcsc.Target"/>,<see cref="T:awcsc.Penetrator"/>で標的、侵徹体の特徴を決める。
+            最も簡単な例を以下に示す。
+            <example>
+              <code>
+              Material M = new Material(rho, YS, E, K0, k);
+              Target T = new Target(M);
+              Penetrator P = new Penetrator(M, L,D);
+              CalcMBE C = new CalcMBE(P,T, V0, cfp);
+              CalcMBE C = new CalcMBE(P,T, V0); //cfpは省略可能
+              var  res = C.calc(dt_log, dt);
+            </code>
+            </example>
+            これは衝突速度V0での侵徹挙動を計算する。
+            <c>var res = C.calc_Vdependent(V_list);</c>
+            とすることで、速度が変化したときの侵徹終了時の各種値を返す。
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcMBE.V0">
+            <summary>
+            衝突速度[m/s]。
+            </summary>
+        </member>
+        <member name="P:awcsc.CalcMBE.P">
+            <summary>
+            Calcが計算に使用するPenetrator
+            </summary>
+            <seealso cref="T:awcsc.Penetrator"/>
+        </member>
+        <member name="P:awcsc.CalcMBE.T">
+            <summary>
+            Calcが計算に使用するTarget
+            </summary>
+            <seealso cref="T:awcsc.Target"/>
+        </member>
+        <member name="P:awcsc.CalcMBE.hydro_lim">
+            <summary>
+            MBEモデルから決定される、侵徹体と標的の密度の比 
+            $\sqrt{\rho_P / \rho_T}$
+            </summary>
+        </member>
+        <member name="M:awcsc.CalcMBE.#ctor(awcsc.Penetrator@,awcsc.Target@,System.Double,System.Double[])">
+            <summary>
+            CalcMBEを初期化。
+            </summary>
+            <param name="P0">Penetrator</param>
+            <param name="T0">Target</param>
+            <param name="V00">衝突速度[m/s]</param>
+            <param name="fit_param0">クレーター径の衝突速度依存性。
+            
+            CalcMBEでは使用しないため省略可能。
+            CalcAWなどと同一の引数を取れるよう用意している</param>
+        </member>
+        <member name="M:awcsc.CalcMBE.vl(System.Double)">
+            <summary>
+            MBEモデルにより侵徹が開始する速度。
+            </summary>
+            <param name="x">侵徹深さ。標的が強度の深さ依存性を持っているときを考慮するため。</param>
+            <returns></returns>
+        </member>
+        <member name="P:awcsc.CalcMBE.mu">
+            <summary>
+            MBEモデルの計算を行うときに出てくる$\mu$
+            
+            $$\sqrt{\rho_T / \rho_P}$$
+            </summary>
+        </member>
+        <member name="M:awcsc.CalcMBE.A(System.Double)">
+            <summary>
+            MBEモデルの計算を行うときに出てくる$A$
+            </summary>
+            <param name="x">侵徹深さ。標的が強度の深さ依存性を持っているときを考慮するため。</param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.CalcMBE.calc_vdot(awcsc.State@)">
+            <summary>
+            侵徹体後端の加速度を求める。
+            </summary>
+            <param name="st">State</param>
+            <returns>vdot[m/s^2]</returns>
+        </member>
+        <member name="M:awcsc.CalcMBE.calc_u(awcsc.State@)">
+            <summary>
+            侵徹体後端の速度から決まる侵徹速度を求める。
+            </summary>
+            <param name="st">State</param>
+            <returns>u[m/s]</returns>
+        </member>
+        <member name="M:awcsc.CalcMBE.cycle(System.Double@,awcsc.State@)">
+            <summary>
+            各時間における侵徹体の状態を計算する。
+            詳細はTate-Alekseebskiiモデル参照
+            </summary>
+            <param name="dt">時間刻み[s]</param>
+            <param name="st0">State</param>
+            <returns>次の時間でのState</returns>
+        </member>
+        <member name="M:awcsc.CalcMBE.init_State(System.Double@)">
+             <summary>
+            計算モデルのt=0sにおける状態を取得するための関数
+             </summary>
+             <param name="dt">dt[s]。まあ気にしなくていいと思います</param>
+             <returns>初期化されたStateを返します</returns>
+        </member>
+        <member name="M:awcsc.CalcMBE.cond_endcalc(awcsc.State@,awcsc.State@)">
+            <summary>
+            計算を終了するための判定基準。
+            がんばろう。
+            </summary>
+            <param name="st">Statenew</param>
+            <param name="st0">Stateold</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:awcsc.CalcMBE.getRt(System.Double,awcsc.State@)">
+            <summary>
+            標的強度項Rtは常に変化するので、それを取得して記録することを矯正するための関数。
+            </summary>
+            <param name="Y">Material.Y[GPa]</param>
+            <param name="stold">State</param>
+            <returns>Rt[Pa]</returns>
+        </member>
+        <member name="M:awcsc.JsonSerializer.Serializer``1">
+            <summary>
+            通常用
+            </summary>
+            <typeparam name="TYpe">任意の型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.JsonSerializer.SerializerList``1">
+            <summary>
+            Listオブジェクト用
+            </summary>
+            <typeparam name="TYpe">任意の型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.JsonSerializer.SerializerDictionary``2">
+            <summary>
+            Dictionaryオブジェクト用
+            </summary>
+            <typeparam name="TYpe1">任意の型</typeparam>
+            <typeparam name="TYpe2">任意の型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.JsonSerializer.SerializerListDictionary``2">
+            <summary>
+            Dictionaryオブジェクト用
+            </summary>
+            <typeparam name="TYpe1">任意の型</typeparam>
+            <typeparam name="TYpe2">任意の型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:awcsc.Material">
+            <summary>
+            侵徹体や標的の材質をまとめて扱うためのクラス。
+            
+            材料の特性を設定する。
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.Y">
+            <summary>
+            降伏強度[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.rho">
+            <summary>
+            密度[kg/m^3]
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.E">
+            <summary>
+            ヤング率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.G">
+            <summary>
+            剛性率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.K0">
+            <summary>
+            静的な体積弾性率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.k">
+            <summary>
+            衝撃波速度の粒子速度依存性[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.c0">
+            <summary>
+            静的な体積波速度
+            </summary>
+        </member>
+        <member name="P:awcsc.Material.c">
+            <summary>
+            縦波速度。
+            </summary>
+        </member>
+        <member name="M:awcsc.Material.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            通常使用するコンストラクタ
+            </summary>
+            <param name="rho">密度[kg/m^3]</param>
+            <param name="YS">降伏強度[GPa]</param>
+            <param name="E">ヤング率[GPa]</param>
+            <param name="K0">静的な体積弾性率[GPa]</param>
+            <param name="k">衝撃波速度の粒子速度依存性[-]</param>
+        </member>
+        <member name="M:awcsc.Material.#ctor(awcsc.Material@)">
+            <summary>
+            Material複製用コンストラクタ
+            </summary>
+            <param name="M">Material</param>
+        </member>
+        <member name="T:awcsc.Target">
+            <summary>
+            標的特性のクラス。
+            Materialと大体同じだけど、表面硬化などを考慮できるように少し変更を加えている。
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.Y0">
+            <summary>
+            均質な部分の降伏強度[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.Ys">
+            <summary>
+            表面の降伏強度[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.ts">
+            <summary>
+            完全に焼きが入り、表面硬さが変化しない領域の厚み[m]
+            常に0 &lt; ts&lt;=thであるべき。
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.th">
+            <summary>
+            表面硬化層全体の厚み[m]
+            常に0 &lt; ts &lt;= thであるべき。
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.tt">
+            <summary>
+            不完全な焼きが入り、表面硬さが均質部の硬さに向かって減少している領域の厚み[m]
+            </summary>
+        </member>
+        <member name="M:awcsc.Target.#ctor(awcsc.Material@)">
+            <summary>
+            均質な標的のコンストラクタ
+            </summary>
+            <param name="Mater">Material</param>
+        </member>
+        <member name="M:awcsc.Target.#ctor(awcsc.Material@,System.Double,System.Double,System.Double)">
+            <summary>
+            表面硬化された標的のコンストラクタ。引数を覚えるのが面倒。
+            </summary>
+            <param name="Mater">Material</param>
+            <param name="Y_surface">表面強度。硬さから換算するのが楽[GPa]</param>
+            <param name="thickness_surface">完全に焼きが入ってる領域の厚み$t_s$[m]</param>
+            <param name="thickness_hardend">表面硬化全体の厚み$t_h$[m]</param>
+            <remarks>常に$t_s \lt t_h$になる。</remarks>
+        </member>
+        <member name="M:awcsc.Target.#ctor(awcsc.Target@)">
+            <summary>
+            Target複製用のコンストラクタ。
+            </summary>
+            <param name="Tar">Target</param>
+        </member>
+        <member name="M:awcsc.Target.Y(System.Double)">
+            <summary>
+            深さxにおける標的の強度
+            </summary>
+            <param name="x">深さ[m]</param>
+            <returns>標的強度[Pa]</returns>
+        </member>
+        <member name="M:awcsc.Target.Yinv(System.Double)">
+            <summary>
+            深さxにおける標的の強度の逆数
+            </summary>
+            <param name="x">深さ[m]</param>
+            <returns>1/標的強度[Pa^-1]</returns>
+        </member>
+        <member name="P:awcsc.Target.Ginv">
+            <summary>
+            標的の剛性率の逆数
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.c0inv">
+            <summary>
+            標的の体積波速度の逆数
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.rho">
+            <summary>
+            密度[kg/m3]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.E">
+            <summary>
+            ヤング率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.G">
+            <summary>
+            剛性率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.K0">
+            <summary>
+            静的な体積弾性率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.k">
+            <summary>
+            衝撃波速度の粒子速度依存性[-]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.c0">
+            <summary>
+            体積波速度[m/s]
+            </summary>
+        </member>
+        <member name="P:awcsc.Target.c">
+            <summary>
+            縦波速度[m/s]
+            </summary>
+        </member>
+        <member name="M:awcsc.Target.set_Y(System.Double)">
+            <summary>
+            均質な部分の降伏強度Y0のセッター
+            </summary>
+            <param name="Y_matrix">均質な部分の降伏強度[GPa]</param>
+            <returns>Target</returns>
+        </member>
+        <member name="M:awcsc.Target.set_Y(System.Double,System.Double,System.Double)">
+            <summary>
+            表面硬化層の強度、厚み設定。
+            </summary>
+            <param name="Y_surface">表面強度[GPa]</param>
+            <param name="thickness_surface">完全に焼きが入った領域の厚み[m]</param>
+            <param name="thickness_hardend">表面硬化層全体の厚み[m]</param>
+            <returns>Target</returns>
+        </member>
+        <member name="M:awcsc.Target.set_Y(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            標的強度全体を再設定
+            </summary>
+            <param name="Y_surface">表面強度[GPa]</param>
+            <param name="thickness_surface">完全に焼きが入った領域の厚み[m]</param>
+            <param name="thickness_hardend">表面硬化層全体の厚み[m]</param>
+            <param name="Y_matrix">均質な部分の降伏強度[GPa]</param>
+            <returns>Target</returns>
+        </member>
+        <member name="M:awcsc.Target.calc_Y(System.Double)">
+            <summary>
+            深さxにおける標的の強度を計算するための関数[Pa]
+            </summary>
+            <param name="x">深さ[m]</param>
+            <returns>強度[Pa]</returns>
+        </member>
+        <member name="T:awcsc.Penetrator">
+            <summary>
+            侵徹体の材料特性、寸法などを設定。
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.L">
+            <summary>
+            侵徹体長さ[m]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.D">
+            <summary>
+            侵徹体直径[m]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.R">
+            <summary>
+            侵徹体半径[m]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.LD">
+            <summary>
+            侵徹体L/D比。
+            </summary>
+        </member>
+        <member name="M:awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double)">
+            <summary>
+            先端が半球状のPenetratorのコンストラクタ。
+            CalcAW,CalcAWLV,CalcMBE用。
+            CRHが0.5として設定される。
+            CalcForrLVではCRHが0.5として計算されるだけで問題はない。
+            </summary>
+            <param name="Mater">Material</param>
+            <param name="L">侵徹体長さ[m]</param>
+            <param name="D">侵徹体径[m]</param>
+        </member>
+        <member name="M:awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double,System.Double)">
+            <summary>
+            侵徹体先端形状を含めたPenetratorのコンストラクタ．
+            CRHはCalcForrLVでのみ考慮される．
+            </summary>
+            <param name="Mater">Material</param>
+            <param name="L">侵徹体長さ[m]</param>
+            <param name="D">侵徹体径[m]</param>
+            <param name="Crh">侵徹体先端形状CRH[-]</param>
+        </member>
+        <member name="M:awcsc.Penetrator.#ctor(awcsc.Penetrator@)">
+            <summary>
+            Penetratorのコピー用コンストラクタ。
+            </summary>
+            <param name="Pen">Penetrator</param>
+        </member>
+        <member name="P:awcsc.Penetrator.Y">
+            <summary>
+            侵徹体強度[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.rho">
+            <summary>
+            侵徹体密度[kg/m^3]
+            
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.E">
+            <summary>
+            ヤング率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.G">
+            <summary>
+            剛性率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.K0">
+            <summary>
+            静的な体積弾性率[Pa]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.k">
+            <summary>
+            衝撃波速度の粒子速度依存性
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.c0">
+            <summary>
+            静的な体積波速度[m/s]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.c">
+            <summary>
+            縦波速度[m/s]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.c0inv">
+            <summary>
+            1/c0[s/m]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.cinv">
+            <summary>
+            1/c[s/m]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.Crh">
+            <summary>
+            侵徹体先端形状CRH[-]
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.l">
+            <summary>
+            侵徹体先端部の半球状領域の長さ。
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.cv">
+            <summary>
+            侵徹体先端部の半球状領域の重さ$m$を与える係数
+            $$m = (L-l+cv\times R)\times \rho_P\timesR^2$$
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.theta0">
+            <summary>
+            侵徹体の先端部を半球状に近似したときの侵徹先端部の開き角
+            </summary>
+        </member>
+        <member name="P:awcsc.Penetrator.m">
+            <summary>
+            侵徹体の質量[kg] 
+            $$m = (L-l+cv\times R)\times \rho_P \times R^2$$
+            </summary>
+        </member>
+        <member name="T:awcsc.State">
+            <summary>
+            侵徹時の状態を保持するクラス。
+            </summary>
+        </member>
+        <member name="F:awcsc.State.u">
+            <summary>
+            侵徹体先端速度[m/s]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.v">
+            <summary>
+            侵徹体後端速度[m/s]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.s">
+            <summary>
+            侵徹体先端塑性領域[m]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.L">
+            <summary>
+            侵徹体長さ
+            </summary>
+        </member>
+        <member name="F:awcsc.State.alpha">
+            <summary>
+            標的塑性領域
+            </summary>
+        </member>
+        <member name="F:awcsc.State.Le">
+            <summary>
+            侵徹体消耗率[-]
+            $$Le =  \frac{L0-L}{L0}$$
+            </summary>
+        </member>
+        <member name="F:awcsc.State.vdot">
+            <summary>
+            侵徹体後端加速度[m/s^2]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.udot">
+            <summary>
+            侵徹体先端加速度[m/s^2]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.Ldot">
+            <summary>
+            侵徹体消耗速度[m/s]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.sdot">
+            <summary>
+            侵徹体塑性領域移動速度
+            </summary>
+        </member>
+        <member name="F:awcsc.State.vu_sdot">
+            <summary>
+            説明が難しいけどvu_sdot
+            </summary>
+        </member>
+        <member name="F:awcsc.State.alphadot">
+            <summary>
+            標的塑性領域速度[1/s]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.DoP">
+            <summary>
+            侵徹深さ[m]
+            </summary>
+        </member>
+        <member name="F:awcsc.State.t">
+            <summary>
+            時間[s]
+            </summary>
+        </member>
+        <member name="M:awcsc.State.Copy(awcsc.State@)">
+            <summary>
+            コピー用の関数だけどなんでこんなことをしているのかよくわからない
+            </summary>
+            <param name="st">State</param>
+        </member>
+        <member name="M:awcsc.State.#ctor">
+            <summary>
+            コンストラクタだけど、Calcのinit_Stateでやるから適当。
+            </summary>
+        </member>
+        <member name="M:awcsc.State.op_Addition(awcsc.State@,awcsc.State@)">
+            <summary>
+            使わない
+            </summary>
+            <param name="st"></param>
+            <param name="dst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:awcsc.State.op_Multiply(awcsc.State@,System.Double@)">
+            <summary>
+            使わない
+            </summary>
+            <param name="st"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>penepy.materialList &#8212; penepy  ドキュメント</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">penepy  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">モジュールコード</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>penepy.materialList のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;&quot;頻繁に使うpenepy.MaterialについてはmaterialPropertyListを準備した。</span>
+
+<span class="sd">現在、Al、鉄、WHA、タングステン、劣化ウランについて用意している。</span>
+<span class="sd">具体的なパラメーターとして</span>
+
+<span class="sd">.. highlight:: python</span>
+
+<span class="sd">::</span>
+
+<span class="sd">    Al = Material(2700, 0.443, 72, 78,1.27)</span>
+<span class="sd">    iron = Material(7900, 1, 299, 172, 1)</span>
+<span class="sd">    WHA = Material(17600, 1, 200, 172, 1.23)</span>
+<span class="sd">    Tungsten = Material(19.2e3, 1, 411, 311, 1.23)</span>
+<span class="sd">    W = Material(19.2e3, 1, 411, 311, 1.23) #Tungstenの短縮形</span>
+<span class="sd">    DU = Material(18.6e3, 1, 193, 104, 1.51)</span>
+
+<span class="sd">を用意している。使用する際には</span>
+<span class="sd">:: </span>
+
+<span class="sd">    iron = penepy.materialPropertyList[&quot;iron&quot;]</span>
+
+<span class="sd">などとして使うと便利。</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">from</span> <span class="nn">material</span> <span class="kn">import</span> <span class="n">Material</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+
+<div class="viewcode-block" id="materialdic"><a class="viewcode-back" href="../../material.html#penepy.materialList.materialdic">[ドキュメント]</a><span class="k">class</span> <span class="nc">materialdic</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dict</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Material</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">E</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">K0</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">k</span><span class="p">)</span></div>
+
+
+<span class="n">materialPropertyList</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Material</span><span class="p">]</span> <span class="o">=</span> <span class="n">materialdic</span><span class="p">()</span>
+<span class="n">materialPropertyList</span><span class="p">[</span><span class="s2">&quot;Al&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
+    <span class="s2">&quot;rho&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">2700</span><span class="p">),</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">72</span><span class="p">),</span>
+    <span class="s2">&quot;K0&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">78</span><span class="p">),</span>
+    <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">1.27</span><span class="p">),</span>
+    <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">0.443</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">materialPropertyList</span><span class="p">[</span><span class="s2">&quot;iron&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
+    <span class="s2">&quot;rho&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">7900</span><span class="p">),</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+    <span class="s2">&quot;K0&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">172</span><span class="p">),</span>
+    <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span>
+    <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">materialPropertyList</span><span class="p">[</span><span class="s2">&quot;WHA&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
+    <span class="s2">&quot;rho&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">17600</span><span class="p">),</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">411</span><span class="p">),</span>
+    <span class="s2">&quot;K0&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">311</span><span class="p">),</span>
+    <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">1.23</span><span class="p">),</span>
+    <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">materialPropertyList</span><span class="p">[</span><span class="s2">&quot;Tungsten&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
+    <span class="s2">&quot;rho&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">19.2e3</span><span class="p">),</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">411</span><span class="p">),</span>
+    <span class="s2">&quot;K0&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">311</span><span class="p">),</span>
+    <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">1.23</span><span class="p">),</span>
+    <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">materialPropertyList</span><span class="p">[</span><span class="s2">&quot;W&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
+    <span class="s2">&quot;rho&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">19.2e3</span><span class="p">),</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">411</span><span class="p">),</span>
+    <span class="s2">&quot;K0&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">311</span><span class="p">),</span>
+    <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">1.23</span><span class="p">),</span>
+    <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">materialPropertyList</span><span class="p">[</span><span class="s2">&quot;DU&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Material</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
+    <span class="s2">&quot;rho&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">18.6e3</span><span class="p">),</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">193</span><span class="p">),</span>
+    <span class="s2">&quot;K0&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">104</span><span class="p">),</span>
+    <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mf">1.51</span><span class="p">),</span>
+    <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">penepy  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >モジュールコード</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, c_curve1870.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1 で生成しました。
+    </div>
+  </body>
+</html>

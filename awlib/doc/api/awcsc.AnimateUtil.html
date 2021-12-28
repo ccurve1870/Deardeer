@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AnimateUtil
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AnimateUtil
+   ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="awcsc.AnimateUtil">
+  
+  
+  <h1 id="awcsc_AnimateUtil" data-uid="awcsc.AnimateUtil" class="text-break">Class AnimateUtil
+  </h1>
+  <div class="markdown level0 summary"><p>計算結果を入れると侵徹挙動をアニメーションで描画するのに必要な情報作成してくれるクラス。
+<example><p>
+<pre><code>Calc C = Calc(P,T,V0);
+AnimateUtil A = new AnimateUtil(C);</code></pre>
+</example>
+pythonでアニメーションを書きたいときは
+<example>
+<pre><code>key = list(A.plot[0].Keys)
+fig, ax = plt.subplots()
+ax.set_xlim(A.xmin, A.xmax)
+ax.set_ylim(A.ymin, A.ymax)
+for p in A.plot:
+    for k in key:
+        ax.plot(p[k].x, p[k].y)</code></pre>
+</example>
+的にかけば動きます(アニメーションにする関数は別途)
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AnimateUtil</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="awcsc.html">awcsc</a></h6>
+  <h6><strong>Assembly</strong>: awlib.dll</h6>
+  <h5 id="awcsc_AnimateUtil_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AnimateUtil</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil__ctor_awcsc_Calc_System_Double_System_Double_System_Int32_.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil.%23ctor(awcsc.Calc%2CSystem.Double%2CSystem.Double%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L115">View Source</a>
+  </span>
+  <a id="awcsc_AnimateUtil__ctor_" data-uid="awcsc.AnimateUtil.#ctor*"></a>
+  <h4 id="awcsc_AnimateUtil__ctor_awcsc_Calc_System_Double_System_Double_System_Int32_" data-uid="awcsc.AnimateUtil.#ctor(awcsc.Calc,System.Double,System.Double,System.Int32)">AnimateUtil(Calc, Double, Double, Int32)</h4>
+  <div class="markdown level1 summary"><p>アニメーションを作るのに必要な辞書のリストを自動的に生成します。
+具体的には、Target界面、Penetrator界面、s界面、alpha界面をkeyに持つ辞書を書く時間ごとに保持したリストをplotとして持ちます。
+pythonでアニメーションを書きたいときは
+key = list(A.plot[0].Keys)
+fig, ax = plt.subplots()
+ax.set_xlim(A.xmin, A.xmax)
+ax.set_ylim(A.ymin, A.ymax)
+for p in A.plot:
+for k in key:
+ax.plot(p[k].x, p[k].y)
+とでもすれば動くと思います。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimateUtil(Calc C, double dt = 1E-07, double dt_log = 1E-05, int numsplit = 100)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Calc.html">Calc</a></td>
+        <td><span class="parametername">C</span></td>
+        <td><p>Calc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt</span></td>
+        <td><p>dt[s] デフォルトは1e-7</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dt_log</span></td>
+        <td><p>dt_log[s] デフォルトは1e-5。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numsplit</span></td>
+        <td><p>座標分割数</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil_plot.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil.plot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L96">View Source</a>
+  </span>
+  <h4 id="awcsc_AnimateUtil_plot" data-uid="awcsc.AnimateUtil.plot">plot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Dictionary&lt;string, PointArray&gt;&gt; plot</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="awcsc.PointArray.html">PointArray</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil_xmax.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil.xmax%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L86">View Source</a>
+  </span>
+  <h4 id="awcsc_AnimateUtil_xmax" data-uid="awcsc.AnimateUtil.xmax">xmax</h4>
+  <div class="markdown level1 summary"><p>座標をplotするときの、ymin,ymax,xmax,xminを提供する</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double xmax</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil_xmin.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil.xmin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L86">View Source</a>
+  </span>
+  <h4 id="awcsc_AnimateUtil_xmin" data-uid="awcsc.AnimateUtil.xmin">xmin</h4>
+  <div class="markdown level1 summary"><p>座標をplotするときの、ymin,ymax,xmax,xminを提供する</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double xmin</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil_ymax.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil.ymax%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L86">View Source</a>
+  </span>
+  <h4 id="awcsc_AnimateUtil_ymax" data-uid="awcsc.AnimateUtil.ymax">ymax</h4>
+  <div class="markdown level1 summary"><p>座標をplotするときの、ymin,ymax,xmax,xminを提供する</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ymax</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil_ymin.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil.ymin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L86">View Source</a>
+  </span>
+  <h4 id="awcsc_AnimateUtil_ymin" data-uid="awcsc.AnimateUtil.ymin">ymin</h4>
+  <div class="markdown level1 summary"><p>座標をplotするときの、ymin,ymax,xmax,xminを提供する</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ymin</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil_result.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil.result%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L91">View Source</a>
+  </span>
+  <a id="awcsc_AnimateUtil_result_" data-uid="awcsc.AnimateUtil.result*"></a>
+  <h4 id="awcsc_AnimateUtil_result" data-uid="awcsc.AnimateUtil.result">result</h4>
+  <div class="markdown level1 summary"><p>計算結果を保持</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, List&lt;double&gt;&gt; result { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_AnimateUtil.md&amp;value=---%0Auid%3A%20awcsc.AnimateUtil%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Animateutil.cs/#L60" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

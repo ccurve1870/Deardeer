@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>resultの説明 &#8212; penepy  ドキュメント</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="penepyの使い方" href="Usage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="Usage.html" title="penepyの使い方"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">penepy  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="Usage.html"
+                        title="前の章へ">penepyの使い方</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Result.md.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="result">
+<h1>resultの説明<a class="headerlink" href="#result" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference internal" href="calc.html#penepy.calc.Calc.calc" title="penepy.calc.Calc.calc"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Calc.calc</span></code></a> ， <a class="reference internal" href="calc.html#penepy.calc.Calc.calc_Vdependent" title="penepy.calc.Calc.calc_Vdependent"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Calc.calc_Vdependent</span></code></a> を実行すると，
+戻り値としてDict[str, np.ndarray]が帰ってくる．ここでは戻り値に含まれる各要素について説明する．</p>
+<p>辞書を戻り値としているのはその後のデータ整理を容易にするためなので必要に応じてPandas.DataFrameへの変換をするとよい．</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Calcの種類</span><a class="headerlink" href="#id1" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>﻿キー</p></th>
+<th class="head"><p>説明</p></th>
+<th class="head"><p>キー</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>t</p></th>
+<td><p>時間[ms]</p></td>
+<td><p>vdot</p></td>
+<td><p>侵徹体後端加速度[ <span class="math notranslate nohighlight">\(\mathrm{m/s^2}\)</span> ]</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>DoP</p></th>
+<td><p>侵徹深さ[m]</p></td>
+<td><p>udot</p></td>
+<td><p>侵徹体先端加速度[ <span class="math notranslate nohighlight">\(\mathrm{m/s^2}\)</span> ]</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>v</p></th>
+<td><p>侵徹体後端速度[m/s]</p></td>
+<td><p>Ldot</p></td>
+<td><p>侵徹体消耗速度[m/s]</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>u</p></th>
+<td><p>侵徹体先端速度[m/s]</p></td>
+<td><p>alphadot</p></td>
+<td><p>標的塑性変形領域係数速度[1/s]</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>L</p></th>
+<td><p>侵徹体長さ</p></td>
+<td><p>sdot</p></td>
+<td><p>侵徹体塑性変形領域速度[m/s]</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Le</p></th>
+<td><p>侵徹体消耗率</p></td>
+<td><p>vu_sdot</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{\left(\frac{vu}{s}\right)}\)</span></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>alpha</p></th>
+<td><p>標的塑性変形領域係数[-]</p></td>
+<td><p>V0</p></td>
+<td><div class="line-block">
+<div class="line">衝突速度[m/s]</div>
+<div class="line">(calc_Vdependのみ)</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>s</p></th>
+<td><p>侵徹体塑性変形領域[m]</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Y</p></th>
+<td><p>標的強度[GPa]</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Rt</p></th>
+<td><p>標的抵抗[GPa]</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="right" >
+          <a href="Usage.html" title="penepyの使い方"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">penepy  ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, c_curve1870.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1 で生成しました。
+    </div>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/hamme/source/repos/Deardeer-276c777d5ce81840577dfef9a0130ce00fce6b2a/docFX",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.AnimateUtil.Point.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.AnimateUtil.Point.html",
+          "hash": "GtvW1Zr5FmTGeqxoBaB59g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.AnimateUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.AnimateUtil.html",
+          "hash": "JHpZfN7jLqDy3bsO5G155Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.Calc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.Calc.html",
+          "hash": "LZCa/1vUTD2IAHMu1p6v8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.CalcAW.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.CalcAW.html",
+          "hash": "tZqj0gGLpKiOzcJUqF/xXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.CalcAWHVLV.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.CalcAWHVLV.html",
+          "hash": "37BIuaU041nLwGFI/wOQ6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.CalcAWLV.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.CalcAWLV.html",
+          "hash": "HeS/IRmitkhW6n/LyUedgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.CalcForrLV.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.CalcForrLV.html",
+          "hash": "ce5ECgn8r2pDpn20fPTY1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.CalcForrLVold.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.CalcForrLVold.html",
+          "hash": "TPsSJr/mmGMNOY7FGcOZbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.CalcMBE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.CalcMBE.html",
+          "hash": "aG0orjk1u18esv2ha/4SQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.JsonSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.JsonSerializer.html",
+          "hash": "9FD8vgYvXPXyDNjl0XJj4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.Material.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.Material.html",
+          "hash": "5BJqY9++PWUqNorWjL+66Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.Penetrator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.Penetrator.html",
+          "hash": "O6ug0ix3m5Bz5vs4tnaTgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.PointArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.PointArray.html",
+          "hash": "RJkubBmTRn2RScjx8Jiyfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.State.html",
+          "hash": "CqhpO+sMGn93oaw9eI/FMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.Target.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.Target.html",
+          "hash": "4mLbe0sKf6pEJk5WSCZa2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/awcsc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/awcsc.html",
+          "hash": "z/GvCg+w5lKYVcf/bualrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "WI3lkZEVd8Bme5nYaeuusw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 16,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,886 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Penetrator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Penetrator
+   ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="awcsc.Penetrator">
+  
+  
+  <h1 id="awcsc_Penetrator" data-uid="awcsc.Penetrator" class="text-break">Class Penetrator
+  </h1>
+  <div class="markdown level0 summary"><p>侵徹体の材料特性、寸法などを設定。</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Penetrator</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="awcsc.html">awcsc</a></h6>
+  <h6><strong>Assembly</strong>: awlib.dll</h6>
+  <h5 id="awcsc_Penetrator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Penetrator</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator__ctor_awcsc_Material__System_Double_System_Double_.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.%23ctor(awcsc.Material%40%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L516">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator__ctor_" data-uid="awcsc.Penetrator.#ctor*"></a>
+  <h4 id="awcsc_Penetrator__ctor_awcsc_Material__System_Double_System_Double_" data-uid="awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double)">Penetrator(Material, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>先端が半球状のPenetratorのコンストラクタ。
+CalcAW,CalcAWLV,CalcMBE用。
+CRHが0.5として設定される。
+CalcForrLVではCRHが0.5として計算されるだけで問題はない。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Penetrator(in Material Mater, double L, double D)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Material.html">Material</a></td>
+        <td><span class="parametername">Mater</span></td>
+        <td><p>Material</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">L</span></td>
+        <td><p>侵徹体長さ[m]</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">D</span></td>
+        <td><p>侵徹体径[m]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator__ctor_awcsc_Material__System_Double_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.%23ctor(awcsc.Material%40%2CSystem.Double%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L546">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator__ctor_" data-uid="awcsc.Penetrator.#ctor*"></a>
+  <h4 id="awcsc_Penetrator__ctor_awcsc_Material__System_Double_System_Double_System_Double_" data-uid="awcsc.Penetrator.#ctor(awcsc.Material@,System.Double,System.Double,System.Double)">Penetrator(Material, Double, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>侵徹体先端形状を含めたPenetratorのコンストラクタ．
+CRHはCalcForrLVでのみ考慮される．</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Penetrator(in Material Mater, double L, double D, double Crh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Material.html">Material</a></td>
+        <td><span class="parametername">Mater</span></td>
+        <td><p>Material</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">L</span></td>
+        <td><p>侵徹体長さ[m]</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">D</span></td>
+        <td><p>侵徹体径[m]</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">Crh</span></td>
+        <td><p>侵徹体先端形状CRH[-]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator__ctor_awcsc_Penetrator__.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.%23ctor(awcsc.Penetrator%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L573">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator__ctor_" data-uid="awcsc.Penetrator.#ctor*"></a>
+  <h4 id="awcsc_Penetrator__ctor_awcsc_Penetrator__" data-uid="awcsc.Penetrator.#ctor(awcsc.Penetrator@)">Penetrator(Penetrator)</h4>
+  <div class="markdown level1 summary"><p>Penetratorのコピー用コンストラクタ。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Penetrator(in Penetrator Pen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="awcsc.Penetrator.html">Penetrator</a></td>
+        <td><span class="parametername">Pen</span></td>
+        <td><p>Penetrator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_c.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.c%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L682">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_c_" data-uid="awcsc.Penetrator.c*"></a>
+  <h4 id="awcsc_Penetrator_c" data-uid="awcsc.Penetrator.c">c</h4>
+  <div class="markdown level1 summary"><p>縦波速度[m/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double c { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_c0.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.c0%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L678">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_c0_" data-uid="awcsc.Penetrator.c0*"></a>
+  <h4 id="awcsc_Penetrator_c0" data-uid="awcsc.Penetrator.c0">c0</h4>
+  <div class="markdown level1 summary"><p>静的な体積波速度[m/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double c0 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_c0inv.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.c0inv%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L687">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_c0inv_" data-uid="awcsc.Penetrator.c0inv*"></a>
+  <h4 id="awcsc_Penetrator_c0inv" data-uid="awcsc.Penetrator.c0inv">c0inv</h4>
+  <div class="markdown level1 summary"><p>1/c0[s/m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double c0inv { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_cinv.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.cinv%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L691">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_cinv_" data-uid="awcsc.Penetrator.cinv*"></a>
+  <h4 id="awcsc_Penetrator_cinv" data-uid="awcsc.Penetrator.cinv">cinv</h4>
+  <div class="markdown level1 summary"><p>1/c[s/m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double cinv { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_Crh.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.Crh%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L696">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_Crh_" data-uid="awcsc.Penetrator.Crh*"></a>
+  <h4 id="awcsc_Penetrator_Crh" data-uid="awcsc.Penetrator.Crh">Crh</h4>
+  <div class="markdown level1 summary"><p>侵徹体先端形状CRH[-]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Crh { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_cv.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.cv%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L717">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_cv_" data-uid="awcsc.Penetrator.cv*"></a>
+  <h4 id="awcsc_Penetrator_cv" data-uid="awcsc.Penetrator.cv">cv</h4>
+  <div class="markdown level1 summary"><p>侵徹体先端部の半球状領域の重さ$m$を与える係数
+$$m = (L-l+cv\times R)\times \rho_P\timesR^2$$</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double cv { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_D.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L485">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_D_" data-uid="awcsc.Penetrator.D*"></a>
+  <h4 id="awcsc_Penetrator_D" data-uid="awcsc.Penetrator.D">D</h4>
+  <div class="markdown level1 summary"><p>侵徹体直径[m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double D { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_E.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.E%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L633">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_E_" data-uid="awcsc.Penetrator.E*"></a>
+  <h4 id="awcsc_Penetrator_E" data-uid="awcsc.Penetrator.E">E</h4>
+  <div class="markdown level1 summary"><p>ヤング率[Pa]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double E { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_G.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.G%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L648">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_G_" data-uid="awcsc.Penetrator.G*"></a>
+  <h4 id="awcsc_Penetrator_G" data-uid="awcsc.Penetrator.G">G</h4>
+  <div class="markdown level1 summary"><p>剛性率[Pa]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double G { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_k.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.k%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L669">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_k_" data-uid="awcsc.Penetrator.k*"></a>
+  <h4 id="awcsc_Penetrator_k" data-uid="awcsc.Penetrator.k">k</h4>
+  <div class="markdown level1 summary"><p>衝撃波速度の粒子速度依存性</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double k { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_K0.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.K0%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L653">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_K0_" data-uid="awcsc.Penetrator.K0*"></a>
+  <h4 id="awcsc_Penetrator_K0" data-uid="awcsc.Penetrator.K0">K0</h4>
+  <div class="markdown level1 summary"><p>静的な体積弾性率[Pa]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double K0 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_l.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.l%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L712">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_l_" data-uid="awcsc.Penetrator.l*"></a>
+  <h4 id="awcsc_Penetrator_l" data-uid="awcsc.Penetrator.l">l</h4>
+  <div class="markdown level1 summary"><p>侵徹体先端部の半球状領域の長さ。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double l { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_L.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.L%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L470">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_L_" data-uid="awcsc.Penetrator.L*"></a>
+  <h4 id="awcsc_Penetrator_L" data-uid="awcsc.Penetrator.L">L</h4>
+  <div class="markdown level1 summary"><p>侵徹体長さ[m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double L { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_LD.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.LD%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L506">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_LD_" data-uid="awcsc.Penetrator.LD*"></a>
+  <h4 id="awcsc_Penetrator_LD" data-uid="awcsc.Penetrator.LD">LD</h4>
+  <div class="markdown level1 summary"><p>侵徹体L/D比。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double LD { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_m.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.m%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L728">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_m_" data-uid="awcsc.Penetrator.m*"></a>
+  <h4 id="awcsc_Penetrator_m" data-uid="awcsc.Penetrator.m">m</h4>
+  <div class="markdown level1 summary"><p>侵徹体の質量[kg]
+$$m = (L-l+cv\times R)\times \rho_P \times R^2$$</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double m { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_R.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.R%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L501">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_R_" data-uid="awcsc.Penetrator.R*"></a>
+  <h4 id="awcsc_Penetrator_R" data-uid="awcsc.Penetrator.R">R</h4>
+  <div class="markdown level1 summary"><p>侵徹体半径[m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double R { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_rho.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.rho%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L616">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_rho_" data-uid="awcsc.Penetrator.rho*"></a>
+  <h4 id="awcsc_Penetrator_rho" data-uid="awcsc.Penetrator.rho">rho</h4>
+  <div class="markdown level1 summary"><p>侵徹体密度[kg/m^3]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double rho { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_theta0.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.theta0%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L722">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_theta0_" data-uid="awcsc.Penetrator.theta0*"></a>
+  <h4 id="awcsc_Penetrator_theta0" data-uid="awcsc.Penetrator.theta0">theta0</h4>
+  <div class="markdown level1 summary"><p>侵徹体の先端部を半球状に近似したときの侵徹先端部の開き角</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double theta0 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator_Y.md&amp;value=---%0Auid%3A%20awcsc.Penetrator.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L603">View Source</a>
+  </span>
+  <a id="awcsc_Penetrator_Y_" data-uid="awcsc.Penetrator.Y*"></a>
+  <h4 id="awcsc_Penetrator_Y" data-uid="awcsc.Penetrator.Y">Y</h4>
+  <div class="markdown level1 summary"><p>侵徹体強度[Pa]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Y { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/abaabba/Deardeer/new/master/apiSpec/new?filename=awcsc_Penetrator.md&amp;value=---%0Auid%3A%20awcsc.Penetrator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/abaabba/Deardeer/blob/master/awlib/Material.cs/#L458" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

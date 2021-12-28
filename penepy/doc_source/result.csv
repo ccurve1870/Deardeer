@@ -1,0 +1,12 @@
+﻿キー,説明,キー,説明
+t,時間[ms],vdot,侵徹体後端加速度[ :math:`\mathrm{m/s^2}` ]
+DoP,侵徹深さ[m],udot,侵徹体先端加速度[ :math:`\mathrm{m/s^2}` ]
+v,侵徹体後端速度[m/s],Ldot,侵徹体消耗速度[m/s]
+u,侵徹体先端速度[m/s],alphadot,標的塑性変形領域係数速度[1/s]
+L,侵徹体長さ,sdot,侵徹体塑性変形領域速度[m/s]
+Le,侵徹体消耗率,vu_sdot, :math:`\dot{\left(\frac{vu}{s}\right)}` 
+alpha,標的塑性変形領域係数[-],V0,"| 衝突速度[m/s]
+| (calc_Vdependのみ)"
+s,侵徹体塑性変形領域[m],,
+Y,標的強度[GPa],,
+Rt,標的抵抗[GPa],,

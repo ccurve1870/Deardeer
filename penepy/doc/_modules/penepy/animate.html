@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>penepy.animate &#8212; penepy  ドキュメント</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">penepy  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">モジュールコード</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>penepy.animate のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">clr</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s2">&quot;awlib&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">awcsc</span> <span class="k">as</span> <span class="nn">aw</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">core</span> <span class="kn">import</span> <span class="n">dicconverter</span><span class="p">,</span> <span class="n">calc</span>
+<span class="kn">from</span> <span class="nn">calc</span> <span class="kn">import</span> <span class="n">Calc</span>
+
+
+<div class="viewcode-block" id="Animate"><a class="viewcode-back" href="../../animate.html#penepy.animate.Animate">[ドキュメント]</a><span class="k">class</span> <span class="nc">Animate</span><span class="p">:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;侵徹過程のアニメーションを出力するためのクラス</span>
+
+<span class="sd">    深いことを気にしなかったら</span>
+
+<span class="sd">    .. highlight:: python</span>
+
+<span class="sd">    ::</span>
+
+<span class="sd">        A = Animate(C)</span>
+<span class="sd">        f = A.makeAnimation()</span>
+<span class="sd">        f.save(~~)</span>
+
+<span class="sd">    でなんとかなる。</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    C : Calc</span>
+<span class="sd">        Calcを継承したクラス</span>
+<span class="sd">    dt : float, optional</span>
+<span class="sd">        計算時間ステップ, by default 1e-7</span>
+<span class="sd">    dt_log : float, optional</span>
+<span class="sd">        記録時間ステップ, by default 1e-5</span>
+<span class="sd">    numsplit : int, optional</span>
+<span class="sd">        plotの分割数(多いほど曲面がなめらかに分割される), by default 100</span>
+<span class="sd">    figkwargs: Dict, optional</span>
+<span class="sd">        plt.figureのオプションとして渡される辞書 plt.figure(**kwargs), by default {&quot;figsize&quot;:(8, 6),&quot;dpi&quot;: 300}</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    res : Dict[str, np.ndarray]</span>
+<span class="sd">        計算結果</span>
+<span class="sd">    plot : List[Dict[str,List[double]]</span>
+<span class="sd">        awcsc.AnimateUtilで取得されたアニメーションを出力するに必要な座標のリスト</span>
+<span class="sd">    xmin : float</span>
+<span class="sd">        プロットする際に適切と考えられるxmin</span>
+<span class="sd">    xmax : float</span>
+<span class="sd">        プロットする際に適切と考えられるxmax</span>
+<span class="sd">    ymin : float</span>
+<span class="sd">        プロットする際に適切と考えられるymin</span>
+<span class="sd">    ymax : float</span>
+<span class="sd">        プロットする際に適切と考えられるymax</span>
+<span class="sd">    fig : plt.figure</span>
+<span class="sd">        plt.figure</span>
+<span class="sd">    ax : plt.Axes</span>
+<span class="sd">        plt.Axes</span>
+<span class="sd">    im_lst : List[plt.Axes]</span>
+<span class="sd">        各座標をプロットしたplt.AxesのList</span>
+<span class="sd">    </span>
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    update(i, step)</span>
+<span class="sd">        アニメーションを作成する時に使う、各時間ごとのプロットを行う関数</span>
+<span class="sd">    makeAnimation(step=1, animatekwargs={&quot;interval&quot;:100})</span>
+<span class="sd">        アニメーション作成用関数</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">C</span><span class="p">:</span> <span class="n">Calc</span><span class="p">,</span>
+                 <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-7</span><span class="p">,</span>
+                 <span class="n">dt_log</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-5</span><span class="p">,</span>
+                 <span class="n">numsplit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+                 <span class="n">figkwargs</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;figsize&quot;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span><span class="s2">&quot;dpi&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}):</span>
+        <span class="sd">&quot;&quot;&quot;Animateクラスのコンストラクタ</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        C : Calc</span>
+<span class="sd">            Calcを継承したクラス</span>
+<span class="sd">        dt : float, optional</span>
+<span class="sd">            計算時間ステップ, by default 1e-7</span>
+<span class="sd">        dt_log : float, optional</span>
+<span class="sd">            記録時間ステップ, by default 1e-5</span>
+<span class="sd">        numsplit : int, optional</span>
+<span class="sd">            plotの分割数(多いほど曲面がなめらかに分割される), by default 100</span>
+<span class="sd">        dpi : float, optional</span>
+<span class="sd">            figのdpi, by default 300</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;dpi&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">figkwargs</span><span class="p">:</span>
+            <span class="n">figkwargs</span><span class="p">[</span><span class="s2">&quot;dpi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
+        <span class="k">if</span> <span class="s2">&quot;figsize&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">figkwargs</span><span class="p">:</span>
+            <span class="n">figkwargs</span><span class="p">[</span><span class="s2">&quot;figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">aw</span><span class="o">.</span><span class="n">AnimateUtil</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">_C</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">dt_log</span><span class="p">,</span> <span class="n">numsplit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">res</span> <span class="o">=</span> <span class="n">dicconverter</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">plot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xmin</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">xmin</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xmax</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">xmax</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ymin</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ymin</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ymax</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ymax</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Keys</span><span class="p">)</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="o">**</span><span class="n">figkwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">_</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xmin</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xmax</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ymin</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ymax</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Position, $x$ / m&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Position, $y$ / m&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">im_lst</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">res</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">im_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">xmax</span> <span class="o">*</span> <span class="mf">0.98</span><span class="p">,</span>
+                                  <span class="n">A</span><span class="o">.</span><span class="n">ymax</span> <span class="o">*</span> <span class="mf">0.98</span><span class="p">,</span>
+                                  <span class="sa">f</span><span class="s2">&quot;v:</span><span class="si">{res[&#39;v&#39;][0]:.0f}</span><span class="s2">&quot;</span><span class="p">,</span>
+                                  <span class="n">va</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
+                                  <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span>
+                                  <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Animate.update"><a class="viewcode-back" href="../../animate.html#penepy.animate.Animate.update">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;アニメーションを作成する時に使う、各時間ごとのプロットを行う関数</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        i : int</span>
+<span class="sd">            現ステップ</span>
+<span class="sd">        step : int</span>
+<span class="sd">            アニメーションをstep数ごとに記録するための引数</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">[::</span><span class="n">step</span><span class="p">]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">res</span>
+        <span class="k">for</span> <span class="n">im</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">im_lst</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">):</span>
+            <span class="n">im</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtax</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;t:{res[&#39;t&#39;][::step][i]*1e3:.0f}μs</span><span class="se">\n</span><span class="s2">v:</span><span class="si">{res[&#39;v&#39;][::step][i]:.0f}</span><span class="s2">m/s</span><span class="se">\n</span><span class="s2">u:</span><span class="si">{res[&#39;u&#39;][::step][i]:.0f}</span><span class="s2">m/s&quot;</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">im_lst</span></div>
+
+<div class="viewcode-block" id="Animate.makeAnimation"><a class="viewcode-back" href="../../animate.html#penepy.animate.Animate.makeAnimation">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">makeAnimation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="n">animatekwargs</span><span class="p">:</span><span class="n">Dict</span> <span class="o">=</span><span class="p">{</span><span class="s2">&quot;interval&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">FuncAnimation</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;アニメーション作成用関数</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        step : int, optional</span>
+<span class="sd">            アニメーションをstep数ごとに記録するための引数, by default 1</span>
+<span class="sd">        animatekwargs : Dict, optional</span>
+<span class="sd">            FuncAnimationの**kwargs</span>
+<span class="sd">            by default animatekwargs:Dict ={&quot;interval&quot;:100}</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        FuncAnimation</span>
+<span class="sd">            matplotlib.Animation.FuncAnimation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">[::</span><span class="n">step</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">&quot;interval&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">animatekwargs</span><span class="p">:</span>
+            <span class="n">animatekwargs</span><span class="p">[</span><span class="s2">&quot;interval&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">return</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">,</span>
+                             <span class="n">frames</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">),</span>
+                             <span class="n">fargs</span><span class="o">=</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="p">),</span>
+                             <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">animatekwargs</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Pythonモジュール索引"
+             >モジュール</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">penepy  ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >モジュールコード</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, c_curve1870.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1 で生成しました。
+    </div>
+  </body>
+</html>

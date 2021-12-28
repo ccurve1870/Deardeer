@@ -1,0 +1,16 @@
+クラス,元になったモデル,低速,高速,参考文献,その他
+:any:`CalcAW <penepy.calc.CalcAW>`,Andeerson-Walker model,X,O,"| J.D. Walker, C.E. Anderson Jr., Proceedings of the 13th Army Symposium
+| on Solid Mechanics, (1991), 271-282.","| この改訂版の論文がpdfで上がっていたものの現在は消失．
+1次元解析高速度モデルで最も信頼できる．"
+:any:`CalcAWLV <penepy.calc.CalcAWLV>`,Andeerson-Walker model,O,X,"| J.D. Walker, C.E. Anderson Jr., Proceedings of the 13th Army Symposium
+| on Solid Mechanics, (1991), 271-282.","| 上のモデルの低速度版
+| (u=vで解きなおしたもの)"
+:any:`CalcAW HVLV<penepy.calc.CalcAWHVLV>`,Andeerson-Walker model,O,O,"| J.D. Walker, C.E. Anderson Jr., Proceedings of the 13th Army Symposium
+| on Solid Mechanics, (1991), 271-282.",侵徹初期をCalcAWで解き，消耗が停止したところでCalcAWLVに切り替えて計算
+:any:`CalcForrLV <penepy.calc.CalcForrLV>`,Forrestal-Warren model,O,X,"| Z. Rosenberg, E. Dekel, Terminal baliistics
+| 2nd edition,
+| (2016), Springer",侵徹体先端形状を考慮した低速度侵徹の解析が可能
+:any:`CalcMBE <penepy.calc.CalcMBE>`,Alekseevski-Tate model,O,O,"| A. Tate, Journal of the Mechanics
+| and Physics of Solids., 15(1967),387","| `webから読める <https://web.archive.org/web/20120326005503/http://hep.ph.liv.ac.uk/~ibailey/target/shielding/tate_1967.pdf>`_ 
+| 勉強としてはいいが解析としてはおすすめしない．
+| TargetのYが直接Rtとして評価される．"

@@ -1,0 +1,23 @@
+﻿DearDeerのグラフ描画のラベルに使えるキーワード一覧
+半角スペースで区切ることで複数変数を一度にプロット可能
+例えば、x valueにDoP、y valueにu vを入れるとu,vの侵徹深さ依存性が得られる。
+V0 dependentにチェックを入れて計算するとV0をキーワードに指定できるようになる。
+この状態でx valueにV0y valueにDoPを入れると侵徹深さの速度依存性を得られるようになる。
+
+t:時間[ms]
+u:侵徹体先端速度(侵徹速度)[m/s]
+v:侵徹体後端速度[m/s]
+s:侵徹体塑性変形領域[m]#CalcAW, CalcAWHVLVのみ
+L:侵徹体長さ[m]
+DoP:侵徹体先端位置(侵徹深さ)[m]
+alpha:標的塑性変形領域係数[-]#CalcAW, CalcAWHVLV, CalcAWLV, CalcForrのみ
+Le:侵徹体消耗率[-] #CalcAW、CalcAWHVLVのみ
+vdot:侵徹体後端加速度[m/s2]
+udot:侵徹体先端加速度[m/s2] #CalcAW, CalcAWHVLV, CalcAWLV, CalcForrのみ
+Ldot:侵徹体消耗速度(u-v)[m/s] #CalcAW, CalcAWHVLV, CalcMBEのみ
+sdot:侵徹体塑性変形領域速度[m/s] #CalcAW, CalcAWHVLVのみ
+vu_sdot:d((v-u)/s)/dt[1/s2] #CalcAW、CalcAWHVLVのみ
+alphadot:標的塑性変形領域係数加速度[1/s] #CalcAW, CalcAWHVLV, CalcAWLVのみ
+Rt: 標的が作る抵抗[GPa]
+Y: 標的の降伏強度[GPa]
+V0: 衝突速度[m/s], V0 dependentで計算したときのみ
